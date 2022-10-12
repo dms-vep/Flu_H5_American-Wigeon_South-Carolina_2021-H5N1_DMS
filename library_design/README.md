@@ -1,7 +1,7 @@
 
-# Design of mutagenesis primers for H5 deep mutational scanning libnrary
+# Design of mutagenesis primers for H5 deep mutational scanning library
 
-This subfolder comntains script required to create primers for saturating mutagenesis of H5 VEP.  
+This sub-folder contains script required to create primers for saturating mutagenesis of H5 VEP.  
 
 '3404_pH2rU3_ForInd_H5_H5N1_turkey_Indiana_twist_T7_CMV_ZsGT2APurR.gb' contains the plasmid map for H5 sequence in inducible lentiviral backbone used in deep mutational scanning.  
 
