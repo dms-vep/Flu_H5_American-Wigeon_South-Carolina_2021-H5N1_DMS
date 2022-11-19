@@ -19,3 +19,7 @@ python 2021Jan_create_primers.py H5_excessflank.txt H5 1 H5_Primers_NNC.csv --am
   
 `oPool_primer_sheet.ipynb` notebook takes the primer sheets created by `2021Jan_create_primers.py` checks for distribution of primer annealing temperatures and creates `oPool_df.csv` spreadsheet containing all primers that can be uploaded to the IDTDNA for ordering.
 
+
+## Plasmid mutagenesis analysis
+
+`plasmid_mutagenesis_analysis` folder contains code and results for analysis of H5 mutation frequencies in plasmid libraries produced using primer pools described above.
