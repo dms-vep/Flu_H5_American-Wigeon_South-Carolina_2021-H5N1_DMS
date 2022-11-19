@@ -1,7 +1,7 @@
 
 # Plasmid mutagenesis analysis
 
-This sub-folder contains script required to analyse mutation frequencies in the four H5 plasmid DMS libraries produced for this project. The four libraries are as follows:  
+This sub-folder contains script required to analyse mutation frequencies in the four H5 plasmid DMS libraries produced for this project. The four libraries are as follow:  
 
 `Lib1_10` Library 1 produced with one round of mutagenesis using 10 PCR cycles.   
 `Lib1_10-8` Library 1 produced with two rounds of mutagenesis using 10 and 8 PCR cycles, respectively.   
