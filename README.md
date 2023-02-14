@@ -1,7 +1,7 @@
 # Deep mutational scanning of H5N1 influenza haemagglutinin using a barcoded lentiviral platform
 Study by Bernadeta Dadonaite and Jesse Bloom.
 
-For documentation of the analysis, see [https://dms-vep.github.io/H5_influenza_DMS/](https://dms-vep.github.io/H5_influenza_DMS/).
+For documentation of the analysis, see [https://dms-vep.github.io/Flu_H5_turkey-Indiana-2022-H5N1_DMS/](https://dms-vep.github.io/Flu_H5_turkey-Indiana-2022-H5N1_DMS/).
 
 ## Organization of this repo
 
