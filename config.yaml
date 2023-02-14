@@ -12,7 +12,7 @@ docs: docs
 # ----------------------------------------------------------------------------
 # Details on repo, used for docs. Change this to details for your project.
 # ----------------------------------------------------------------------------
-github_repo: H5_influenza_DMS
+github_repo: Flu_H5_turkey-Indiana-2022-H5N1_DMS
 github_user: dms-vep
 github_branch: main  # main branch for repo, assume renamed from master -> main
 description: Deep mutational scanning of H5N1 influenza haemagglutinin using a barcoded lentiviral platform

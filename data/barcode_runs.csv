@@ -7,3 +7,7 @@ date,virus_batch,library,sample_type,antibody,antibody_concentration,replicate,f
 2022-03-27,thaw-1,Lib-1,no-antibody_control,,,2,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/230113_VH00699_249_AAAWKNFHV/Unaligned/Project_bdadonai/H5_8_S6_R1_001.fastq.gz,,
 2022-03-27,thaw-1,Lib-2,no-antibody_control,,,1,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/230113_VH00699_249_AAAWKNFHV/Unaligned/Project_bdadonai/H5_9_S7_R1_001.fastq.gz,,
 2022-03-27,thaw-1,Lib-2,no-antibody_control,,,2,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/230113_VH00699_249_AAAWKNFHV/Unaligned/Project_bdadonai/H5_10_S8_R1_001.fastq.gz,,
+2022-03-14,thaw-1,Lib-1,VSVG_control,,,1,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/230213_VH01189_64_AAAYVG7HV/Unaligned/Project_bdadonai/H5_35_S35_R1_001.fastq.gz,,
+2022-03-14,thaw-1,Lib-2,VSVG_control,,,1,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/230213_VH01189_64_AAAYVG7HV/Unaligned/Project_bdadonai/H5_36_S36_R1_001.fastq.gz,,
+2022-03-14,thaw-1,Lib-1,no-antibody_control,,,1,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/230213_VH01189_64_AAAYVG7HV/Unaligned/Project_bdadonai/H5_37_S37_R1_001.fastq.gz,,
+2022-03-14,thaw-1,Lib-2,no-antibody_control,,,1,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/230213_VH01189_64_AAAYVG7HV/Unaligned/Project_bdadonai/H5_38_S38_R1_001.fastq.gz,,
