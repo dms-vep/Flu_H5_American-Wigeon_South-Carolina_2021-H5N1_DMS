@@ -29,7 +29,7 @@ consensus_params:  # parameters for building PacBio consensus sequences
   max_indel_diffs: null
   max_minor_sub_frac: 0.2
   max_minor_indel_frac: 0.2
-  min_support: 3
+  min_support: 2
 
 # Parameters for processing Illumina barcodes
 illumina_barcode_parser_params:

@@ -25,9 +25,11 @@ results/barcode_runs/*
 !results/variant_counts
 results/variant_counts/*
 !results/variant_counts/*.csv
+!results/antibody_selections
+results/antibody_selections/*
+!results/antibody_selections/antibody_selection_groups.csv
 !results/prob_escape
 results/prob_escape/*
-!results/prob_escape/antibody_selections.csv
 !results/site_numbering
 results/site_numbering/*
 !results/site_numbering/site_numbering_map.csv
@@ -43,4 +45,6 @@ results/muteffects_functional/*
 !results/antibody_escape
 results/antibody_escape/*
 !results/antibody_escape/*.csv
-!results/antibody_escape/*.html
+!results/spatial_distances
+results/spatial_distances/*
+!results/spatial_distances/*.csv
