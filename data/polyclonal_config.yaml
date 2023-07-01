@@ -59,3 +59,13 @@ sera_default: &sera_default
 # define configuration for specific sera, merging above defaults
 sera_1-05:
   <<: *sera_default
+sera_1-01:
+  <<: *sera_default
+sera_1-02:
+  <<: *sera_default
+sera_1-03:
+  <<: *sera_default
+sera_1-04:
+  <<: *sera_default
+sera_2-04:
+  <<: *sera_default

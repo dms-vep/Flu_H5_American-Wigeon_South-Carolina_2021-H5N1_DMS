@@ -3,4 +3,9 @@ Antibody-escape averaged across replicates
 ------------------------------------------
 
 - :doc:`sera_1-05 <avg_antibody_escape_sera_1-05>`
+- :doc:`sera_1-01 <avg_antibody_escape_sera_1-01>`
+- :doc:`sera_1-02 <avg_antibody_escape_sera_1-02>`
+- :doc:`sera_1-03 <avg_antibody_escape_sera_1-03>`
+- :doc:`sera_1-04 <avg_antibody_escape_sera_1-04>`
+- :doc:`sera_2-04 <avg_antibody_escape_sera_2-04>`
 
