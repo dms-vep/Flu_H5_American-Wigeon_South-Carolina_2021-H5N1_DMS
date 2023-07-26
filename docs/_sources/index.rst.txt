@@ -58,6 +58,13 @@ Interactive plots of mutation antibody escape
 - `sera 1-04 icXX plot <sera_1-04_icXX_plot.html>`_
 - `sera 1-05 escape plot <sera_1-05_escape_plot.html>`_
 - `sera 1-05 icXX plot <sera_1-05_icXX_plot.html>`_
+- `sera 2-01 escape plot <sera_2-01_escape_plot.html>`_
+- `sera 2-01 icXX plot <sera_2-01_icXX_plot.html>`_
 - `sera 2-04 escape plot <sera_2-04_escape_plot.html>`_
 - `sera 2-04 icXX plot <sera_2-04_icXX_plot.html>`_
+- `sera 2-05 escape plot <sera_2-05_escape_plot.html>`_
+- `sera 2-05 icXX plot <sera_2-05_icXX_plot.html>`_
 
+Additional plots
+----------------
+ - `compiled_all_sera_escape <compiled_all_sera_escape.html>`_
