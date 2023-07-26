@@ -67,5 +67,9 @@ sera_1-03:
   <<: *sera_default
 sera_1-04:
   <<: *sera_default
+sera_2-01:
+  <<: *sera_default
 sera_2-04:
+  <<: *sera_default
+sera_2-05:
   <<: *sera_default

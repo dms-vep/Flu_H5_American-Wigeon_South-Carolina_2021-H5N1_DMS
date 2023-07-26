@@ -121,6 +121,20 @@ barcode_runs: data/barcode_runs.csv
 fit_polyclonal_threads: 2  # threads to use bootstrapping polyclonal models
 polyclonal_config: data/polyclonal_config.yaml
 
+# ----------------------------------------------------------------------------
+# Custom analyses in Snakefile
+# ----------------------------------------------------------------------------
+
+# configuration for custom escape map comparisons in Snakefile
+# provide name of comparison and then antibodies to compare
+compare_escape_maps:
+  compiled_all_sera_escape:
+    - sera_1-01
+    - sera_1-02
+    - sera_1-03
+    - sera_1-04
+    - sera_1-05
+    - sera_2-04
 
 # ----------------------------------------------------------------------------
 # Names of output directories / files

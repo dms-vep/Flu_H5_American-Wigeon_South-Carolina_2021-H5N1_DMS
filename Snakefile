@@ -44,11 +44,51 @@ rule site_numbering_map:
     script:
         "scripts/site_numbering_map.py"
 
+compare_escape_maps_config = (
+    config["compare_escape_maps"] if "compare_escape_maps" in config else {}
+)
+
+rule compare_escape_maps:
+    """Compare escape maps for COV2-2130 and 2130-1-0114-112."""
+    input:
+        antibodies=lambda wc: [
+            os.path.join(config["escape_dir"], f"{antibody}.pickle")
+            for antibody in compare_escape_maps_config[wc.comparison]
+        ],
+        muteffects=config["muteffects_observed"],
+        polyclonal_config=config["polyclonal_config"],
+        nb_noshow="notebooks/compare_escape_maps.ipynb",
+    params:
+        antibodies_yaml=lambda wc: (
+            "{'antibodies': " + str(compare_escape_maps_config[wc.comparison]) + "}"
+        ),
+    output:
+        chart="results/compare_escape_maps/{comparison}.html",
+        nb_noshow="results/notebooks/compare_escape_maps_{comparison}.ipynb",
+    log:
+        os.path.join(config["logdir"], "compare_escape_maps_{comparison}.txt"),
+    conda:
+        "dms-vep-pipeline/environment.yml"
+    shell:
+        """
+        papermill \
+            -p chart_html {output.chart} \
+            -y "{params.antibodies_yaml}" \
+            {input.nb_noshow} \
+            {output.nb_noshow} \
+            &> {log}
+        """
+
 # Add any extra data/results files for docs with name: file
 extra_data_files = {
     "sequential to reference site numbering": config["site_numbering_map"],
 }
 
+# add extra HTML documents with name: file
+extra_html_docs = {
+    comparison: f"results/compare_escape_maps/{comparison}.html"
+    for comparison in compare_escape_maps_config
+}
 
 # include `dms-vep-pipeline` docs building Snakemake file
 include: os.path.join(config["pipeline_path"], "docs.smk")
