@@ -454,7 +454,7 @@ avg_antibody_escape:
       - Lib1-230630-sera-1-01
       - Lib2-230630-sera-1-01
       - Lib1-230724-sera-1-01
-      - Lib2-230724-sera-1-01
+      # - Lib2-230724-sera-1-01
   sera1-02:
     <<: *avg_antibody_escape_default
     title: sera1-02 escape

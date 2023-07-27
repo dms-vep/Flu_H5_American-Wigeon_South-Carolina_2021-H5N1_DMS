@@ -1,0 +1,293 @@
+<h1 id="deep-mutational-scanning-of-h5n1-influenza-haemagglutinin-using-a-barcoded-lentiviral-platform">Deep mutational scanning of H5N1 influenza haemagglutinin using a barcoded lentiviral platform</h1>
+<p>Analysis by Bernadeta Dadonaite and Jesse Bloom (2023)</p>
+<p>See <a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS">https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS</a> for full code.</p>
+<div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#barcode-to-codon-variant-lookup-table">Barcode to codon-variant lookup table</a></li>
+<li><a href="#count-variants">Count variants</a></li>
+<li><a href="#functional-effects-of-mutations">Functional effects of mutations</a></li>
+<li><a href="#antibodyserum-escape">Antibody/serum escape</a></li>
+<li><a href="#site-numbering">Site numbering</a></li>
+</ul>
+</div>
+<h2 id="barcode-to-codon-variant-lookup-table">Barcode to codon-variant lookup table</h2>
+<ul>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/gene_sequence/codon.fasta">parental codon sequence</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/gene_sequence/protein.fasta">parental protein sequence</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/variants/codon_variants.csv">barcode to codon-variant lookup table</a></li>
+<li><a href="notebooks/analyze_pacbio_ccs.html">Analysis of PacBio CCSs</a></li>
+<li><a href="notebooks/build_pacbio_consensus.html">Building of consensus sequences for barcoded variants</a></li>
+<li><a href="notebooks/build_codon_variants.html">Building of codon-variant table</a></li>
+</ul>
+<h2 id="count-variants">Count variants</h2>
+<ul>
+<li><details><summary>Barcode counts (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230613-VSVG-control_counts.csv">Lib1-230613-VSVG-control</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230613-VSVG-control_counts.csv">Lib2-230613-VSVG-control</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230613-no-antibody-control_counts.csv">Lib1-230613-no-antibody-control</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230613-no-antibody-control_counts.csv">Lib2-230613-no-antibody-control</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230613-antibody-sera-1-05-0.000445_counts.csv">Lib1-230613-antibody-sera-1-05-0.000445</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230613-antibody-sera-1-05-0.00178_counts.csv">Lib1-230613-antibody-sera-1-05-0.00178</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230613-antibody-sera-1-05-0.00712_counts.csv">Lib1-230613-antibody-sera-1-05-0.00712</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230613-antibody-sera-1-05-0.000445_counts.csv">Lib2-230613-antibody-sera-1-05-0.000445</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230613-antibody-sera-1-05-0.00178_counts.csv">Lib2-230613-antibody-sera-1-05-0.00178</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230613-antibody-sera-1-05-0.00712_counts.csv">Lib2-230613-antibody-sera-1-05-0.00712</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-no-antibody-control_counts.csv">Lib1-230630-no-antibody-control</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-no-antibody-control_counts.csv">Lib2-230630-no-antibody-control</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-1-01-0.00088_counts.csv">Lib1-230630-antibody-sera-1-01-0.00088</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-1-01-0.0035_counts.csv">Lib1-230630-antibody-sera-1-01-0.0035</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-1-01-0.014_counts.csv">Lib1-230630-antibody-sera-1-01-0.014</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-1-01-0.00088_counts.csv">Lib2-230630-antibody-sera-1-01-0.00088</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-1-01-0.0035_counts.csv">Lib2-230630-antibody-sera-1-01-0.0035</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-1-01-0.014_counts.csv">Lib2-230630-antibody-sera-1-01-0.014</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-1-02-0.00136_counts.csv">Lib1-230630-antibody-sera-1-02-0.00136</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-1-02-0.00544_counts.csv">Lib1-230630-antibody-sera-1-02-0.00544</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-1-02-0.02176_counts.csv">Lib1-230630-antibody-sera-1-02-0.02176</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-1-02-0.00136_counts.csv">Lib2-230630-antibody-sera-1-02-0.00136</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-1-02-0.00544_counts.csv">Lib2-230630-antibody-sera-1-02-0.00544</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-1-02-0.02176_counts.csv">Lib2-230630-antibody-sera-1-02-0.02176</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-1-03-0.00515_counts.csv">Lib1-230630-antibody-sera-1-03-0.00515</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-1-03-0.0206_counts.csv">Lib1-230630-antibody-sera-1-03-0.0206</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-1-03-0.08242_counts.csv">Lib1-230630-antibody-sera-1-03-0.08242</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-1-03-0.00515_counts.csv">Lib2-230630-antibody-sera-1-03-0.00515</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-1-03-0.0206_counts.csv">Lib2-230630-antibody-sera-1-03-0.0206</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-1-03-0.08242_counts.csv">Lib2-230630-antibody-sera-1-03-0.08242</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-1-04-0.00838_counts.csv">Lib1-230630-antibody-sera-1-04-0.00838</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-1-04-0.0335_counts.csv">Lib1-230630-antibody-sera-1-04-0.0335</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-1-04-0.13402_counts.csv">Lib1-230630-antibody-sera-1-04-0.13402</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-1-04-0.00838_counts.csv">Lib2-230630-antibody-sera-1-04-0.00838</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-1-04-0.0335_counts.csv">Lib2-230630-antibody-sera-1-04-0.0335</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-1-04-0.13402_counts.csv">Lib2-230630-antibody-sera-1-04-0.13402</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-2-04-0.00681_counts.csv">Lib1-230630-antibody-sera-2-04-0.00681</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-2-04-0.02724_counts.csv">Lib1-230630-antibody-sera-2-04-0.02724</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230630-antibody-sera-2-04-0.10898_counts.csv">Lib1-230630-antibody-sera-2-04-0.10898</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-2-04-0.00681_counts.csv">Lib2-230630-antibody-sera-2-04-0.00681</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-2-04-0.02724_counts.csv">Lib2-230630-antibody-sera-2-04-0.02724</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230630-antibody-sera-2-04-0.10898_counts.csv">Lib2-230630-antibody-sera-2-04-0.10898</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230724-no-antibody-control_counts.csv">Lib1-230724-no-antibody-control</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230724-antibody-sera-1-01-0.004_counts.csv">Lib1-230724-antibody-sera-1-01-0.004</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230724-antibody-sera-1-01-0.016_counts.csv">Lib1-230724-antibody-sera-1-01-0.016</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230724-antibody-sera-1-01-0.064_counts.csv">Lib1-230724-antibody-sera-1-01-0.064</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230724-antibody-sera-2-01-0.01138_counts.csv">Lib1-230724-antibody-sera-2-01-0.01138</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230724-antibody-sera-2-01-0.04552_counts.csv">Lib1-230724-antibody-sera-2-01-0.04552</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230724-antibody-sera-2-01-0.17555_counts.csv">Lib1-230724-antibody-sera-2-01-0.17555</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230724-antibody-sera-2-05-0.01488_counts.csv">Lib1-230724-antibody-sera-2-05-0.01488</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230724-antibody-sera-2-05-0.05953_counts.csv">Lib1-230724-antibody-sera-2-05-0.05953</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230724-antibody-sera-2-05-0.21781_counts.csv">Lib1-230724-antibody-sera-2-05-0.21781</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230724-no-antibody-control_counts.csv">Lib2-230724-no-antibody-control</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230724-antibody-sera-1-01-0.004_counts.csv">Lib2-230724-antibody-sera-1-01-0.004</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230724-antibody-sera-1-01-0.016_counts.csv">Lib2-230724-antibody-sera-1-01-0.016</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230724-antibody-sera-1-01-0.064_counts.csv">Lib2-230724-antibody-sera-1-01-0.064</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230724-antibody-sera-2-01-0.01138_counts.csv">Lib2-230724-antibody-sera-2-01-0.01138</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230724-antibody-sera-2-01-0.04552_counts.csv">Lib2-230724-antibody-sera-2-01-0.04552</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230724-antibody-sera-2-01-0.17555_counts.csv">Lib2-230724-antibody-sera-2-01-0.17555</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230724-antibody-sera-2-05-0.01488_counts.csv">Lib2-230724-antibody-sera-2-05-0.01488</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230724-antibody-sera-2-05-0.05953_counts.csv">Lib2-230724-antibody-sera-2-05-0.05953</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib2-230724-antibody-sera-2-05-0.21781_counts.csv">Lib2-230724-antibody-sera-2-05-0.21781</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230724-1p-DNA_standard_counts.csv">Lib1-230724-1p-DNA_standard</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230724-5p-DNA_standard_counts.csv">Lib1-230724-5p-DNA_standard</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/barcode_counts/Lib1-230724-10p-DNA_standard_counts.csv">Lib1-230724-10p-DNA_standard</a></li>
+</ul></details>
+
+</li>
+<li><a href="notebooks/analyze_variant_counts.html">Analysis of variant counts</a></li>
+</ul>
+<h2 id="functional-effects-of-mutations">Functional effects of mutations</h2>
+<ul>
+<li><details><summary>Per-variant functional scores (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/func_scores/Lib1-230613-293T_func_scores.csv">Lib1-230613-293T</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/func_scores/Lib2-230613-293T_func_scores.csv">Lib2-230613-293T</a></li>
+</ul></details>
+
+</li>
+<li><a href="notebooks/analyze_func_scores.html">Analysis of functional scores</a></li>
+<li><details><summary>Per-selection global epistasis fitting (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="notebooks/func_effects_global_epistasis_Lib1-230613-293T.html">Lib1-230613-293T</a></li>
+<li><a href="notebooks/func_effects_global_epistasis_Lib2-230613-293T.html">Lib2-230613-293T</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Per-selection mutation functional effects (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/func_effects/by_selection/Lib1-230613-293T_func_effects.csv">Lib1-230613-293T</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/func_effects/by_selection/Lib2-230613-293T_func_effects.csv">Lib2-230613-293T</a></li>
+</ul></details>
+
+</li>
+<li>Notebooks averaging mutation functional effects<ul>
+<li><a href="notebooks/avg_func_effects_293T_entry.html">293T_entry</a></li>
+</ul>
+</li>
+<li>Average mutation functional effects (CSV files)<ul>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/func_effects/averages/293T_entry_func_effects.csv">293T_entry</a></li>
+</ul>
+</li>
+<li>Average mutation latent-phenotype effects (CSV files)<ul>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/func_effects/averages/293T_entry_func_effects.csv">293T_entry</a></li>
+</ul>
+</li>
+<li>Interactive plots of average mutation functional effects<ul>
+<li><a href="htmls/293T_entry_func_effects.html">293T_entry</a></li>
+</ul>
+</li>
+<li>Interactive plots of average mutation latent-phenotype effects<ul>
+<li><a href="htmls/293T_entry_latent_effects.html">293T_entry</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="antibodyserum-escape">Antibody/serum escape</h2>
+<ul>
+<li><details><summary>Probability (fraction) escape for each variant (CSVs) in each selection (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230613-sera-1-05/Lib1-230613-antibody-sera-1-05-0.000445_prob_escape.csv">Lib1-230613-sera-1-05 Lib1-230613-antibody-sera-1-05-0.000445</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230613-sera-1-05/Lib1-230613-antibody-sera-1-05-0.00178_prob_escape.csv">Lib1-230613-sera-1-05 Lib1-230613-antibody-sera-1-05-0.00178</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230613-sera-1-05/Lib1-230613-antibody-sera-1-05-0.00712_prob_escape.csv">Lib1-230613-sera-1-05 Lib1-230613-antibody-sera-1-05-0.00712</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230613-sera-1-05/Lib2-230613-antibody-sera-1-05-0.000445_prob_escape.csv">Lib2-230613-sera-1-05 Lib2-230613-antibody-sera-1-05-0.000445</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230613-sera-1-05/Lib2-230613-antibody-sera-1-05-0.00178_prob_escape.csv">Lib2-230613-sera-1-05 Lib2-230613-antibody-sera-1-05-0.00178</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230613-sera-1-05/Lib2-230613-antibody-sera-1-05-0.00712_prob_escape.csv">Lib2-230613-sera-1-05 Lib2-230613-antibody-sera-1-05-0.00712</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-1-01/Lib1-230630-antibody-sera-1-01-0.00088_prob_escape.csv">Lib1-230630-sera-1-01 Lib1-230630-antibody-sera-1-01-0.00088</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-1-01/Lib1-230630-antibody-sera-1-01-0.0035_prob_escape.csv">Lib1-230630-sera-1-01 Lib1-230630-antibody-sera-1-01-0.0035</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-1-01/Lib1-230630-antibody-sera-1-01-0.014_prob_escape.csv">Lib1-230630-sera-1-01 Lib1-230630-antibody-sera-1-01-0.014</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-1-01/Lib2-230630-antibody-sera-1-01-0.00088_prob_escape.csv">Lib2-230630-sera-1-01 Lib2-230630-antibody-sera-1-01-0.00088</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-1-01/Lib2-230630-antibody-sera-1-01-0.0035_prob_escape.csv">Lib2-230630-sera-1-01 Lib2-230630-antibody-sera-1-01-0.0035</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-1-01/Lib2-230630-antibody-sera-1-01-0.014_prob_escape.csv">Lib2-230630-sera-1-01 Lib2-230630-antibody-sera-1-01-0.014</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230724-sera-1-01/Lib1-230724-antibody-sera-1-01-0.004_prob_escape.csv">Lib1-230724-sera-1-01 Lib1-230724-antibody-sera-1-01-0.004</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230724-sera-1-01/Lib1-230724-antibody-sera-1-01-0.016_prob_escape.csv">Lib1-230724-sera-1-01 Lib1-230724-antibody-sera-1-01-0.016</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230724-sera-1-01/Lib1-230724-antibody-sera-1-01-0.064_prob_escape.csv">Lib1-230724-sera-1-01 Lib1-230724-antibody-sera-1-01-0.064</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230724-sera-1-01/Lib2-230724-antibody-sera-1-01-0.004_prob_escape.csv">Lib2-230724-sera-1-01 Lib2-230724-antibody-sera-1-01-0.004</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230724-sera-1-01/Lib2-230724-antibody-sera-1-01-0.016_prob_escape.csv">Lib2-230724-sera-1-01 Lib2-230724-antibody-sera-1-01-0.016</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230724-sera-1-01/Lib2-230724-antibody-sera-1-01-0.064_prob_escape.csv">Lib2-230724-sera-1-01 Lib2-230724-antibody-sera-1-01-0.064</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-1-02/Lib1-230630-antibody-sera-1-02-0.00136_prob_escape.csv">Lib1-230630-sera-1-02 Lib1-230630-antibody-sera-1-02-0.00136</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-1-02/Lib1-230630-antibody-sera-1-02-0.00544_prob_escape.csv">Lib1-230630-sera-1-02 Lib1-230630-antibody-sera-1-02-0.00544</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-1-02/Lib1-230630-antibody-sera-1-02-0.02176_prob_escape.csv">Lib1-230630-sera-1-02 Lib1-230630-antibody-sera-1-02-0.02176</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-1-02/Lib2-230630-antibody-sera-1-02-0.00136_prob_escape.csv">Lib2-230630-sera-1-02 Lib2-230630-antibody-sera-1-02-0.00136</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-1-02/Lib2-230630-antibody-sera-1-02-0.00544_prob_escape.csv">Lib2-230630-sera-1-02 Lib2-230630-antibody-sera-1-02-0.00544</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-1-02/Lib2-230630-antibody-sera-1-02-0.02176_prob_escape.csv">Lib2-230630-sera-1-02 Lib2-230630-antibody-sera-1-02-0.02176</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-1-03/Lib1-230630-antibody-sera-1-03-0.00515_prob_escape.csv">Lib1-230630-sera-1-03 Lib1-230630-antibody-sera-1-03-0.00515</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-1-03/Lib1-230630-antibody-sera-1-03-0.0206_prob_escape.csv">Lib1-230630-sera-1-03 Lib1-230630-antibody-sera-1-03-0.0206</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-1-03/Lib1-230630-antibody-sera-1-03-0.08242_prob_escape.csv">Lib1-230630-sera-1-03 Lib1-230630-antibody-sera-1-03-0.08242</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-1-03/Lib2-230630-antibody-sera-1-03-0.00515_prob_escape.csv">Lib2-230630-sera-1-03 Lib2-230630-antibody-sera-1-03-0.00515</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-1-03/Lib2-230630-antibody-sera-1-03-0.0206_prob_escape.csv">Lib2-230630-sera-1-03 Lib2-230630-antibody-sera-1-03-0.0206</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-1-03/Lib2-230630-antibody-sera-1-03-0.08242_prob_escape.csv">Lib2-230630-sera-1-03 Lib2-230630-antibody-sera-1-03-0.08242</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-1-04/Lib1-230630-antibody-sera-1-04-0.00838_prob_escape.csv">Lib1-230630-sera-1-04 Lib1-230630-antibody-sera-1-04-0.00838</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-1-04/Lib1-230630-antibody-sera-1-04-0.0335_prob_escape.csv">Lib1-230630-sera-1-04 Lib1-230630-antibody-sera-1-04-0.0335</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-1-04/Lib1-230630-antibody-sera-1-04-0.13402_prob_escape.csv">Lib1-230630-sera-1-04 Lib1-230630-antibody-sera-1-04-0.13402</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-1-04/Lib2-230630-antibody-sera-1-04-0.00838_prob_escape.csv">Lib2-230630-sera-1-04 Lib2-230630-antibody-sera-1-04-0.00838</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-1-04/Lib2-230630-antibody-sera-1-04-0.0335_prob_escape.csv">Lib2-230630-sera-1-04 Lib2-230630-antibody-sera-1-04-0.0335</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-1-04/Lib2-230630-antibody-sera-1-04-0.13402_prob_escape.csv">Lib2-230630-sera-1-04 Lib2-230630-antibody-sera-1-04-0.13402</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-2-04/Lib1-230630-antibody-sera-2-04-0.00681_prob_escape.csv">Lib1-230630-sera-2-04 Lib1-230630-antibody-sera-2-04-0.00681</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-2-04/Lib1-230630-antibody-sera-2-04-0.02724_prob_escape.csv">Lib1-230630-sera-2-04 Lib1-230630-antibody-sera-2-04-0.02724</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230630-sera-2-04/Lib1-230630-antibody-sera-2-04-0.10898_prob_escape.csv">Lib1-230630-sera-2-04 Lib1-230630-antibody-sera-2-04-0.10898</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-2-04/Lib2-230630-antibody-sera-2-04-0.00681_prob_escape.csv">Lib2-230630-sera-2-04 Lib2-230630-antibody-sera-2-04-0.00681</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-2-04/Lib2-230630-antibody-sera-2-04-0.02724_prob_escape.csv">Lib2-230630-sera-2-04 Lib2-230630-antibody-sera-2-04-0.02724</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230630-sera-2-04/Lib2-230630-antibody-sera-2-04-0.10898_prob_escape.csv">Lib2-230630-sera-2-04 Lib2-230630-antibody-sera-2-04-0.10898</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230724-sera-2-01/Lib1-230724-antibody-sera-2-01-0.01138_prob_escape.csv">Lib1-230724-sera-2-01 Lib1-230724-antibody-sera-2-01-0.01138</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230724-sera-2-01/Lib1-230724-antibody-sera-2-01-0.04552_prob_escape.csv">Lib1-230724-sera-2-01 Lib1-230724-antibody-sera-2-01-0.04552</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230724-sera-2-01/Lib1-230724-antibody-sera-2-01-0.17555_prob_escape.csv">Lib1-230724-sera-2-01 Lib1-230724-antibody-sera-2-01-0.17555</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230724-sera-2-01/Lib2-230724-antibody-sera-2-01-0.01138_prob_escape.csv">Lib2-230724-sera-2-01 Lib2-230724-antibody-sera-2-01-0.01138</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230724-sera-2-01/Lib2-230724-antibody-sera-2-01-0.04552_prob_escape.csv">Lib2-230724-sera-2-01 Lib2-230724-antibody-sera-2-01-0.04552</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230724-sera-2-01/Lib2-230724-antibody-sera-2-01-0.17555_prob_escape.csv">Lib2-230724-sera-2-01 Lib2-230724-antibody-sera-2-01-0.17555</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230724-sera-2-05/Lib1-230724-antibody-sera-2-05-0.01488_prob_escape.csv">Lib1-230724-sera-2-05 Lib1-230724-antibody-sera-2-05-0.01488</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230724-sera-2-05/Lib1-230724-antibody-sera-2-05-0.05953_prob_escape.csv">Lib1-230724-sera-2-05 Lib1-230724-antibody-sera-2-05-0.05953</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib1-230724-sera-2-05/Lib1-230724-antibody-sera-2-05-0.21781_prob_escape.csv">Lib1-230724-sera-2-05 Lib1-230724-antibody-sera-2-05-0.21781</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230724-sera-2-05/Lib2-230724-antibody-sera-2-05-0.01488_prob_escape.csv">Lib2-230724-sera-2-05 Lib2-230724-antibody-sera-2-05-0.01488</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230724-sera-2-05/Lib2-230724-antibody-sera-2-05-0.05953_prob_escape.csv">Lib2-230724-sera-2-05 Lib2-230724-antibody-sera-2-05-0.05953</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/by_selection/Lib2-230724-sera-2-05/Lib2-230724-antibody-sera-2-05-0.21781_prob_escape.csv">Lib2-230724-sera-2-05 Lib2-230724-antibody-sera-2-05-0.21781</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Fits of polyclonal models to antibody escape selections (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="notebooks/fit_antibody_escape_Lib1-230613-sera-1-05.html">Lib1-230613-sera-1-05</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib2-230613-sera-1-05.html">Lib2-230613-sera-1-05</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib1-230630-sera-1-01.html">Lib1-230630-sera-1-01</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib2-230630-sera-1-01.html">Lib2-230630-sera-1-01</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib1-230724-sera-1-01.html">Lib1-230724-sera-1-01</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib2-230724-sera-1-01.html">Lib2-230724-sera-1-01</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib1-230630-sera-1-02.html">Lib1-230630-sera-1-02</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib2-230630-sera-1-02.html">Lib2-230630-sera-1-02</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib1-230630-sera-1-03.html">Lib1-230630-sera-1-03</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib2-230630-sera-1-03.html">Lib2-230630-sera-1-03</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib1-230630-sera-1-04.html">Lib1-230630-sera-1-04</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib2-230630-sera-1-04.html">Lib2-230630-sera-1-04</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib1-230630-sera-2-04.html">Lib1-230630-sera-2-04</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib2-230630-sera-2-04.html">Lib2-230630-sera-2-04</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib1-230724-sera-2-01.html">Lib1-230724-sera-2-01</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib2-230724-sera-2-01.html">Lib2-230724-sera-2-01</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib1-230724-sera-2-05.html">Lib1-230724-sera-2-05</a></li>
+<li><a href="notebooks/fit_antibody_escape_Lib2-230724-sera-2-05.html">Lib2-230724-sera-2-05</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Average selections for antibody/serum (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="notebooks/avg_antibody_escape_sera1-01.html">sera1-01</a></li>
+<li><a href="notebooks/avg_antibody_escape_sera1-02.html">sera1-02</a></li>
+<li><a href="notebooks/avg_antibody_escape_sera1-03.html">sera1-03</a></li>
+<li><a href="notebooks/avg_antibody_escape_sera1-04.html">sera1-04</a></li>
+<li><a href="notebooks/avg_antibody_escape_sera1-05.html">sera1-05</a></li>
+<li><a href="notebooks/avg_antibody_escape_sera2-01.html">sera2-01</a></li>
+<li><a href="notebooks/avg_antibody_escape_sera2-04.html">sera2-04</a></li>
+<li><a href="notebooks/avg_antibody_escape_sera2-05.html">sera2-05</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Antibody/serum mutation escape CSVs (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera1-01_mut_escape.csv">sera1-01</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera1-02_mut_escape.csv">sera1-02</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera1-03_mut_escape.csv">sera1-03</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera1-04_mut_escape.csv">sera1-04</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera1-05_mut_escape.csv">sera1-05</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera2-01_mut_escape.csv">sera2-01</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera2-04_mut_escape.csv">sera2-04</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera2-05_mut_escape.csv">sera2-05</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Antibody/serum mutation ICXX CSVs (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera1-01_mut_icXX.csv">sera1-01</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera1-02_mut_icXX.csv">sera1-02</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera1-03_mut_icXX.csv">sera1-03</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera1-04_mut_icXX.csv">sera1-04</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera1-05_mut_icXX.csv">sera1-05</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera2-01_mut_icXX.csv">sera2-01</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera2-04_mut_icXX.csv">sera2-04</a></li>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/results/antibody_escape/averages/sera2-05_mut_icXX.csv">sera2-05</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Antibody/serum mutation escape plots (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="htmls/sera1-01_mut_escape.html">sera1-01</a></li>
+<li><a href="htmls/sera1-02_mut_escape.html">sera1-02</a></li>
+<li><a href="htmls/sera1-03_mut_escape.html">sera1-03</a></li>
+<li><a href="htmls/sera1-04_mut_escape.html">sera1-04</a></li>
+<li><a href="htmls/sera1-05_mut_escape.html">sera1-05</a></li>
+<li><a href="htmls/sera2-01_mut_escape.html">sera2-01</a></li>
+<li><a href="htmls/sera2-04_mut_escape.html">sera2-04</a></li>
+<li><a href="htmls/sera2-05_mut_escape.html">sera2-05</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Antibody/serum mutation ICXX plots (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="htmls/sera1-01_mut_icXX.html">sera1-01</a></li>
+<li><a href="htmls/sera1-02_mut_icXX.html">sera1-02</a></li>
+<li><a href="htmls/sera1-03_mut_icXX.html">sera1-03</a></li>
+<li><a href="htmls/sera1-04_mut_icXX.html">sera1-04</a></li>
+<li><a href="htmls/sera1-05_mut_icXX.html">sera1-05</a></li>
+<li><a href="htmls/sera2-01_mut_icXX.html">sera2-01</a></li>
+<li><a href="htmls/sera2-04_mut_icXX.html">sera2-04</a></li>
+<li><a href="htmls/sera2-05_mut_icXX.html">sera2-05</a></li>
+</ul></details>
+
+</li>
+</ul>
+<h2 id="site-numbering">Site numbering</h2>
+<ul>
+<li><a href="https://github.com/dms-vep/Flu_H5_turkey-Indiana-2022-H5N1_DMS/blob/main/data/site_numbering_map.csv">Reference to sequential site-numbering map</a></li>
+</ul>
