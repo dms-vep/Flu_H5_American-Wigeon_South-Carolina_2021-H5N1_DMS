@@ -1,5 +1,5 @@
 ﻿library,run,fastq
-Lib-1,230612,/fh/fast/bloom_j/computational_notebooks/bdadonai/2023/H5_pacbio_files/H5_lib1_sorted_1.fastq.gz
-Lib-1,230613,/fh/fast/bloom_j/computational_notebooks/bdadonai/2023/H5_pacbio_files/H5_lib1_sorted_2.fastq.gz
-Lib-2,230612,/fh/fast/bloom_j/computational_notebooks/bdadonai/2023/H5_pacbio_files/H5_lib2_sorted_1.fastq.gz
-Lib-2,230613,/fh/fast/bloom_j/computational_notebooks/bdadonai/2023/H5_pacbio_files/H5_lib2_sorted_2.fastq.gz
+Lib1,Lib1-230612,/fh/fast/bloom_j/computational_notebooks/bdadonai/2023/H5_pacbio_files/H5_lib1_sorted_1.fastq.gz
+Lib1,Lib1-230613,/fh/fast/bloom_j/computational_notebooks/bdadonai/2023/H5_pacbio_files/H5_lib1_sorted_2.fastq.gz
+Lib2,Lib2-230612,/fh/fast/bloom_j/computational_notebooks/bdadonai/2023/H5_pacbio_files/H5_lib2_sorted_1.fastq.gz
+Lib2,Lib2-230613,/fh/fast/bloom_j/computational_notebooks/bdadonai/2023/H5_pacbio_files/H5_lib2_sorted_2.fastq.gz

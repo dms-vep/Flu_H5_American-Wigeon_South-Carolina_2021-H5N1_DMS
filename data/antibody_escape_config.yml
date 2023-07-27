@@ -1,0 +1,499 @@
+# Configurations for determining effects of mutations on antibody/sera escape
+
+# --------------------------------------------------------------------------------------
+# Configuration for each antibody selection experiment.
+# --------------------------------------------------------------------------------------
+
+# `antibody_selections` is keyed by name of each selection experiment, which includes a
+# no-antibody control samples and one or more antibody samples. These should typically
+# be from the same library and run on same date. Selection experiments are recommended
+# to be named as <Library>-<date as YYMMDD>-<description (eg, antibody)>-<replicate>.
+# Each selection experiment should in turn provide the following keys:
+#  - `neut_standard_name`: name of neutralization standard in `neut_standard_barcodes`
+#  - `no_antibody_sample`: name of the no-antibody sample
+#  - `antibody_samples`: a dict keyed by sample name with values of:
+#    * `concentration`: the concentration of the antibody
+#    * `use_in_fit`: whether to use this sample in the `polyclonal` fit
+#  - `prob_escape_filters`: dict giving filters of prob_escape values to use for fitting
+#  - `polyclonal_params`: dict giving parameters for `polyclonal` model fitting.
+#  - `escape_plot_kwargs`: dict giving parameters for `polyclonal` escape plot
+#  - `plot_hide_stats`: dict giving data frames with stats for slider to hide mutations
+# The `use_in_fit` option exists because you may decide that some samples are outside
+# the preferred neutralization range to include in the fit, so if `use_in_fit: false`
+# then functional scores are computed and plotted but it is not included in the fit.
+
+# default prob_escape filters
+prob_escape_filters_default: &prob_escape_filters_default
+  # error if sample used in fit doesn't have >= this many neut standard counts and
+  # >= this fraction of all counts from neut standard.
+  min_neut_standard_count: 1000
+  min_neut_standard_frac: 0.0001
+  # Only retain for fitting variants with at least this many counts and this fraction
+  # of total counts in the no-antibody sample **OR** the indicated counts and fraction
+  # of total counts in the antibody sample.
+  min_no_antibody_count: 20  # make bigger for real experiments, say 20
+  min_no_antibody_frac: 0.0000025  # make smaller for large libraries, say ~0.1 / (library size)
+  min_antibody_count: 100  # make bigger for real experiments, say 100
+  min_antibody_frac: 0.0001  # make smaller for large libraries, say ~10 / (library size)
+  # For averaging and plotting the mean probability (fraction) escape across variants, use
+  # these cutoffs:
+  max_aa_subs: 3  # group variants with >= this many substitutions
+  clip_uncensored_prob_escape: 5  # clip uncensored prob escape values at this max
+
+# default parameters for `polyclonal` model fitting
+polyclonal_params_default: &polyclonal_params_default
+  n_epitopes: 1  # fit this many epitopes, also fit all numbers less than this and plot
+  spatial_distances: null  # CSV with residue distances for spatial regularization, or null
+  fit_kwargs:  # keyword arguments to `Polyclonal.fit`
+    reg_escape_weight: 0.1
+    reg_spread_weight: 0.25
+    reg_activity_weight: 1.0
+    logfreq: 200
+
+# keyword arguments to `Polyclonal.mut_escape_plot`
+escape_plot_kwargs_default: &escape_plot_kwargs_default
+  addtl_slider_stats:
+    times_seen: 2
+
+  addtl_tooltip_stats:
+    - sequential_site
+  heatmap_max_at_least: 2
+  heatmap_min_at_least: -2
+  init_floor_at_zero: false
+  init_site_statistic: sum
+  site_zoom_bar_color_col: region  # supplied in `site_numbering_map`
+  rename_stat_col: site escape
+
+
+# Specify any statistics (usually functional effects) for which you want to enable
+# sliders that hide data. Keyed by statistic name, then next dict gives:
+#   - `csv`: CSV file with the data, should have columns "site" and "mutant"
+#   - `csv_col`: column in the CSV with the data
+#   - `init`: initial value of slider
+plot_hide_stats_default: &plot_hide_stats_default
+  functional effect:
+    csv: results/func_effects/averages/293T_entry_func_effects.csv
+    csv_col: effect
+    init: -2
+
+# define the antibody selections
+antibody_selections:
+# --------------------------------------------------------------------------------------
+  Lib1-230613-sera-1-05:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-230613-no-antibody-control
+    antibody_samples:
+     Lib1-230613-antibody-sera-1-05-0.000445:
+      concentration: 0.000445
+      use_in_fit: true
+     Lib1-230613-antibody-sera-1-05-0.00178:
+      concentration: 0.00178
+      use_in_fit: true
+     Lib1-230613-antibody-sera-1-05-0.00712:
+      concentration: 0.00712
+      use_in_fit: true
+
+
+  Lib2-230613-sera-1-05:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-230613-no-antibody-control
+    antibody_samples:
+     Lib2-230613-antibody-sera-1-05-0.000445:
+      concentration: 0.000445
+      use_in_fit: true
+     Lib2-230613-antibody-sera-1-05-0.00178:
+      concentration: 0.00178
+      use_in_fit: true
+     Lib2-230613-antibody-sera-1-05-0.00712:
+      concentration: 0.00712
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-230630-sera-1-01:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-230630-no-antibody-control
+    antibody_samples:
+     Lib1-230630-antibody-sera-1-01-0.00088:
+      concentration: 0.00088
+      use_in_fit: true
+     Lib1-230630-antibody-sera-1-01-0.0035:
+      concentration: 0.0035
+      use_in_fit: true
+     Lib1-230630-antibody-sera-1-01-0.014:
+      concentration: 0.014
+      use_in_fit: true
+
+  Lib2-230630-sera-1-01:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-230630-no-antibody-control
+    antibody_samples:
+     Lib2-230630-antibody-sera-1-01-0.00088:
+      concentration: 0.00088
+      use_in_fit: true
+     Lib2-230630-antibody-sera-1-01-0.0035:
+      concentration: 0.0035
+      use_in_fit: true
+     Lib2-230630-antibody-sera-1-01-0.014:
+      concentration: 0.014
+      use_in_fit: true
+
+  Lib1-230724-sera-1-01:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-230724-no-antibody-control
+    antibody_samples:
+     Lib1-230724-antibody-sera-1-01-0.004:
+      concentration: 0.004
+      use_in_fit: true
+     Lib1-230724-antibody-sera-1-01-0.016:
+      concentration: 0.016
+      use_in_fit: true
+     Lib1-230724-antibody-sera-1-01-0.064:
+      concentration: 0.064
+      use_in_fit: true 
+
+
+  Lib2-230724-sera-1-01:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-230724-no-antibody-control
+    antibody_samples:
+     Lib2-230724-antibody-sera-1-01-0.004:
+      concentration: 0.004
+      use_in_fit: true
+     Lib2-230724-antibody-sera-1-01-0.016:
+      concentration: 0.016
+      use_in_fit: false
+     Lib2-230724-antibody-sera-1-01-0.064:
+      concentration: 0.064
+      use_in_fit: true 
+
+# --------------------------------------------------------------------------------------
+  Lib1-230630-sera-1-02:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-230630-no-antibody-control
+    antibody_samples:
+     Lib1-230630-antibody-sera-1-02-0.00136:
+      concentration: 0.00136
+      use_in_fit: true
+     Lib1-230630-antibody-sera-1-02-0.00544:
+      concentration: 0.00544
+      use_in_fit: true
+     Lib1-230630-antibody-sera-1-02-0.02176:
+      concentration: 0.02176
+      use_in_fit: true 
+
+  Lib2-230630-sera-1-02:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-230630-no-antibody-control
+    antibody_samples:
+     Lib2-230630-antibody-sera-1-02-0.00136:
+      concentration: 0.00136
+      use_in_fit: true
+     Lib2-230630-antibody-sera-1-02-0.00544:
+      concentration: 0.00544
+      use_in_fit: true
+     Lib2-230630-antibody-sera-1-02-0.02176:
+      concentration: 0.02176
+      use_in_fit: true    
+
+# --------------------------------------------------------------------------------------
+  Lib1-230630-sera-1-03:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-230630-no-antibody-control
+    antibody_samples:
+     Lib1-230630-antibody-sera-1-03-0.00515:
+      concentration: 0.00515
+      use_in_fit: true
+     Lib1-230630-antibody-sera-1-03-0.0206:
+      concentration: 0.0206
+      use_in_fit: true
+     Lib1-230630-antibody-sera-1-03-0.08242:
+      concentration: 0.08242
+      use_in_fit: true 
+
+  Lib2-230630-sera-1-03:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-230630-no-antibody-control
+    antibody_samples:
+     Lib2-230630-antibody-sera-1-03-0.00515:
+      concentration: 0.00515
+      use_in_fit: true
+     Lib2-230630-antibody-sera-1-03-0.0206:
+      concentration: 0.0206
+      use_in_fit: true
+     Lib2-230630-antibody-sera-1-03-0.08242:
+      concentration: 0.08242
+      use_in_fit: true 
+
+# --------------------------------------------------------------------------------------
+  Lib1-230630-sera-1-04:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-230630-no-antibody-control
+    antibody_samples:
+     Lib1-230630-antibody-sera-1-04-0.00838:
+      concentration: 0.00838
+      use_in_fit: true
+     Lib1-230630-antibody-sera-1-04-0.0335:
+      concentration: 0.0335
+      use_in_fit: true
+     Lib1-230630-antibody-sera-1-04-0.13402:
+      concentration: 0.13402
+      use_in_fit: true 
+
+  Lib2-230630-sera-1-04:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-230630-no-antibody-control
+    antibody_samples:
+     Lib2-230630-antibody-sera-1-04-0.00838:
+      concentration: 0.00838
+      use_in_fit: true
+     Lib2-230630-antibody-sera-1-04-0.0335:
+      concentration: 0.0335
+      use_in_fit: true
+     Lib2-230630-antibody-sera-1-04-0.13402:
+      concentration: 0.13402
+      use_in_fit: true 
+
+# --------------------------------------------------------------------------------------
+  Lib1-230630-sera-2-04:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-230630-no-antibody-control
+    antibody_samples:
+     Lib1-230630-antibody-sera-2-04-0.00681:
+      concentration: 0.00838
+      use_in_fit: true
+     Lib1-230630-antibody-sera-2-04-0.02724:
+      concentration: 0.0335
+      use_in_fit: true
+     Lib1-230630-antibody-sera-2-04-0.10898:
+      concentration: 0.13402
+      use_in_fit: true 
+
+
+  Lib2-230630-sera-2-04:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-230630-no-antibody-control
+    antibody_samples:
+     Lib2-230630-antibody-sera-2-04-0.00681:
+      concentration: 0.00838
+      use_in_fit: true
+     Lib2-230630-antibody-sera-2-04-0.02724:
+      concentration: 0.0335
+      use_in_fit: true
+     Lib2-230630-antibody-sera-2-04-0.10898:
+      concentration: 0.13402
+      use_in_fit: true 
+
+# --------------------------------------------------------------------------------------
+  Lib1-230724-sera-2-01:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-230724-no-antibody-control
+    antibody_samples:
+     Lib1-230724-antibody-sera-2-01-0.01138:
+      concentration: 0.01138
+      use_in_fit: true
+     Lib1-230724-antibody-sera-2-01-0.04552:
+      concentration: 0.04552
+      use_in_fit: true
+     Lib1-230724-antibody-sera-2-01-0.17555:
+      concentration: 0.17555
+      use_in_fit: true 
+
+  Lib2-230724-sera-2-01:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-230724-no-antibody-control
+    antibody_samples:
+     Lib2-230724-antibody-sera-2-01-0.01138:
+      concentration: 0.01138
+      use_in_fit: true
+     Lib2-230724-antibody-sera-2-01-0.04552:
+      concentration: 0.04552
+      use_in_fit: true
+     Lib2-230724-antibody-sera-2-01-0.17555:
+      concentration: 0.17555
+      use_in_fit: true 
+
+# --------------------------------------------------------------------------------------
+  Lib1-230724-sera-2-05:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-230724-no-antibody-control
+    antibody_samples:
+     Lib1-230724-antibody-sera-2-05-0.01488:
+      concentration: 0.01488
+      use_in_fit: true
+     Lib1-230724-antibody-sera-2-05-0.05953:
+      concentration: 0.05953
+      use_in_fit: true
+     Lib1-230724-antibody-sera-2-05-0.21781:
+      concentration: 0.21781
+      use_in_fit: true 
+
+  Lib2-230724-sera-2-05:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-230724-no-antibody-control
+    antibody_samples:
+     Lib2-230724-antibody-sera-2-05-0.01488:
+      concentration: 0.01488
+      use_in_fit: true
+     Lib2-230724-antibody-sera-2-05-0.05953:
+      concentration: 0.05953
+      use_in_fit: true
+     Lib2-230724-antibody-sera-2-05-0.21781:
+      concentration: 0.21781
+      use_in_fit: true 
+
+# --------------------------------------------------------------------------------------
+# Configuration for averaging and plotting selections for the same antibody
+# --------------------------------------------------------------------------------------
+
+# Average/plot escape values from different selections with the same antibody/serum using
+# `avg_antibody_escape`. Each key is the name of an antibody/serum that has the following values:
+#   - `selections`: list of antibody selections for which we average escape
+#   - `icXX`: for the plot showing fold-change in ICXX (eg, IC90), what is XX (eg, 90)
+#   - `escape_plot_kwargs`: keyword arguments for `PolyclonalAverage.mut_escape_plot`
+#   - `plot_hide_stats`: dict giving data frames with stats for slider to hide mutations
+#   - `title`: title of plots
+#   - `legend`: legend added to plots
+
+# Define defaults for each antibody/serum, used via the merge (<<) operator
+avg_antibody_escape_default: &avg_antibody_escape_default
+  icXX: 90
+  escape_plot_kwargs:
+    <<: *escape_plot_kwargs_default
+    avg_type: median
+    per_model_tooltip: true
+  plot_hide_stats: *plot_hide_stats_default
+  legend: |
+    Interactive plot of how mutations affect antibody escape.
+
+    Use the site zoom bar at the top to zoom in on specific sites. The line plot shows a summary statistic indicating escape at each site. The heat map shows escape for individual mutations, with parental amino-acid identities indicated by x and gray indicating non-measured mutations. Mouse over points for details.
+
+    Options at the bottom of the plot let you modify the display, such as by selecting how many different variants a mutation must be seen in to be shown (*minimum times_seen*), how many different experimental selections the mutation was measured in (*minimum n_models*), what site summary statistic to show, etc.
+
+    You can filter by the functional effects of mutations. Mutations removed by this filter are shown as dark gray squares in the heat map to distinguish unmeasured mutations from ones measured to be deleterious.
+
+    The minimum max of escape at site is useful to select the sites where mutations confer the most escape.
+
+# Define the antibodies/sera to average
+avg_antibody_escape:
+  sera1-01:
+    <<: *avg_antibody_escape_default
+    title: sera1-01 escape
+    selections:
+      - Lib1-230630-sera-1-01
+      - Lib2-230630-sera-1-01
+      - Lib1-230724-sera-1-01
+      - Lib2-230724-sera-1-01
+  sera1-02:
+    <<: *avg_antibody_escape_default
+    title: sera1-02 escape
+    selections:
+      - Lib1-230630-sera-1-02
+      - Lib2-230630-sera-1-02
+  sera1-03:
+    <<: *avg_antibody_escape_default
+    title: sera1-03 escape
+    selections:
+      - Lib1-230630-sera-1-03
+      - Lib2-230630-sera-1-03
+  sera1-04:
+    <<: *avg_antibody_escape_default
+    title: sera1-04 escape
+    selections:
+      - Lib1-230630-sera-1-04
+      - Lib2-230630-sera-1-04
+  sera1-05:
+    <<: *avg_antibody_escape_default
+    title: sera1-05 escape
+    selections:
+      - Lib1-230613-sera-1-05
+      - Lib2-230613-sera-1-05
+  sera2-01:
+    <<: *avg_antibody_escape_default
+    title: sera2-01 escape
+    selections:
+      - Lib1-230724-sera-2-01
+      - Lib2-230724-sera-2-01
+  sera2-04:
+    <<: *avg_antibody_escape_default
+    title: sera2-04 escape
+    selections:
+      - Lib1-230630-sera-2-04
+      - Lib2-230630-sera-2-04
+  sera2-05:
+    <<: *avg_antibody_escape_default
+    title: sera2-05 escape
+    selections:
+      - Lib1-230724-sera-2-05
+      - Lib2-230724-sera-2-05
