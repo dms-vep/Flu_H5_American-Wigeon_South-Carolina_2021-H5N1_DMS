@@ -84,7 +84,7 @@ avg_func_effects_default: &avg_func_effects_default
         min: 1
         max: 25
       n_selections:
-        step: 2
+        step: 1
   legend: |
     Interactive plot of the effects of mutations. Negative values indicated deleterious mutations,
     positive values indicate beneficial mutations for the measured phenotype.
