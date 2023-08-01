@@ -1,4 +1,4 @@
-site,wildtype,mutant,log2 fold change IC90 mean,log2 fold change IC90 median,log2 fold change IC90 min_magnitude,log2 fold change IC90 std,n_models,times_seen,frac_models
+site,wildtype,mutant,log2 fold change IC80 mean,log2 fold change IC80 median,log2 fold change IC80 min_magnitude,log2 fold change IC80 std,n_models,times_seen,frac_models
 2,E,A,-0.1189,-0.1189,-0.002231,0.165,2,2.5,1
 2,E,C,-0.01137,-0.01137,-0.001357,0.01416,2,3.5,1
 2,E,D,0.4166,0.4166,0.3036,0.1599,2,3,1
@@ -3747,7 +3747,7 @@ site,wildtype,mutant,log2 fold change IC90 mean,log2 fold change IC90 median,log
 268,Y,F,0.02937,0.02937,-0.09269,0.1726,2,4,1
 268,Y,G,0.2066,0.2066,0.2066,,1,2,0.5
 268,Y,H,-0.3637,-0.3637,-0.255,0.1538,2,2.5,1
-268,Y,I,-0.5565,-0.5565,-0.5565,8.366e-06,2,4,1
+268,Y,I,-0.5565,-0.5565,-0.5565,8.365e-06,2,4,1
 268,Y,K,-0.4202,-0.4202,-0.3313,0.1257,2,3,1
 268,Y,L,-0.175,-0.175,-0.1454,0.04186,2,3.5,1
 268,Y,M,-0.1831,-0.1831,-0.1761,0.01001,2,1.5,1

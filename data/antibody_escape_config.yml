@@ -428,7 +428,7 @@ antibody_selections:
 
 # Define defaults for each antibody/serum, used via the merge (<<) operator
 avg_antibody_escape_default: &avg_antibody_escape_default
-  icXX: 90
+  icXX: 80
   escape_plot_kwargs:
     <<: *escape_plot_kwargs_default
     avg_type: median
@@ -454,7 +454,7 @@ avg_antibody_escape:
       - Lib1-230630-sera-1-01
       - Lib2-230630-sera-1-01
       - Lib1-230724-sera-1-01
-      # - Lib2-230724-sera-1-01
+      - Lib2-230724-sera-1-01
   sera1-02:
     <<: *avg_antibody_escape_default
     title: sera1-02 escape
