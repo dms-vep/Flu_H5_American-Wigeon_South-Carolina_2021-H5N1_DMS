@@ -17,6 +17,7 @@ rule escape_summary:
         nb="notebooks_escape_summary.ipynb",
     output:
         chart="results/summaries/escape_summary.html",
+        csv="results/summaries/escape_summary.csv",
         nb="results/notebooks/escape_summary.ipynb",
     params:
         sera_yaml=lambda _, input: yaml.dump(
@@ -32,6 +33,7 @@ rule escape_summary:
             -p site_numbering_map_csv {input.site_numbering_map_csv} \
             -p func_effects_csv {input.func_effects_csv} \
             -p chart {input.chart} \
+            -p csv_file {input.csv} \
             -y "{params.sera_yaml}" \
             &> {log}
         """
@@ -39,6 +41,7 @@ rule escape_summary:
 docs["Escape and functional effects summary"] = {
     "Notebook summarizing escape and functional effects": rules.escape_summary.output.nb,
     "Chart summarizing escape and functional effects": rules.escape_summary.output.chart,
+    "CSV summarizing escape and functional effects": rules.escape_summary.output.csv,
 }
 
 docs["Site numbering"] = {
