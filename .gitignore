@@ -48,3 +48,7 @@ results/antibody_escape/*
 !results/spatial_distances
 results/spatial_distances/*
 !results/spatial_distances/*.csv
+
+!results/summaries
+results/summaries/*
+!results/summaries/escape_summary.csv
