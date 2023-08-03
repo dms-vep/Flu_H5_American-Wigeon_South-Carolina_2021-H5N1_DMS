@@ -5,8 +5,8 @@ This file is included by the pipeline ``Snakefile``.
 """
 
 
-rule all_sera_escape:
-    """Summarize escape across all sera."""
+rule escape_summary:
+    """Summarize escape across all sera alongside functional effects."""
     input:
         escape_csvs=expand(
             "results/antibody_escape/averages/{serum}_mut_escape.csv",
@@ -14,9 +14,10 @@ rule all_sera_escape:
         ),
         site_numbering_map_csv=config["site_numbering_map"],
         func_effects_csv="results/func_effects/averages/293T_entry_func_effects.csv",
-        nb="notebooks/all_sera_escape.ipynb",
+        nb="notebooks_escape_summary.ipynb",
     output:
-        nb="results/notebooks/all_sera_escape.ipynb",
+        chart="results/summaries/escape_summary.html",
+        nb="results/notebooks/escape_summary.ipynb",
     params:
         sera_yaml=lambda _, input: yaml.dump(
             {"sera": dict(zip(list(avg_antibody_escape_config), input.escape_csvs))}
@@ -24,18 +25,20 @@ rule all_sera_escape:
     conda:
         "dms-vep-pipeline-3/environment.yml"
     log:
-        "results/logs/all_sera_escape.txt",
+        "results/logs/escape_summary.txt",
     shell:
         """
         papermill {input.nb} {output.nb} \
             -p site_numbering_map_csv {input.site_numbering_map_csv} \
             -p func_effects_csv {input.func_effects_csv} \
+            -p chart {input.chart} \
             -y "{params.sera_yaml}" \
             &> {log}
         """
 
-docs["Escape summarized across all sera"] = {
-    "Notebook combining escape for all sera": rules.all_sera_escape.output.nb,
+docs["Escape and functional effects summary"] = {
+    "Notebook summarizing escape and functional effects": rules.escape_summary.output.nb,
+    "Chart summarizing escape and functional effects": rules.escape_summary.output.chart,
 }
 
 docs["Site numbering"] = {
