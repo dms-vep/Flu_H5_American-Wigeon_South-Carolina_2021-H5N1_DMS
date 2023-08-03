@@ -14,7 +14,7 @@ rule escape_summary:
         ),
         site_numbering_map_csv=config["site_numbering_map"],
         func_effects_csv="results/func_effects/averages/293T_entry_func_effects.csv",
-        nb="notebooks_escape_summary.ipynb",
+        nb="notebooks/escape_summary.ipynb",
     output:
         chart="results/summaries/escape_summary.html",
         csv="results/summaries/escape_summary.csv",
@@ -24,7 +24,7 @@ rule escape_summary:
             {"sera": dict(zip(list(avg_antibody_escape_config), input.escape_csvs))}
         ),
     conda:
-        "dms-vep-pipeline-3/environment.yml"
+        os.path.join(config["pipeline_path"], "environment.yml"),
     log:
         "results/logs/escape_summary.txt",
     shell:
@@ -32,8 +32,8 @@ rule escape_summary:
         papermill {input.nb} {output.nb} \
             -p site_numbering_map_csv {input.site_numbering_map_csv} \
             -p func_effects_csv {input.func_effects_csv} \
-            -p chart {input.chart} \
-            -p csv_file {input.csv} \
+            -p chart {output.chart} \
+            -p csv_file {output.csv} \
             -y "{params.sera_yaml}" \
             &> {log}
         """
