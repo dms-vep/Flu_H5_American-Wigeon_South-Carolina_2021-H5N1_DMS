@@ -9,8 +9,8 @@ rule escape_summary:
     """Summarize escape across all sera alongside functional effects."""
     input:
         escape_csvs=expand(
-            "results/antibody_escape/averages/{serum}_mut_escape.csv",
-            serum=avg_antibody_escape_config,
+            "results/antibody_escape/averages/{serum}_mut_effect.csv",
+            serum=avg_assay_config["antibody_escape"],
         ),
         site_numbering_map_csv=config["site_numbering_map"],
         func_effects_csv="results/func_effects/averages/293T_entry_func_effects.csv",
@@ -20,8 +20,12 @@ rule escape_summary:
         csv="results/summaries/escape_summary.csv",
         nb="results/notebooks/escape_summary.ipynb",
     params:
-        sera_yaml=lambda _, input: yaml.dump(
-            {"sera": dict(zip(list(avg_antibody_escape_config), input.escape_csvs))}
+        sera_yaml=lambda _, input: yaml.round_trip_dump(
+            {
+                "sera": dict(
+                    zip(list(avg_assay_config["antibody_escape"]), input.escape_csvs)
+                )
+            }
         ),
     conda:
         os.path.join(config["pipeline_path"], "environment.yml"),
