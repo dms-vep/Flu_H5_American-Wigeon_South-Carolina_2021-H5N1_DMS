@@ -75,6 +75,8 @@ plot_hide_stats_default: &plot_hide_stats_default
     csv: results/func_effects/averages/293T_entry_func_effects.csv
     csv_col: effect
     init: -2
+    min_filters:
+      times_seen: 2
 
 # define the antibody selections
 antibody_selections:
