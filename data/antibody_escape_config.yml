@@ -54,9 +54,6 @@ polyclonal_params_default: &polyclonal_params_default
 escape_plot_kwargs_default: &escape_plot_kwargs_default
   addtl_slider_stats:
     times_seen: 2
-
-  addtl_tooltip_stats:
-    - sequential_site
   heatmap_max_at_least: 2
   heatmap_min_at_least: -2
   init_floor_at_zero: false
@@ -74,7 +71,7 @@ plot_hide_stats_default: &plot_hide_stats_default
   functional effect:
     csv: results/func_effects/averages/293T_entry_func_effects.csv
     csv_col: effect
-    init: -2
+    init: -4
     min_filters:
       times_seen: 2
 
@@ -89,13 +86,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib1-230613-no-antibody-control
     antibody_samples:
-     Lib1-230613-antibody-sera-1-05-0.000445:
+     Lib1-230613-sera-1-05-0.000445:
       concentration: 0.000445
       use_in_fit: true
-     Lib1-230613-antibody-sera-1-05-0.00178:
+     Lib1-230613-sera-1-05-0.00178:
       concentration: 0.00178
       use_in_fit: true
-     Lib1-230613-antibody-sera-1-05-0.00712:
+     Lib1-230613-sera-1-05-0.00712:
       concentration: 0.00712
       use_in_fit: true
 
@@ -108,13 +105,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib2-230613-no-antibody-control
     antibody_samples:
-     Lib2-230613-antibody-sera-1-05-0.000445:
+     Lib2-230613-sera-1-05-0.000445:
       concentration: 0.000445
       use_in_fit: true
-     Lib2-230613-antibody-sera-1-05-0.00178:
+     Lib2-230613-sera-1-05-0.00178:
       concentration: 0.00178
       use_in_fit: true
-     Lib2-230613-antibody-sera-1-05-0.00712:
+     Lib2-230613-sera-1-05-0.00712:
       concentration: 0.00712
       use_in_fit: true
 
@@ -127,13 +124,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib1-230630-no-antibody-control
     antibody_samples:
-     Lib1-230630-antibody-sera-1-01-0.00088:
+     Lib1-230630-sera-1-01-0.00088:
       concentration: 0.00088
       use_in_fit: true
-     Lib1-230630-antibody-sera-1-01-0.0035:
+     Lib1-230630-sera-1-01-0.0035:
       concentration: 0.0035
       use_in_fit: true
-     Lib1-230630-antibody-sera-1-01-0.014:
+     Lib1-230630-sera-1-01-0.014:
       concentration: 0.014
       use_in_fit: true
 
@@ -145,13 +142,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib2-230630-no-antibody-control
     antibody_samples:
-     Lib2-230630-antibody-sera-1-01-0.00088:
+     Lib2-230630-sera-1-01-0.00088:
       concentration: 0.00088
       use_in_fit: true
-     Lib2-230630-antibody-sera-1-01-0.0035:
+     Lib2-230630-sera-1-01-0.0035:
       concentration: 0.0035
       use_in_fit: true
-     Lib2-230630-antibody-sera-1-01-0.014:
+     Lib2-230630-sera-1-01-0.014:
       concentration: 0.014
       use_in_fit: true
 
@@ -163,13 +160,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib1-230724-no-antibody-control
     antibody_samples:
-     Lib1-230724-antibody-sera-1-01-0.004:
+     Lib1-230724-sera-1-01-0.004:
       concentration: 0.004
       use_in_fit: true
-     Lib1-230724-antibody-sera-1-01-0.016:
+     Lib1-230724-sera-1-01-0.016:
       concentration: 0.016
       use_in_fit: true
-     Lib1-230724-antibody-sera-1-01-0.064:
+     Lib1-230724-sera-1-01-0.064:
       concentration: 0.064
       use_in_fit: true 
 
@@ -182,13 +179,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib2-230724-no-antibody-control
     antibody_samples:
-     Lib2-230724-antibody-sera-1-01-0.004:
+     Lib2-230724-sera-1-01-0.004:
       concentration: 0.004
       use_in_fit: true
-     Lib2-230724-antibody-sera-1-01-0.016:
+     Lib2-230724-sera-1-01-0.016:
       concentration: 0.016
       use_in_fit: false
-     Lib2-230724-antibody-sera-1-01-0.064:
+     Lib2-230724-sera-1-01-0.064:
       concentration: 0.064
       use_in_fit: true 
 
@@ -201,13 +198,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib1-230630-no-antibody-control
     antibody_samples:
-     Lib1-230630-antibody-sera-1-02-0.00136:
+     Lib1-230630-sera-1-02-0.00136:
       concentration: 0.00136
       use_in_fit: true
-     Lib1-230630-antibody-sera-1-02-0.00544:
+     Lib1-230630-sera-1-02-0.00544:
       concentration: 0.00544
       use_in_fit: true
-     Lib1-230630-antibody-sera-1-02-0.02176:
+     Lib1-230630-sera-1-02-0.02176:
       concentration: 0.02176
       use_in_fit: true 
 
@@ -219,13 +216,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib2-230630-no-antibody-control
     antibody_samples:
-     Lib2-230630-antibody-sera-1-02-0.00136:
+     Lib2-230630-sera-1-02-0.00136:
       concentration: 0.00136
       use_in_fit: true
-     Lib2-230630-antibody-sera-1-02-0.00544:
+     Lib2-230630-sera-1-02-0.00544:
       concentration: 0.00544
       use_in_fit: true
-     Lib2-230630-antibody-sera-1-02-0.02176:
+     Lib2-230630-sera-1-02-0.02176:
       concentration: 0.02176
       use_in_fit: true    
 
@@ -238,13 +235,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib1-230630-no-antibody-control
     antibody_samples:
-     Lib1-230630-antibody-sera-1-03-0.00515:
+     Lib1-230630-sera-1-03-0.00515:
       concentration: 0.00515
       use_in_fit: true
-     Lib1-230630-antibody-sera-1-03-0.0206:
+     Lib1-230630-sera-1-03-0.0206:
       concentration: 0.0206
       use_in_fit: true
-     Lib1-230630-antibody-sera-1-03-0.08242:
+     Lib1-230630-sera-1-03-0.08242:
       concentration: 0.08242
       use_in_fit: true 
 
@@ -256,13 +253,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib2-230630-no-antibody-control
     antibody_samples:
-     Lib2-230630-antibody-sera-1-03-0.00515:
+     Lib2-230630-sera-1-03-0.00515:
       concentration: 0.00515
       use_in_fit: true
-     Lib2-230630-antibody-sera-1-03-0.0206:
+     Lib2-230630-sera-1-03-0.0206:
       concentration: 0.0206
       use_in_fit: true
-     Lib2-230630-antibody-sera-1-03-0.08242:
+     Lib2-230630-sera-1-03-0.08242:
       concentration: 0.08242
       use_in_fit: true 
 
@@ -275,13 +272,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib1-230630-no-antibody-control
     antibody_samples:
-     Lib1-230630-antibody-sera-1-04-0.00838:
+     Lib1-230630-sera-1-04-0.00838:
       concentration: 0.00838
       use_in_fit: true
-     Lib1-230630-antibody-sera-1-04-0.0335:
+     Lib1-230630-sera-1-04-0.0335:
       concentration: 0.0335
       use_in_fit: true
-     Lib1-230630-antibody-sera-1-04-0.13402:
+     Lib1-230630-sera-1-04-0.13402:
       concentration: 0.13402
       use_in_fit: true 
 
@@ -293,13 +290,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib2-230630-no-antibody-control
     antibody_samples:
-     Lib2-230630-antibody-sera-1-04-0.00838:
+     Lib2-230630-sera-1-04-0.00838:
       concentration: 0.00838
       use_in_fit: true
-     Lib2-230630-antibody-sera-1-04-0.0335:
+     Lib2-230630-sera-1-04-0.0335:
       concentration: 0.0335
       use_in_fit: true
-     Lib2-230630-antibody-sera-1-04-0.13402:
+     Lib2-230630-sera-1-04-0.13402:
       concentration: 0.13402
       use_in_fit: true 
 
@@ -312,13 +309,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib1-230630-no-antibody-control
     antibody_samples:
-     Lib1-230630-antibody-sera-2-04-0.00681:
+     Lib1-230630-sera-2-04-0.00681:
       concentration: 0.00838
       use_in_fit: true
-     Lib1-230630-antibody-sera-2-04-0.02724:
+     Lib1-230630-sera-2-04-0.02724:
       concentration: 0.0335
       use_in_fit: true
-     Lib1-230630-antibody-sera-2-04-0.10898:
+     Lib1-230630-sera-2-04-0.10898:
       concentration: 0.13402
       use_in_fit: true 
 
@@ -331,13 +328,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib2-230630-no-antibody-control
     antibody_samples:
-     Lib2-230630-antibody-sera-2-04-0.00681:
+     Lib2-230630-sera-2-04-0.00681:
       concentration: 0.00838
       use_in_fit: true
-     Lib2-230630-antibody-sera-2-04-0.02724:
+     Lib2-230630-sera-2-04-0.02724:
       concentration: 0.0335
       use_in_fit: true
-     Lib2-230630-antibody-sera-2-04-0.10898:
+     Lib2-230630-sera-2-04-0.10898:
       concentration: 0.13402
       use_in_fit: true 
 
@@ -350,13 +347,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib1-230724-no-antibody-control
     antibody_samples:
-     Lib1-230724-antibody-sera-2-01-0.01138:
+     Lib1-230724-sera-2-01-0.01138:
       concentration: 0.01138
       use_in_fit: true
-     Lib1-230724-antibody-sera-2-01-0.04552:
+     Lib1-230724-sera-2-01-0.04552:
       concentration: 0.04552
       use_in_fit: true
-     Lib1-230724-antibody-sera-2-01-0.17555:
+     Lib1-230724-sera-2-01-0.17555:
       concentration: 0.17555
       use_in_fit: true 
 
@@ -368,13 +365,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib2-230724-no-antibody-control
     antibody_samples:
-     Lib2-230724-antibody-sera-2-01-0.01138:
+     Lib2-230724-sera-2-01-0.01138:
       concentration: 0.01138
       use_in_fit: true
-     Lib2-230724-antibody-sera-2-01-0.04552:
+     Lib2-230724-sera-2-01-0.04552:
       concentration: 0.04552
       use_in_fit: true
-     Lib2-230724-antibody-sera-2-01-0.17555:
+     Lib2-230724-sera-2-01-0.17555:
       concentration: 0.17555
       use_in_fit: true 
 
@@ -387,13 +384,13 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib1-230724-no-antibody-control
     antibody_samples:
-     Lib1-230724-antibody-sera-2-05-0.01488:
+     Lib1-230724-sera-2-05-0.01488:
       concentration: 0.01488
       use_in_fit: true
-     Lib1-230724-antibody-sera-2-05-0.05953:
+     Lib1-230724-sera-2-05-0.05953:
       concentration: 0.05953
       use_in_fit: true
-     Lib1-230724-antibody-sera-2-05-0.21781:
+     Lib1-230724-sera-2-05-0.21781:
       concentration: 0.21781
       use_in_fit: true 
 
@@ -405,15 +402,159 @@ antibody_selections:
     plot_hide_stats: *plot_hide_stats_default
     no_antibody_sample: Lib2-230724-no-antibody-control
     antibody_samples:
-     Lib2-230724-antibody-sera-2-05-0.01488:
+     Lib2-230724-sera-2-05-0.01488:
       concentration: 0.01488
       use_in_fit: true
-     Lib2-230724-antibody-sera-2-05-0.05953:
+     Lib2-230724-sera-2-05-0.05953:
       concentration: 0.05953
       use_in_fit: true
-     Lib2-230724-antibody-sera-2-05-0.21781:
+     Lib2-230724-sera-2-05-0.21781:
       concentration: 0.21781
       use_in_fit: true 
+
+# --------------------------------------------------------------------------------------
+  Lib1-230822-ferret-sera-7:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-230822-no-antibody-control
+    antibody_samples:
+     Lib1-230822-ferret-sera-7-0.00184:
+      concentration: 0.00184
+      use_in_fit: true
+     Lib1-230822-ferret-sera-7-0.00736:
+      concentration: 0.00736
+      use_in_fit: true
+     Lib1-230822-ferret-sera-7-0.02944:
+      concentration: 0.02944
+      use_in_fit: true 
+
+  Lib2-230822-ferret-sera-7:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-230822-no-antibody-control
+    antibody_samples:
+     Lib2-230822-ferret-sera-7-0.00184:
+      concentration: 0.00184
+      use_in_fit: true
+     Lib2-230822-ferret-sera-7-0.00736:
+      concentration: 0.00736
+      use_in_fit: true
+     Lib2-230822-ferret-sera-7-0.02944:
+      concentration: 0.02944
+      use_in_fit: true 
+
+# --------------------------------------------------------------------------------------
+  Lib1-230822-ferret-sera-10:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-230822-no-antibody-control
+    antibody_samples:
+     Lib1-230822-ferret-sera-10-0.00178:
+      concentration: 0.00178
+      use_in_fit: true
+     Lib1-230822-ferret-sera-10-0.00491:
+      concentration: 0.00491
+      use_in_fit: true
+     Lib1-230822-ferret-sera-10-0.01965:
+      concentration: 0.01965
+      use_in_fit: true 
+
+  Lib2-230822-ferret-sera-10:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-230822-no-antibody-control
+    antibody_samples:
+     Lib2-230822-ferret-sera-10-0.00178:
+      concentration: 0.00178
+      use_in_fit: true
+     Lib2-230822-ferret-sera-10-0.00491:
+      concentration: 0.00491
+      use_in_fit: true
+     Lib2-230822-ferret-sera-10-0.01965:
+      concentration: 0.01965
+      use_in_fit: true 
+
+# --------------------------------------------------------------------------------------
+  Lib1-230822-ferret-sera-19:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-230822-no-antibody-control
+    antibody_samples:
+     Lib1-230822-ferret-sera-19-0.00178:
+      concentration: 0.00178
+      use_in_fit: true
+     Lib1-230822-ferret-sera-19-0.00378:
+      concentration: 0.00378
+      use_in_fit: true
+     Lib1-230822-ferret-sera-19-0.0151:
+      concentration: 0.0151
+      use_in_fit: true 
+
+  Lib2-230822-ferret-sera-19:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-230822-no-antibody-control
+    antibody_samples:
+     Lib2-230822-ferret-sera-19-0.00178:
+      concentration: 0.00178
+      use_in_fit: true
+     Lib2-230822-ferret-sera-19-0.00378:
+      concentration: 0.00378
+      use_in_fit: true
+     Lib2-230822-ferret-sera-19-0.0151:
+      concentration: 0.0151
+      use_in_fit: true 
+
+# --------------------------------------------------------------------------------------
+
+  Lib1-230822-pH:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-230822-pH-D10
+    antibody_samples:
+     Lib1-230822-pH-5.5:
+      concentration: 5.5
+      use_in_fit: true
+
+
+  Lib2-230822-pH:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-230822-pH-D10
+    antibody_samples:
+     Lib2-230822-pH-5.5:
+      concentration: 5.5
+      use_in_fit: true
+
+
+
+
+
+
 
 # --------------------------------------------------------------------------------------
 # Configuration for averaging and plotting selections for the same antibody
@@ -499,3 +640,30 @@ avg_antibody_escape:
     selections:
       - Lib1-230724-sera-2-05
       - Lib2-230724-sera-2-05
+
+  ferret-7:
+    <<: *avg_antibody_escape_default
+    title: ferret-7 escape
+    selections:
+      - Lib1-230822-ferret-sera-7
+      - Lib2-230822-ferret-sera-7
+  ferret-10:
+    <<: *avg_antibody_escape_default
+    title: ferret-10 escape
+    selections:
+      - Lib1-230822-ferret-sera-10
+      - Lib2-230822-ferret-sera-10
+  ferret-19:
+    <<: *avg_antibody_escape_default
+    title: ferret-19 escape
+    selections:
+      - Lib1-230822-ferret-sera-19
+      - Lib2-230822-ferret-sera-19
+
+
+  Lib1-230822-pH:
+    <<: *avg_antibody_escape_default
+    title: ferret-19 escape
+    selections:
+      - Lib1-230822-pH
+      - Lib2-230822-pH
