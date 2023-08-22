@@ -661,7 +661,7 @@ avg_antibody_escape:
       - Lib2-230822-ferret-sera-19
 
 
-  Lib1-230822-pH:
+  pH-230822:
     <<: *avg_antibody_escape_default
     title: ferret-19 escape
     selections:
