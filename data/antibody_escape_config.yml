@@ -1,10 +1,50 @@
-# Configurations for determining effects of mutations on antibody/sera escape
+# Configurations for determining effects of mutations on assays such as antibody
+# escape, receptor affinity from soluble receptor neutralization, etc.
+# Note that in the configuration for individual selections, "antibody" is used
+# as a synonym for any treatment (receptor, heat, etc), and "no-antibody" is
+# used as a synonym for the untreated conditions.
 
 # --------------------------------------------------------------------------------------
-# Configuration for each antibody selection experiment.
+# Define the selections
 # --------------------------------------------------------------------------------------
 
-# `antibody_selections` is keyed by name of each selection experiment, which includes a
+# `assays` is keyed by assay (eg, "antibody_escape", "receptor_affinity", etc). Values are:
+#    - `title`: title given to selection in docs
+#    - `selections`: name of key used to define all selections for this assay
+#    - `averages`: name of key used to define averages across selections for this assay.
+#       Leave out this key if not taking averages.
+#    - `prob_escape_scale`: the scale used for the y-axis when plotting prob escape as
+#      a function of concentration. Typically symlog if all values close to zero, linear
+#      otherwise. Should be in the form of keyword arguments to `altair.Scale`.
+#    - `scale_stat`: scale the statistic being estimated for mutation effects by this
+#      number. Typically is 1 (no scaling) unless you want negative values to indicate a
+#      favorable effect (as for soluble receptor selections), in which case use -1.
+#    - `stat_name`: name assigned to statistic, eg, "escape" or "receptor affinity".
+
+assays:
+  antibody_escape:
+    title: Antibody/serum escape
+    selections: antibody_selections
+    averages: avg_antibody_escape
+    prob_escape_scale:
+      type: symlog
+      constant: 0.04
+    scale_stat: 1
+    stat_name: escape
+  pH_stability:
+    title: pH stability
+    selections: ph_stability_selections
+    averages: avg_ph_stability
+    prob_escape_scale:
+      type: linear
+    scale_stat: 1
+    stat_name: pH stability
+
+# --------------------------------------------------------------------------------------
+# Configuration for the selection experiments for each assay
+# --------------------------------------------------------------------------------------
+
+# `<assay>_selections` is keyed by name of each selection experiment, which includes a
 # no-antibody control samples and one or more antibody samples. These should typically
 # be from the same library and run on same date. Selection experiments are recommended
 # to be named as <Library>-<date as YYMMDD>-<description (eg, antibody)>-<replicate>.
@@ -77,7 +117,7 @@ plot_hide_stats_default: &plot_hide_stats_default
 
 # define the antibody selections
 antibody_selections:
-# --------------------------------------------------------------------------------------
+  # --------------------------------------------------------------------------------------
   Lib1-230613-sera-1-05:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -95,7 +135,6 @@ antibody_selections:
      Lib1-230613-sera-1-05-0.00712:
       concentration: 0.00712
       use_in_fit: true
-
 
   Lib2-230613-sera-1-05:
     neut_standard_name: neut_standard
@@ -115,7 +154,7 @@ antibody_selections:
       concentration: 0.00712
       use_in_fit: true
 
-# --------------------------------------------------------------------------------------
+  # --------------------------------------------------------------------------------------
   Lib1-230630-sera-1-01:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -170,7 +209,6 @@ antibody_selections:
       concentration: 0.064
       use_in_fit: true 
 
-
   Lib2-230724-sera-1-01:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -189,7 +227,7 @@ antibody_selections:
       concentration: 0.064
       use_in_fit: true 
 
-# --------------------------------------------------------------------------------------
+  # --------------------------------------------------------------------------------------
   Lib1-230630-sera-1-02:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -226,7 +264,7 @@ antibody_selections:
       concentration: 0.02176
       use_in_fit: true    
 
-# --------------------------------------------------------------------------------------
+  # --------------------------------------------------------------------------------------
   Lib1-230630-sera-1-03:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -263,7 +301,7 @@ antibody_selections:
       concentration: 0.08242
       use_in_fit: true 
 
-# --------------------------------------------------------------------------------------
+  # --------------------------------------------------------------------------------------
   Lib1-230630-sera-1-04:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -300,7 +338,7 @@ antibody_selections:
       concentration: 0.13402
       use_in_fit: true 
 
-# --------------------------------------------------------------------------------------
+  # --------------------------------------------------------------------------------------
   Lib1-230630-sera-2-04:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -318,7 +356,6 @@ antibody_selections:
      Lib1-230630-sera-2-04-0.10898:
       concentration: 0.13402
       use_in_fit: true 
-
 
   Lib2-230630-sera-2-04:
     neut_standard_name: neut_standard
@@ -338,7 +375,7 @@ antibody_selections:
       concentration: 0.13402
       use_in_fit: true 
 
-# --------------------------------------------------------------------------------------
+  # --------------------------------------------------------------------------------------
   Lib1-230724-sera-2-01:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -375,7 +412,7 @@ antibody_selections:
       concentration: 0.17555
       use_in_fit: true 
 
-# --------------------------------------------------------------------------------------
+  # --------------------------------------------------------------------------------------
   Lib1-230724-sera-2-05:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -412,7 +449,7 @@ antibody_selections:
       concentration: 0.21781
       use_in_fit: true 
 
-# --------------------------------------------------------------------------------------
+  # --------------------------------------------------------------------------------------
   Lib1-230822-ferret-sera-7:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -449,7 +486,7 @@ antibody_selections:
       concentration: 0.02944
       use_in_fit: true 
 
-# --------------------------------------------------------------------------------------
+  # --------------------------------------------------------------------------------------
   Lib1-230822-ferret-sera-10:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -486,7 +523,7 @@ antibody_selections:
       concentration: 0.01965
       use_in_fit: true 
 
-# --------------------------------------------------------------------------------------
+  # --------------------------------------------------------------------------------------
   Lib1-230822-ferret-sera-19:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -523,8 +560,9 @@ antibody_selections:
       concentration: 0.0151
       use_in_fit: true 
 
-# --------------------------------------------------------------------------------------
-
+# define the pH selections
+ph_stability_selections:
+  # --------------------------------------------------------------------------------------
   Lib1-230822-pH:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -536,7 +574,6 @@ antibody_selections:
      Lib1-230822-pH-5.5:
       concentration: 5.5
       use_in_fit: true
-
 
   Lib2-230822-pH:
     neut_standard_name: neut_standard
@@ -550,18 +587,12 @@ antibody_selections:
       concentration: 5.5
       use_in_fit: true
 
-
-
-
-
-
-
 # --------------------------------------------------------------------------------------
-# Configuration for averaging and plotting selections for the same antibody
+# Configuration for averaging and plotting selections for an assay
 # --------------------------------------------------------------------------------------
 
-# Average/plot escape values from different selections with the same antibody/serum using
-# `avg_antibody_escape`. Each key is the name of an antibody/serum that has the following values:
+# Average/plot escape values from different selections for an assay using `<assay>_ecape`.
+# Each key is the name of an antibody/serum that has the following values:
 #   - `selections`: list of antibody selections for which we average escape
 #   - `icXX`: for the plot showing fold-change in ICXX (eg, IC90), what is XX (eg, 90)
 #   - `escape_plot_kwargs`: keyword arguments for `PolyclonalAverage.mut_escape_plot`
@@ -660,10 +691,11 @@ avg_antibody_escape:
       - Lib1-230822-ferret-sera-19
       - Lib2-230822-ferret-sera-19
 
-
-  pH-230822:
+# define the pH stability selections to average
+avg_ph_stability:
+  pH_stability:
     <<: *avg_antibody_escape_default
-    title: ferret-19 escape
+    title: pH stability
     selections:
       - Lib1-230822-pH
       - Lib2-230822-pH
