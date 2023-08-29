@@ -1,4 +1,4 @@
-epitope,site,wildtype,mutant,mutation,escape_mean,escape_median,n_models,times_seen,frac_models,Lib1-230822-pH,Lib2-230822-pH
+epitope,site,wildtype,mutant,mutation,pH stability_mean,pH stability_median,n_models,times_seen,frac_models,Lib1-230822-pH,Lib2-230822-pH
 1,-5,E,A,E-5A,-0.02368,-0.02368,2,2.5,1,-0.04727,-9.815e-05
 1,-5,E,C,E-5C,-0.1338,-0.1338,2,3.5,1,-0.08477,-0.1829
 1,-5,E,D,E-5D,-0.04062,-0.04062,2,3,1,-0.03413,-0.04711
