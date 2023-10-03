@@ -88,3 +88,11 @@ Lib2-230822-ferret-sera-7-0.00736,Lib2,2023-08-22,/fh/fast/bloom_j/SR/ngs/illumi
 Lib2-230822-ferret-sera-7-0.02944,Lib2,2023-08-22,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/230821_VH00699_360_AACYLGLM5/Unaligned/Project_bdadonai/Lib2_ferret_7_3_S12_R1_001.fastq.gz
 Lib2-230822-no-antibody-control,Lib2,2023-08-22,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/230821_VH00699_360_AACYLGLM5/Unaligned/Project_bdadonai/Lib2_no_mAb_S20_R1_001.fastq.gz
 Lib2-230822-pH-5.5,Lib2,2023-08-22,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/230821_VH00699_360_AACYLGLM5/Unaligned/Project_bdadonai/Lib2_pH55_S24_R1_001.fastq.gz
+Lib1-231002-pH-5.3,Lib1,2023-10-02,/fh/fast/bloom_j/SR/ngs/illumina/jahn2/231001_VH00319_406_AAF2KCNM5/Unaligned/Project_jahn2/L1_53_S2_R1_001.fastq.gz
+Lib1-231002-pH-5.5,Lib1,2023-10-02,/fh/fast/bloom_j/SR/ngs/illumina/jahn2/231001_VH00319_406_AAF2KCNM5/Unaligned/Project_jahn2/L1_55_S3_R1_001.fastq.gz
+Lib1-231002-pH-5.7,Lib1,2023-10-02,/fh/fast/bloom_j/SR/ngs/illumina/jahn2/231001_VH00319_406_AAF2KCNM5/Unaligned/Project_jahn2/L1_57_S4_R1_001.fastq.gz
+Lib1-231002-pH-D10,Lib1,2023-10-02,/fh/fast/bloom_j/SR/ngs/illumina/jahn2/231001_VH00319_406_AAF2KCNM5/Unaligned/Project_jahn2/L1_D10_S1_R1_001.fastq.gz
+Lib2-231002-pH-5.3,Lib2,2023-10-02,/fh/fast/bloom_j/SR/ngs/illumina/jahn2/231001_VH00319_406_AAF2KCNM5/Unaligned/Project_jahn2/L2_53_S6_R1_001.fastq.gz
+Lib2-231002-pH-5.5,Lib2,2023-10-02,/fh/fast/bloom_j/SR/ngs/illumina/jahn2/231001_VH00319_406_AAF2KCNM5/Unaligned/Project_jahn2/L2_55_S7_R1_001.fastq.gz
+Lib2-231002-pH-5.7,Lib2,2023-10-02,/fh/fast/bloom_j/SR/ngs/illumina/jahn2/231001_VH00319_406_AAF2KCNM5/Unaligned/Project_jahn2/L2_57_S8_R1_001.fastq.gz
+Lib2-231002-pH-D10,Lib2,2023-10-02,/fh/fast/bloom_j/SR/ngs/illumina/jahn2/231001_VH00319_406_AAF2KCNM5/Unaligned/Project_jahn2/L2_D10_S5_R1_001.fastq.gz

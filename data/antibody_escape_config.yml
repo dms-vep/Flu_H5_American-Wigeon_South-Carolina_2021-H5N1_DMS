@@ -586,6 +586,43 @@ ph_stability_selections:
      Lib2-230822-pH-5.5:
       concentration: 5.5
       use_in_fit: true
+      
+  # --------------------------------------------------------------------------------------
+  Lib1-231002-pH:
+     neut_standard_name: neut_standard
+     prob_escape_filters: *prob_escape_filters_default
+     polyclonal_params: *polyclonal_params_default
+     escape_plot_kwargs: *escape_plot_kwargs_default
+     plot_hide_stats: *plot_hide_stats_default
+     no_antibody_sample: Lib1-231002-pH-D10
+     antibody_samples:
+      Lib1-231002-pH-5.3:
+        concentration: 5.3
+        use_in_fit: true
+      Lib1-231002-pH-5.5:
+        concentration: 5.5
+        use_in_fit: true
+      Lib1-231002-pH-5.7:
+        concentration: 5.7
+        use_in_fit: true
+
+  Lib2-231002-pH:
+     neut_standard_name: neut_standard
+     prob_escape_filters: *prob_escape_filters_default
+     polyclonal_params: *polyclonal_params_default
+     escape_plot_kwargs: *escape_plot_kwargs_default
+     plot_hide_stats: *plot_hide_stats_default
+     no_antibody_sample: Lib2-231002-pH-D10
+     antibody_samples:
+      Lib2-231002-pH-5.3:
+       concentration: 5.3
+       use_in_fit: true
+      Lib2-231002-pH-5.5:
+       concentration: 5.5
+       use_in_fit: true
+      Lib2-231002-pH-5.7:
+       concentration: 5.7
+       use_in_fit: true
 
 # --------------------------------------------------------------------------------------
 # Configuration for averaging and plotting selections for an assay
@@ -699,3 +736,5 @@ avg_ph_stability:
     selections:
       - Lib1-230822-pH
       - Lib2-230822-pH
+      - Lib1-231002-pH
+      - Lib2-231002-pH
