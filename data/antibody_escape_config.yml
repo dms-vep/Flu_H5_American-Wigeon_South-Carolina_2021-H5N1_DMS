@@ -572,7 +572,7 @@ ph_stability_selections:
     no_antibody_sample: Lib1-230822-pH-D10
     antibody_samples:
      Lib1-230822-pH-5.5:
-      concentration: 5.5
+      concentration: 1.9
       use_in_fit: true
 
   Lib2-230822-pH:
@@ -584,7 +584,7 @@ ph_stability_selections:
     no_antibody_sample: Lib2-230822-pH-D10
     antibody_samples:
      Lib2-230822-pH-5.5:
-      concentration: 5.5
+      concentration: 1.9
       use_in_fit: true
       
   # --------------------------------------------------------------------------------------
@@ -597,13 +597,13 @@ ph_stability_selections:
      no_antibody_sample: Lib1-231002-pH-D10
      antibody_samples:
       Lib1-231002-pH-5.3:
-        concentration: 5.3
+        concentration: 2.1
         use_in_fit: true
       Lib1-231002-pH-5.5:
-        concentration: 5.5
+        concentration: 1.9
         use_in_fit: true
       Lib1-231002-pH-5.7:
-        concentration: 5.7
+        concentration: 1.7
         use_in_fit: true
 
   Lib2-231002-pH:
@@ -615,13 +615,13 @@ ph_stability_selections:
      no_antibody_sample: Lib2-231002-pH-D10
      antibody_samples:
       Lib2-231002-pH-5.3:
-       concentration: 5.3
+       concentration: 2.1
        use_in_fit: true
       Lib2-231002-pH-5.5:
-       concentration: 5.5
+       concentration: 1.9
        use_in_fit: true
       Lib2-231002-pH-5.7:
-       concentration: 5.7
+       concentration: 1.7
        use_in_fit: true
 
 # --------------------------------------------------------------------------------------
