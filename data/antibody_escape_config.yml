@@ -560,6 +560,154 @@ antibody_selections:
       concentration: 0.0151
       use_in_fit: true 
 
+  # --------------------------------------------------------------------------------------
+  Lib1-231129-pig-sera-972:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-231129-no-antibody-control
+    antibody_samples:
+     Lib1-231129-pig-sera-972-0.00708:
+      concentration: 0.00708
+      use_in_fit: true
+     Lib1-231129-pig-sera-972-0.0283:
+      concentration: 0.0283
+      use_in_fit: true
+     Lib1-231129-pig-sera-972-0.11321:
+      concentration: 0.11321
+      use_in_fit: true 
+
+  Lib2-231129-pig-sera-972:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-231129-no-antibody-control
+    antibody_samples:
+     Lib2-231129-pig-sera-972-0.00552:
+      concentration: 0.00552
+      use_in_fit: true
+     Lib2-231129-pig-sera-972-0.01934:
+      concentration: 0.01934
+      use_in_fit: true
+     Lib2-231129-pig-sera-972-0.0663:
+      concentration: 0.0663
+      use_in_fit: true 
+
+  # --------------------------------------------------------------------------------------
+  Lib1-231129-pig-sera-973:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-231129-no-antibody-control
+    antibody_samples:
+     Lib1-231129-pig-sera-973-0.00566:
+      concentration: 0.00566
+      use_in_fit: true
+     Lib1-231129-pig-sera-973-0.02264:
+      concentration: 0.02264
+      use_in_fit: true
+     Lib1-231129-pig-sera-973-0.08962:
+      concentration: 0.08962
+      use_in_fit: true 
+
+  Lib2-231129-pig-sera-973:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-231129-no-antibody-control
+    antibody_samples:
+     Lib2-231129-pig-sera-973-0.00552:
+      concentration: 0.00552
+      use_in_fit: true
+     Lib2-231129-pig-sera-973-0.01934:
+      concentration: 0.01934
+      use_in_fit: true
+     Lib2-231129-pig-sera-973-0.05525:
+      concentration: 0.05525
+      use_in_fit: true 
+
+  # --------------------------------------------------------------------------------------
+  Lib1-231129-pig-sera-977:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-231129-no-antibody-control
+    antibody_samples:
+     Lib1-231129-pig-sera-977-0.00505:
+      concentration: 0.00505
+      use_in_fit: true
+     Lib1-231129-pig-sera-977-0.02028:
+      concentration: 0.02028
+      use_in_fit: true
+     Lib1-231129-pig-sera-977-0.08113:
+      concentration: 0.08113
+      use_in_fit: true 
+
+  Lib2-231129-pig-sera-977:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-231129-no-antibody-control
+    antibody_samples:
+     Lib2-231129-pig-sera-977-0.00552:
+      concentration: 0.00552
+      use_in_fit: true
+     Lib2-231129-pig-sera-977-0.01934:
+      concentration: 0.01934
+      use_in_fit: true
+     Lib2-231129-pig-sera-977-0.05525:
+      concentration: 0.05525
+      use_in_fit: true 
+
+  # --------------------------------------------------------------------------------------
+  Lib1-231129-pig-sera-978:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-231129-no-antibody-control
+    antibody_samples:
+     Lib1-231129-pig-sera-978-0.00943:
+      concentration: 0.00943
+      use_in_fit: true
+     Lib1-231129-pig-sera-978-0.02358:
+      concentration: 0.02358
+      use_in_fit: true
+     Lib1-231129-pig-sera-978-0.09434:
+      concentration: 0.09434
+      use_in_fit: true 
+
+  Lib2-231129-pig-sera-978:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-231129-no-antibody-control
+    antibody_samples:
+     Lib2-231129-pig-sera-978-0.00552:
+      concentration: 0.00552
+      use_in_fit: true
+     Lib2-231129-pig-sera-978-0.01934:
+      concentration: 0.01934
+      use_in_fit: true
+     Lib2-231129-pig-sera-978-0.05525:
+      concentration: 0.05525
+      use_in_fit: true 
+
 # define the pH selections
 ph_stability_selections:
   # --------------------------------------------------------------------------------------
@@ -727,6 +875,31 @@ avg_antibody_escape:
     selections:
       - Lib1-230822-ferret-sera-19
       - Lib2-230822-ferret-sera-19
+
+  pig-972:
+    <<: *avg_antibody_escape_default
+    title: pig-972 escape
+    selections:
+      - Lib1-231129-pig-sera-972
+      - Lib2-231129-pig-sera-972
+  pig-973:
+    <<: *avg_antibody_escape_default
+    title: pig-973 escape
+    selections:
+      - Lib1-231129-pig-sera-973
+      - Lib2-231129-pig-sera-973
+  pig-977:
+    <<: *avg_antibody_escape_default
+    title: pig-977 escape
+    selections:
+      - Lib1-231129-pig-sera-977
+      - Lib2-231129-pig-sera-977
+  pig-978:
+    <<: *avg_antibody_escape_default
+    title: pig-978 escape
+    selections:
+      - Lib1-231129-pig-sera-978
+      - Lib2-231129-pig-sera-978
 
 # define the pH stability selections to average
 avg_ph_stability:
