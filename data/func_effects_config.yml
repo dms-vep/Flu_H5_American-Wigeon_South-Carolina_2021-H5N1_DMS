@@ -51,6 +51,26 @@ func_scores:
     post_selection_sample: Lib2-230613-no-antibody-control
     func_score_params: *func_scores_params_default
     global_epistasis_params: *global_epistasis_params
+  Lib1-240125-293-SA23:
+    pre_selection_sample: Lib1-240125-293-SA23-VSVG-control
+    post_selection_sample: Lib1-240125-293-SA23-H5-control
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
+  Lib2-240125-293-SA23:
+    pre_selection_sample: Lib2-240125-293-SA23-VSVG-control
+    post_selection_sample: Lib2-240125-293-SA23-H5-control
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
+  Lib1-240125-293-SA26:
+    pre_selection_sample: Lib1-240125-293-SA26-VSVG-control
+    post_selection_sample: Lib1-240125-293-SA26-H5-control
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
+  Lib2-240125-293-SA26:
+    pre_selection_sample: Lib2-240125-293-SA26-VSVG-control
+    post_selection_sample: Lib2-240125-293-SA26-H5-control
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
 
 # --------------------------------------------------------------------------------------
 # Configuration for averaging mutation functional effects across selections and plotting
@@ -113,3 +133,15 @@ avg_func_effects:
     selections:
       - Lib1-230613-293T
       - Lib2-230613-293T
+  293_SA23_entry:
+    <<: *avg_func_effects_default
+    title: Mutation effects on H5 HA entry into 293 cells expressing only Alpha(2,3)-linked sialic acids
+    selections:
+      - Lib1-240125-293-SA23
+      - Lib2-240125-293-SA23
+  293_SA26_entry:
+    <<: *avg_func_effects_default
+    title: Mutation effects on H5 HA entry into 293 cells expressing only Alpha(2,6)-linked sialic acids
+    selections:
+      - Lib1-240125-293-SA26
+      - Lib2-240125-293-SA26
