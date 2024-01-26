@@ -175,7 +175,7 @@ func_effect_shifts_default: &func_effect_shifts_default
   latent_offset: true
   # Strength of lasso regularization on shifts in `multidms`. You can try a range of
   # values and then pick a best one at the averaging step. 
-  lasso_shifts: [0.00001, 0.00005, 0.0001, 0.0002, 0.001]
+  lasso_shifts: [0.00001, 0.00008, 0.0001, 0.0002, 0.001]
 
 func_effect_shifts:
  Lib1-240125-293-sialic_acid_entry_effects:
