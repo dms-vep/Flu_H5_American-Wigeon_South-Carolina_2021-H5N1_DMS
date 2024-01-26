@@ -7331,11 +7331,12 @@ a.anchor-link {
     if (!diagrams.length) {
       return;
     }
-    const mermaid = (await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.0/mermaid.esm.min.mjs")).default;
+    const mermaid = (await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs")).default;
     const parser = new DOMParser();
 
     mermaid.initialize({
       maxTextSize: 100000,
+      maxEdges: 100000,
       startOnLoad: false,
       fontFamily: window
         .getComputedStyle(document.body)
@@ -7543,7 +7544,7 @@ The next cell is tagged as <code>parameters</code> to get the passed parameters.
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_injected-parameters" id="cell-id=8484966e">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_injected-parameters" id="cell-id=27966c60">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7870,23 +7871,23 @@ The next cell is tagged as <code>parameters</code> to get the passed parameters.
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-80f0d2329aec479185aeda28a7e9b842.vega-embed {
+  #altair-viz-03f058728f8d457e8ff51229e3f542eb.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-80f0d2329aec479185aeda28a7e9b842.vega-embed details,
-  #altair-viz-80f0d2329aec479185aeda28a7e9b842.vega-embed details summary {
+  #altair-viz-03f058728f8d457e8ff51229e3f542eb.vega-embed details,
+  #altair-viz-03f058728f8d457e8ff51229e3f542eb.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-80f0d2329aec479185aeda28a7e9b842"></div>
+<div id="altair-viz-03f058728f8d457e8ff51229e3f542eb"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-80f0d2329aec479185aeda28a7e9b842") {
-      outputDiv = document.getElementById("altair-viz-80f0d2329aec479185aeda28a7e9b842");
+    if (outputDiv.id !== "altair-viz-03f058728f8d457e8ff51229e3f542eb") {
+      outputDiv = document.getElementById("altair-viz-03f058728f8d457e8ff51229e3f542eb");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -8187,23 +8188,23 @@ Recall we keep variants that meet <strong>either</strong> threshold, and in an i
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-8aa2bffb5a874b64adf549b14de76066.vega-embed {
+  #altair-viz-c89733429c2140f5896fc82d45724447.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-8aa2bffb5a874b64adf549b14de76066.vega-embed details,
-  #altair-viz-8aa2bffb5a874b64adf549b14de76066.vega-embed details summary {
+  #altair-viz-c89733429c2140f5896fc82d45724447.vega-embed details,
+  #altair-viz-c89733429c2140f5896fc82d45724447.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-8aa2bffb5a874b64adf549b14de76066"></div>
+<div id="altair-viz-c89733429c2140f5896fc82d45724447"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-8aa2bffb5a874b64adf549b14de76066") {
-      outputDiv = document.getElementById("altair-viz-8aa2bffb5a874b64adf549b14de76066");
+    if (outputDiv.id !== "altair-viz-c89733429c2140f5896fc82d45724447") {
+      outputDiv = document.getElementById("altair-viz-c89733429c2140f5896fc82d45724447");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -8378,23 +8379,23 @@ We typically retain a higher fraction of barcode counts than variants, since the
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-caa1aa65f11f452292cc1411056d5801.vega-embed {
+  #altair-viz-bebc964eeeaa43c88871b9eba598af19.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-caa1aa65f11f452292cc1411056d5801.vega-embed details,
-  #altair-viz-caa1aa65f11f452292cc1411056d5801.vega-embed details summary {
+  #altair-viz-bebc964eeeaa43c88871b9eba598af19.vega-embed details,
+  #altair-viz-bebc964eeeaa43c88871b9eba598af19.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-caa1aa65f11f452292cc1411056d5801"></div>
+<div id="altair-viz-bebc964eeeaa43c88871b9eba598af19"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-caa1aa65f11f452292cc1411056d5801") {
-      outputDiv = document.getElementById("altair-viz-caa1aa65f11f452292cc1411056d5801");
+    if (outputDiv.id !== "altair-viz-bebc964eeeaa43c88871b9eba598af19") {
+      outputDiv = document.getElementById("altair-viz-bebc964eeeaa43c88871b9eba598af19");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -8662,23 +8663,23 @@ Mouseover points for details.</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-da099c2a1393434188c19a7f70ec7ce8.vega-embed {
+  #altair-viz-19515d3630f64f349a5ba9c1c23c8b41.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-da099c2a1393434188c19a7f70ec7ce8.vega-embed details,
-  #altair-viz-da099c2a1393434188c19a7f70ec7ce8.vega-embed details summary {
+  #altair-viz-19515d3630f64f349a5ba9c1c23c8b41.vega-embed details,
+  #altair-viz-19515d3630f64f349a5ba9c1c23c8b41.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-da099c2a1393434188c19a7f70ec7ce8"></div>
+<div id="altair-viz-19515d3630f64f349a5ba9c1c23c8b41"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-da099c2a1393434188c19a7f70ec7ce8") {
-      outputDiv = document.getElementById("altair-viz-da099c2a1393434188c19a7f70ec7ce8");
+    if (outputDiv.id !== "altair-viz-19515d3630f64f349a5ba9c1c23c8b41") {
+      outputDiv = document.getElementById("altair-viz-19515d3630f64f349a5ba9c1c23c8b41");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -8844,27 +8845,69 @@ If there is more than one epitope, we fit models with fewer epitopes too:</p>
 <pre>
 
 Fitting a model for 1 epitopes
-#
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>#
 # Fitting site-level fixed Hill coefficient and non-neutralized frac model.
-# Starting optimization of 547 parameters at Wed Nov 29 11:39:29 2023.
+# Starting optimization of 547 parameters at Thu Jan 25 06:38:09 2024.
         step    time_sec        loss    fit_loss  reg_escape  reg_spread reg_spatial reg_uniqueness reg_uniqueness2 reg_activity reg_hill_coefficient reg_non_neutralized_frac
-           0     0.01951       24933       24893           0           0           0              0               0       40.936                    0                        0
-         104      2.1089      1027.5      1019.2      6.9115           0           0              0               0       1.3174                    0                        0
-# Successfully finished at Wed Nov 29 11:39:31 2023.
+           0    0.018372       24933       24893           0           0           0              0               0       40.936                    0                        0
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>         104      2.2229      1027.5      1019.2      6.9115           0           0              0               0       1.3174                    0                        0
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre># Successfully finished at Thu Jan 25 06:38:11 2024.
 #
 # Fitting fixed Hill coefficient and non-neutralized frac model.
-# Starting optimization of 5933 parameters at Wed Nov 29 11:39:31 2023.
+# Starting optimization of 5933 parameters at Thu Jan 25 06:38:11 2024.
         step    time_sec        loss    fit_loss  reg_escape  reg_spread reg_spatial reg_uniqueness reg_uniqueness2 reg_activity reg_hill_coefficient reg_non_neutralized_frac
-           0    0.024741        2636      2572.9      61.765  2.0263e-31           0              0               0       1.3174                    0                        0
-         170      4.8803      2298.8      2178.7      106.41      11.932           0              0               0       1.7272                    0                        0
-# Successfully finished at Wed Nov 29 11:39:36 2023.
+           0    0.027094        2636      2572.9      61.765  2.0263e-31           0              0               0       1.3174                    0                        0
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>         170      5.2265      2298.8      2178.7      106.41      11.932           0              0               0       1.7272                    0                        0
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre># Successfully finished at Thu Jan 25 06:38:16 2024.
 #
 # Fitting model.
-# Starting optimization of 5935 parameters at Wed Nov 29 11:39:36 2023.
+# Starting optimization of 5935 parameters at Thu Jan 25 06:38:16 2024.
         step    time_sec        loss    fit_loss  reg_escape  reg_spread reg_spatial reg_uniqueness reg_uniqueness2 reg_activity reg_hill_coefficient reg_non_neutralized_frac
-           0    0.029231      2297.2      2178.7      106.41      11.932           0              0               0      0.17272                    0                        0
-          80      2.3865      1988.9      1876.8      99.219      10.838           0              0               0      0.14974               1.8852                        0
-# Successfully finished at Wed Nov 29 11:39:39 2023.
+           0    0.028694      2297.2      2178.7      106.41      11.932           0              0               0      0.17272                    0                        0
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>          80       2.369      1988.9      1876.8      99.219      10.838           0              0               0      0.14974               1.8852                        0
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre># Successfully finished at Thu Jan 25 06:38:19 2024.
 Here is the neutralization curve:
 </pre>
 </div>
@@ -8873,23 +8916,23 @@ Here is the neutralization curve:
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-020eda8b57c94dab9c2d1049f5335427.vega-embed {
+  #altair-viz-cef5d29f122a4c70a5c373f6696342d8.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-020eda8b57c94dab9c2d1049f5335427.vega-embed details,
-  #altair-viz-020eda8b57c94dab9c2d1049f5335427.vega-embed details summary {
+  #altair-viz-cef5d29f122a4c70a5c373f6696342d8.vega-embed details,
+  #altair-viz-cef5d29f122a4c70a5c373f6696342d8.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-020eda8b57c94dab9c2d1049f5335427"></div>
+<div id="altair-viz-cef5d29f122a4c70a5c373f6696342d8"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-020eda8b57c94dab9c2d1049f5335427") {
-      outputDiv = document.getElementById("altair-viz-020eda8b57c94dab9c2d1049f5335427");
+    if (outputDiv.id !== "altair-viz-cef5d29f122a4c70a5c373f6696342d8") {
+      outputDiv = document.getElementById("altair-viz-cef5d29f122a4c70a5c373f6696342d8");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
@@ -8950,23 +8993,23 @@ Here is the neutralization curve:
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-d3477a9e21844d67b9d5da8aa119f6d2.vega-embed {
+  #altair-viz-fd9c9b42cdfc44319bc23aec26122aa7.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-d3477a9e21844d67b9d5da8aa119f6d2.vega-embed details,
-  #altair-viz-d3477a9e21844d67b9d5da8aa119f6d2.vega-embed details summary {
+  #altair-viz-fd9c9b42cdfc44319bc23aec26122aa7.vega-embed details,
+  #altair-viz-fd9c9b42cdfc44319bc23aec26122aa7.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-d3477a9e21844d67b9d5da8aa119f6d2"></div>
+<div id="altair-viz-fd9c9b42cdfc44319bc23aec26122aa7"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-d3477a9e21844d67b9d5da8aa119f6d2") {
-      outputDiv = document.getElementById("altair-viz-d3477a9e21844d67b9d5da8aa119f6d2");
+    if (outputDiv.id !== "altair-viz-fd9c9b42cdfc44319bc23aec26122aa7") {
+      outputDiv = document.getElementById("altair-viz-fd9c9b42cdfc44319bc23aec26122aa7");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
