@@ -24,7 +24,7 @@ You can also make changes to the [dms-vep-pipeline-3](https://github.com/dms-vep
 The configuration for the pipeline is in [config.yaml](config.yaml) and the files in [./data/](data) referenced therein.
 To run the pipeline, do:
 
-    snakemake -j 8 --use-conda -s dms-vep-pipeline-3/Snakefile
+    snakemake -j 8 --software-deployment-method conda -s dms-vep-pipeline-3/Snakefile
 
 To run on the Hutch cluster via [slurm](https://slurm.schedmd.com/), you can run the file [run_Hutch_cluster.bash](run_Hutch_cluster.bash):
 
