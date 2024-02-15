@@ -37,7 +37,7 @@ results/func_effects/averages/*
 
 !results/func_effect_diffs
 results/func_effect_diffs/*
-!results/func_effect_diffs/*_comparison_diffs.csv
+!results/func_effect_diffs/*_diffs.csv
 
 !results/func_effect_shifts
 results/func_effect_shifts/*
