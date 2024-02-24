@@ -182,14 +182,14 @@ func_effect_diffs:
         difference_std: 2  # standard deviation difference across pairwise comparisons for mutation
         fraction_pairs_w_mutation: 1  # fraction of all pairs between conditions w mutation
         best_effect: -2  # effect must be >= for at least one condition
-        SA23 entry effect: -2  # slider on effect in this condition, but no initial value
+        SA23 entry effect: -8  # slider on effect in this condition, but no initial value
         SA26 entry effect: 0  # slider on effect in this condition, but no initial value
       addtl_slider_stats_hide_not_filter: [best_effect, SA23 entry effect, SA26 entry effect]
       addtl_slider_stats_as_max: [difference_std]
       heatmap_max_at_least: 1
       heatmap_min_at_least: -1
       init_floor_at_zero: false
-      init_site_statistic: mean_abs
+      init_site_statistic: sum
       site_zoom_bar_color_col: region  # supplied in `site_numbering_map`
       slider_binding_range_kwargs:
         times_seen:
