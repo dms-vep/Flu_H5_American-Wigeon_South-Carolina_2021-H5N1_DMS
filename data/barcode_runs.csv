@@ -122,10 +122,10 @@ Lib2-231129-pig-sera-978-0.00552,Lib2,2023-11-29,/fh/fast/bloom_j/SR/ngs/illumin
 Lib2-231129-pig-sera-978-0.01934,Lib2,2023-11-29,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/231129_VH01189_196_AAFF7MLM5/Unaligned/Project_bdadonai/Lib2_978_2_S24_R1_001.fastq.gz
 Lib2-231129-pig-sera-978-0.05525,Lib2,2023-11-29,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/231129_VH01189_196_AAFF7MLM5/Unaligned/Project_bdadonai/Lib2_978_3_S25_R1_001.fastq.gz
 Lib2-231129-no-antibody-control,Lib2,2023-11-29,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/231129_VH01189_196_AAFF7MLM5/Unaligned/Project_bdadonai/Lib2_no_mAb_S26_R1_001.fastq.gz
-Lib1-240125-293-SA23-VSVG-control,Lib1,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240124_VH00699_428_AAFGTFNM5/Unaligned/Project_bdadonai/Lib1_VSVG_SA23_S1_R1_001.fastq.gz
-Lib2-240125-293-SA23-VSVG-control,Lib2,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240124_VH00699_428_AAFGTFNM5/Unaligned/Project_bdadonai/Lib2_VSVG_SA23_S2_R1_001.fastq.gz
-Lib1-240125-293-SA26-VSVG-control,Lib1,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240124_VH00699_428_AAFGTFNM5/Unaligned/Project_bdadonai/Lib1_VSVG_SA26_S3_R1_001.fastq.gz
-Lib2-240125-293-SA26-VSVG-control,Lib2,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240124_VH00699_428_AAFGTFNM5/Unaligned/Project_bdadonai/Lib2_VSVG_SA26_S4_R1_001.fastq.gz
+Lib1-240125-293-SA26-VSVG-control,Lib1,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240124_VH00699_428_AAFGTFNM5/Unaligned/Project_bdadonai/Lib1_VSVG_SA23_S1_R1_001.fastq.gz
+Lib2-240125-293-SA26-VSVG-control,Lib2,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240124_VH00699_428_AAFGTFNM5/Unaligned/Project_bdadonai/Lib2_VSVG_SA23_S2_R1_001.fastq.gz
+Lib1-240125-293-SA23-VSVG-control,Lib1,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240124_VH00699_428_AAFGTFNM5/Unaligned/Project_bdadonai/Lib1_VSVG_SA26_S3_R1_001.fastq.gz
+Lib2-240125-293-SA23-VSVG-control,Lib2,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240124_VH00699_428_AAFGTFNM5/Unaligned/Project_bdadonai/Lib2_VSVG_SA26_S4_R1_001.fastq.gz
 Lib1-240125-293-SA23-H5-control,Lib1,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240124_VH00699_428_AAFGTFNM5/Unaligned/Project_bdadonai/Lib1_H5_SA23_S5_R1_001.fastq.gz
 Lib2-240125-293-SA23-H5-control,Lib2,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240124_VH00699_428_AAFGTFNM5/Unaligned/Project_bdadonai/Lib2_H5_SA23_S6_R1_001.fastq.gz
 Lib1-240125-293-SA26-H5-control,Lib1,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240124_VH00699_428_AAFGTFNM5/Unaligned/Project_bdadonai/Lib1_H5_SA26_S7_R1_001.fastq.gz
