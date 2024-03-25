@@ -32,12 +32,12 @@ rule sialic_acid_entry_difference_summary:
         diff_df="results/func_effect_diffs/SA26_vs_SA23_entry_diffs.csv",
     output:
         nb="results/notebooks/SA_diff_summary.ipynb",
-        summary_df="results/func_effect_diffs/SA_diff_summary.csv"
+        summary="results/func_effect_diffs/SA_diff_summary.csv"
     params:
         yaml=lambda _, input, output: yaml.round_trip_dump(
             {
                 "diff_df": input.diff_df,
-                "summary_df": output.summary_df,
+                "summary": output.summary,
             }
         ),
     log:
@@ -55,7 +55,7 @@ docs["Additional data files"] = {
         "CSV converting among different protein numbering schemes":
             config["site_numbering_map"],
         "Notebook comparing entry between 2,3 and 2,6 sialic acid expressing cells": rules.sialic_acid_entry.output.nb,
-        "Summary CSV for 2,3 vs 2,6 sialic acid entry": rules.sialic_acid_entry_difference_summary.output.summary_df,
+        "Summary CSV for 2,3 vs 2,6 sialic acid entry": rules.sialic_acid_entry_difference_summary.output.summary,
     },
 }
 
