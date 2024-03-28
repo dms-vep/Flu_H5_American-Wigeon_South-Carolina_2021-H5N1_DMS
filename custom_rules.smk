@@ -35,13 +35,13 @@ rule summary_with_difference:
         diffs="results/func_effect_diffs/SA26_vs_SA23_entry_diffs.csv"
     output:
         nb="results/notebooks/phenotype_summary_file.ipynb",
-        summary_with_diffs="results/summaries/summary_with_diffs.csv",
+        phenotypes_summary="results/summaries/phenotypes_summary.csv",
     params:
         yaml=lambda _, input, output: yaml.round_trip_dump(
             {
                 "summary_file": input.summary_file,
                 "diffs":  input.diffs,
-                "summary_with_diffs": output.summary_with_diffs,
+                "phenotypes_summary": output.phenotypes_summary,
             }
         ),
     log:
@@ -59,7 +59,7 @@ docs["Additional data files"] = {
         "CSV converting among different protein numbering schemes":
             config["site_numbering_map"],
         "Notebook comparing entry between 2,3 and 2,6 sialic acid expressing cells": rules.sialic_acid_entry.output.nb,
-        "Summary CSV for all phenotypes": rules.summary_with_difference.output.summary_with_diffs,
+        "Summary CSV for all phenotypes": rules.summary_with_difference.output.phenotypes_summary,
     },
 }
 
