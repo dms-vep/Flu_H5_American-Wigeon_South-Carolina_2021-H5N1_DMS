@@ -27,14 +27,14 @@ rule sialic_acid_entry:
     shell:
         "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
 
-rule summary_with_difference:
+rule phenotypes_summary:
     """CMake summary CSV with all phenotypes"""
     input:
-        nb="analysis_notebooks/phenotype_summary_file.ipynb",
+        nb="analysis_notebooks/phenotype_summary.ipynb",
         summary_file="results/summaries/summary.csv",
         diffs="results/func_effect_diffs/SA26_vs_SA23_entry_diffs.csv"
     output:
-        nb="results/notebooks/phenotype_summary_file.ipynb",
+        nb="results/notebooks/phenotype_summary.ipynb",
         phenotypes_summary="results/summaries/phenotypes_summary.csv",
     params:
         yaml=lambda _, input, output: yaml.round_trip_dump(
@@ -45,7 +45,7 @@ rule summary_with_difference:
             }
         ),
     log:
-        log="results/logs/diff_summary.txt",
+        log="results/logs/phenotypes_summary.txt",
     conda:
         os.path.join(config["pipeline_path"], "environment.yml")
     shell:
@@ -59,7 +59,7 @@ docs["Additional data files"] = {
         "CSV converting among different protein numbering schemes":
             config["site_numbering_map"],
         "Notebook comparing entry between 2,3 and 2,6 sialic acid expressing cells": rules.sialic_acid_entry.output.nb,
-        "Summary CSV for all phenotypes": rules.summary_with_difference.output.phenotypes_summary,
+        "Summary CSV for all phenotypes": rules.phenotypes_summary.output.phenotypes_summary,
     },
 }
 
