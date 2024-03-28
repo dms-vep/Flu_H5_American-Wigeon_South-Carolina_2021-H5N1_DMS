@@ -6,7 +6,7 @@
 # --------------------------------------------------------------------------------------
 
 summary:
-  min_times_seen: 3  # only include mutations with times_seen >= this
+  min_times_seen: 2  # only include mutations with times_seen >= this
   min_frac_models: 1  # only include mutations in >= this fraction of models
   alphabet: [A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y]  # amino acids to include
   init_floor_escape_at_zero: true  # initially floor site escape to be >= 0?
@@ -57,6 +57,8 @@ summary:
       max_at_least: 1
       min_at_least: 0
       init_min_value: -3  # initial min value in slider
+      le_filters:  # only keep entries with indicated column is <= indicated value
+        effect_std: 3 
     Entry in 23 linked sialic acid cells:  # name of functional selection
       condition: 293_SA23_entry  # condition specified in `avg_func_effects`
       effect_type: func_effects  # "func_effects" or "latent_effects"
@@ -65,6 +67,8 @@ summary:
       max_at_least: 1
       min_at_least: 0
       init_min_value: -3  # initial min value in slider
+      le_filters:  # only keep entries with indicated column is <= indicated value
+        effect_std: 3 
     Entry in 26 linked sialic acid cells:  # name of functional selection
       condition: 293_SA26_entry  # condition specified in `avg_func_effects`
       effect_type: func_effects  # "func_effects" or "latent_effects"
@@ -72,7 +76,9 @@ summary:
       negative_color: "#F0E442"  # yellow
       max_at_least: 1
       min_at_least: 0
-      init_min_value: -3  # initial min value in slider    
+      init_min_value: -3  # initial min value in slider
+      le_filters:  # only keep entries with indicated column is <= indicated value
+        effect_std: 3 
   other_assays:  # other assays that we show, empty dict if no assays being shown
     pH_stability:  # assay type
       pH stability:  # name of particular assay condition
@@ -82,7 +88,9 @@ summary:
         negative_color: "#D55E00"  # red
         max_at_least: 1
         min_at_least: 0
-        init_min_value: -10  # initial min value in slider 
+        init_min_value: -10  # initial min value in slider
+        le_filters:  # only keep entries with indicated column is <= indicated value
+          pH stability_std: 3 
   title: Effects of mutations to hemagglutinin (HA) of H5N1 strain A/turkey/Indiana/22-003707-003/2022 on serum antibody escape, HA-mediated cell entry, and HA stability as measured in lentiviral deep mutational scanning
   legend: |
     This is is an interactive chart. Mouseover points for details and measurements, and
