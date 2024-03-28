@@ -83,3 +83,4 @@ results/pH_stability/averages/*
 !results/summaries
 results/summaries/*
 !results/summaries/summary.csv
+!results/summaries/phenotype_summary.csv

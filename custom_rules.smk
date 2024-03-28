@@ -9,6 +9,7 @@ rule sialic_acid_entry:
         nb="analysis_notebooks/SA_functional_scores.ipynb",
         SA23_csv="results/func_effects/averages/293_SA23_entry_func_effects.csv",
         SA26_csv="results/func_effects/averages/293_SA26_entry_func_effects.csv",
+        c293T_csv="results/func_effects/averages/293T_entry_func_effects.csv",
     output:
         nb="results/notebooks/SA_functional_scores.ipynb",
     params:
@@ -16,6 +17,7 @@ rule sialic_acid_entry:
             {
                 "SA23_csv": input.SA23_csv,
                 "SA26_csv": input.SA26_csv,
+                "c293T_csv": input.c293T_csv
             }
         ),
     log:
@@ -25,23 +27,25 @@ rule sialic_acid_entry:
     shell:
         "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
 
-rule sialic_acid_entry_difference_summary:
-    """Compare binding and escape at key sites."""
+rule phenotypes_summary:
+    """CMake summary CSV with all phenotypes"""
     input:
-        nb="analysis_notebooks/SA_diff_summary.ipynb",
-        diff_df="results/func_effect_diffs/SA26_vs_SA23_entry_diffs.csv",
+        nb="analysis_notebooks/phenotype_summary.ipynb",
+        summary_file="results/summaries/summary.csv",
+        diffs="results/func_effect_diffs/SA26_vs_SA23_entry_diffs.csv"
     output:
-        nb="results/notebooks/SA_diff_summary.ipynb",
-        summary="results/func_effect_diffs/SA_diff_summary.csv"
+        nb="results/notebooks/phenotype_summary.ipynb",
+        phenotypes_summary="results/summaries/phenotypes_summary.csv",
     params:
         yaml=lambda _, input, output: yaml.round_trip_dump(
             {
-                "diff_df": input.diff_df,
-                "summary": output.summary,
+                "summary_file": input.summary_file,
+                "diffs":  input.diffs,
+                "phenotypes_summary": output.phenotypes_summary,
             }
         ),
     log:
-        log="results/logs/SA_diff_summary.txt",
+        log="results/logs/phenotypes_summary.txt",
     conda:
         os.path.join(config["pipeline_path"], "environment.yml")
     shell:
@@ -55,7 +59,7 @@ docs["Additional data files"] = {
         "CSV converting among different protein numbering schemes":
             config["site_numbering_map"],
         "Notebook comparing entry between 2,3 and 2,6 sialic acid expressing cells": rules.sialic_acid_entry.output.nb,
-        "Summary CSV for 2,3 vs 2,6 sialic acid entry": rules.sialic_acid_entry_difference_summary.output.summary,
+        "Summary CSV for all phenotypes": rules.phenotypes_summary.output.phenotypes_summary,
     },
 }
 
