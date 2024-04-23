@@ -91,7 +91,7 @@ summary:
         init_min_value: -10  # initial min value in slider
         le_filters:  # only keep entries with indicated column is <= indicated value
           pH stability_std: 3 
-  title: Effects of mutations to hemagglutinin (HA) of H5N1 strain A/turkey/Indiana/22-003707-003/2022 on serum antibody escape, HA-mediated cell entry, and HA stability as measured in lentiviral deep mutational scanning
+  title: Effects of mutations to hemagglutinin (HA) of H5N1 strain A/American Wigeon/South Carolina/USDA-000345-001/2021 on serum antibody escape, HA-mediated cell entry, and HA stability as measured in lentiviral deep mutational scanning
   legend: |
     This is is an interactive chart. Mouseover points for details and measurements, and
     use the top zoom bar to zoom in on specific sites. The options at the bottom let you
