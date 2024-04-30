@@ -92,6 +92,7 @@ polyclonal_params_default: &polyclonal_params_default
 
 # keyword arguments to `Polyclonal.mut_escape_plot`
 escape_plot_kwargs_default: &escape_plot_kwargs_default
+  alphabet: [A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y] 
   addtl_slider_stats:
     times_seen: 2
   heatmap_max_at_least: 2
