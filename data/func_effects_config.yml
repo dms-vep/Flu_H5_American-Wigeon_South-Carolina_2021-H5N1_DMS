@@ -96,7 +96,9 @@ avg_func_effects_default: &avg_func_effects_default
     addtl_slider_stats:
       times_seen: 2
       effect_std: 3
-    addtl_slider_stats_as_max: [effect_std]
+      nt changes to codon: 3
+    addtl_slider_stats_as_max: [effect_std, nt changes to codon]
+    addtl_slider_stats_hide_not_filter: [nt changes to codon]
     heatmap_max_at_least: 2
     heatmap_min_at_least: -1
     init_floor_at_zero: false
@@ -109,6 +111,10 @@ avg_func_effects_default: &avg_func_effects_default
         max: 25
       n_selections:
         step: 1
+      nt changes to codon:
+        step: 1
+        min: 1
+        max: 3
   legend: |
     Interactive plot of the effects of mutations. Negative values indicated deleterious mutations,
     positive values indicate beneficial mutations for the measured phenotype.
@@ -188,8 +194,9 @@ func_effect_diffs:
         best_effect: -2  # effect must be >= for at least one condition
         SA23 entry effect: -8  # slider on effect in this condition, but no initial value
         SA26 entry effect: 0  # slider on effect in this condition, but no initial value
-      addtl_slider_stats_hide_not_filter: [best_effect, SA23 entry effect, SA26 entry effect]
-      addtl_slider_stats_as_max: [difference_std]
+        nt changes to codon: 3
+      addtl_slider_stats_hide_not_filter: [best_effect, SA23 entry effect, SA26 entry effect, nt changes to codon]
+      addtl_slider_stats_as_max: [difference_std, nt changes to codon]
       heatmap_max_at_least: 1
       heatmap_min_at_least: -1
       init_floor_at_zero: false
@@ -200,6 +207,10 @@ func_effect_diffs:
           step: 1
           min: 1
           max: 25
+        nt changes to codon:
+          step: 1
+          min: 1
+          max: 3
     title: Difference between cell entry in SA26 and SA23 cells
     legend: |
       Interactive plot of the difference of effects of mutations between two conditions.
@@ -286,6 +297,9 @@ avg_func_effect_shifts_default: &avg_func_effect_shifts_default
   plot_kwargs:
     addtl_slider_stats:
       times_seen: 2
+      nt changes to codon: 3
+    addtl_slider_stats_as_max: [nt changes to codon]
+    addtl_slider_stats_hide_not_filter: [nt changes to codon]
     heatmap_max_at_least: 0.5
     heatmap_min_at_least: -0.5
     init_floor_at_zero: false
@@ -298,6 +312,10 @@ avg_func_effect_shifts_default: &avg_func_effect_shifts_default
         max: 25
       n_comparisons:
         step: 1
+      nt changes to codon:
+        step: 1
+        min: 1
+        max: 3
   legend: |
     Interactive plot of shifts in effects of mutations. Negative values indicate mutations that
     have shifted to become more deleterious; positive values indicate mutations shifted to

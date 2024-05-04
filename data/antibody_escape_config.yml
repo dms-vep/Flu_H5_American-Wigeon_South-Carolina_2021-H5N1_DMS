@@ -791,6 +791,16 @@ avg_antibody_escape_default: &avg_antibody_escape_default
   icXX: 80
   escape_plot_kwargs:
     <<: *escape_plot_kwargs_default
+    addtl_slider_stats:
+      times_seen: 2
+      nt changes to codon: 3
+    addtl_slider_stats_as_max: [nt changes to codon]
+    addtl_slider_stats_hide_not_filter: [nt changes to codon]
+    slider_binding_range_kwargs:
+      nt changes to codon:
+        min: 1
+        max: 3
+        step: 1
     avg_type: median
     per_model_tooltip: true
   plot_hide_stats: *plot_hide_stats_default
