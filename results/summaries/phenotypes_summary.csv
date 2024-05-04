@@ -1,4 +1,4 @@
-site,sequential_site,reference_H1_site,region,wildtype,mutant,mouse sera escape,ferret sera escape,pig sera escape,Entry in 293T cells,Entry in 23 linked sialic acid cells,Entry in 26 linked sialic acid cells,pH stability,26 vs 23 26 linked sialic acid cells entry difference
+site,sequential_site,reference_H1_site,region,wildtype,mutant,mouse sera escape,ferret sera escape,pig sera escape,Entry in 293T cells,Entry in 23 linked sialic acid cells,Entry in 26 linked sialic acid cells,pH stability,26 vs 23 linked sialic acid cells entry difference
 -6,1,-16,HA1,M,E,,,,-3.203,-3.719,-2.163,,0.0
 -6,1,-16,HA1,M,F,,,,-5.774,-5.855,-3.671,,0.0
 -6,1,-16,HA1,M,G,,,,-5.777,-5.086,-5.306,,0.0
