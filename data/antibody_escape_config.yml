@@ -795,6 +795,7 @@ avg_antibody_escape_default: &avg_antibody_escape_default
       times_seen: 2
       nt changes to codon: 3
     addtl_slider_stats_as_max: [nt changes to codon]
+    addtl_slider_stats_hide_not_filter: [nt changes to codon]
     slider_binding_range_kwargs:
       nt changes to codon:
         min: 1
