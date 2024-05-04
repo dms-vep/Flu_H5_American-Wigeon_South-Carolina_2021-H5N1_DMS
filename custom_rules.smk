@@ -3,6 +3,24 @@
 This file is included by the pipeline ``Snakefile``.
 
 """
+
+
+rule nt_changes_to_codon:
+    """Annotate how nucleotide changes to codon required for each amino-acid mutation."""
+    input:
+        natural_geneseq="data/American_Wigeon_H5N1_HA_EPI2709137.fa",
+        site_numbering_map=config["site_numbering_map"],
+        pacbio_amplicon=config["pacbio_amplicon"],
+    output:
+        annotations=config["mutation_annotations"],
+    log:
+        notebook="results/logs/nt_changes_to_codon.ipynb"
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    notebook:
+        "analysis_notebooks/nt_changes_to_codon.py.ipynb"
+
+
 rule sialic_acid_entry:
     """Compare binding and escape at key sites."""
     input:
