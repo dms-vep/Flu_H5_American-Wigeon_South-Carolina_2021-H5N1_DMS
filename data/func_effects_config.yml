@@ -161,6 +161,7 @@ func_effect_diffs:
     avg_method: median
     per_selection_tooltips: true
     plot_kwargs:
+      alphabet: [R,K,H,D,E,Q,N,S,T,Y,W,F,A,I,L,M,V,G,P,C]
       addtl_slider_stats:
         times_seen: 2
         difference_std: 2  # standard deviation difference across pairwise comparisons for mutation
