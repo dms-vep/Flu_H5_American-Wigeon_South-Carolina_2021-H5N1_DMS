@@ -783,8 +783,6 @@ ph_stability_selections:
 #   - `icXX`: for the plot showing fold-change in ICXX (eg, IC90), what is XX (eg, 90)
 #   - `escape_plot_kwargs`: keyword arguments for `PolyclonalAverage.mut_escape_plot`
 #   - `plot_hide_stats`: dict giving data frames with stats for slider to hide mutations
-#   - `title`: title of plots
-#   - `legend`: legend added to plots
 
 # Define defaults for each antibody/serum, used via the merge (<<) operator
 avg_antibody_escape_default: &avg_antibody_escape_default
@@ -804,22 +802,11 @@ avg_antibody_escape_default: &avg_antibody_escape_default
     avg_type: median
     per_model_tooltip: true
   plot_hide_stats: *plot_hide_stats_default
-  legend: |
-    Interactive plot of how mutations affect antibody escape.
-
-    Use the site zoom bar at the top to zoom in on specific sites. The line plot shows a summary statistic indicating escape at each site. The heat map shows escape for individual mutations, with parental amino-acid identities indicated by x and gray indicating non-measured mutations. Mouse over points for details.
-
-    Options at the bottom of the plot let you modify the display, such as by selecting how many different variants a mutation must be seen in to be shown (*minimum times_seen*), how many different experimental selections the mutation was measured in (*minimum n_models*), what site summary statistic to show, etc.
-
-    You can filter by the functional effects of mutations. Mutations removed by this filter are shown as dark gray squares in the heat map to distinguish unmeasured mutations from ones measured to be deleterious.
-
-    The minimum max of escape at site is useful to select the sites where mutations confer the most escape.
 
 # Define the antibodies/sera to average
 avg_antibody_escape:
   sera1-01:
     <<: *avg_antibody_escape_default
-    title: sera1-01 escape
     selections:
       - Lib1-230630-sera-1-01
       - Lib2-230630-sera-1-01
@@ -827,87 +814,73 @@ avg_antibody_escape:
       - Lib2-230724-sera-1-01
   sera1-02:
     <<: *avg_antibody_escape_default
-    title: sera1-02 escape
     selections:
       - Lib1-230630-sera-1-02
       - Lib2-230630-sera-1-02
   sera1-03:
     <<: *avg_antibody_escape_default
-    title: sera1-03 escape
     selections:
       - Lib1-230630-sera-1-03
       - Lib2-230630-sera-1-03
   sera1-04:
     <<: *avg_antibody_escape_default
-    title: sera1-04 escape
     selections:
       - Lib1-230630-sera-1-04
       - Lib2-230630-sera-1-04
   sera1-05:
     <<: *avg_antibody_escape_default
-    title: sera1-05 escape
     selections:
       - Lib1-230613-sera-1-05
       - Lib2-230613-sera-1-05
   sera2-01:
     <<: *avg_antibody_escape_default
-    title: sera2-01 escape
     selections:
       - Lib1-230724-sera-2-01
       - Lib2-230724-sera-2-01
   sera2-04:
     <<: *avg_antibody_escape_default
-    title: sera2-04 escape
     selections:
       - Lib1-230630-sera-2-04
       - Lib2-230630-sera-2-04
   sera2-05:
     <<: *avg_antibody_escape_default
-    title: sera2-05 escape
     selections:
       - Lib1-230724-sera-2-05
       - Lib2-230724-sera-2-05
 
   ferret-7:
     <<: *avg_antibody_escape_default
-    title: ferret-7 escape
     selections:
       - Lib1-230822-ferret-sera-7
       - Lib2-230822-ferret-sera-7
   ferret-10:
     <<: *avg_antibody_escape_default
-    title: ferret-10 escape
     selections:
       - Lib1-230822-ferret-sera-10
       - Lib2-230822-ferret-sera-10
   ferret-19:
     <<: *avg_antibody_escape_default
-    title: ferret-19 escape
     selections:
       - Lib1-230822-ferret-sera-19
       - Lib2-230822-ferret-sera-19
 
   pig-972:
     <<: *avg_antibody_escape_default
-    title: pig-972 escape
     selections:
       - Lib1-231129-pig-sera-972
       - Lib2-231129-pig-sera-972
   pig-973:
     <<: *avg_antibody_escape_default
-    title: pig-973 escape
     selections:
       - Lib1-231129-pig-sera-973
       - Lib2-231129-pig-sera-973
   pig-977:
     <<: *avg_antibody_escape_default
-    title: pig-977 escape
     selections:
       - Lib1-231129-pig-sera-977
       - Lib2-231129-pig-sera-977
   pig-978:
     <<: *avg_antibody_escape_default
-    title: pig-978 escape
     selections:
       - Lib1-231129-pig-sera-978
       - Lib2-231129-pig-sera-978
@@ -916,7 +889,6 @@ avg_antibody_escape:
 avg_ph_stability:
   pH_stability:
     <<: *avg_antibody_escape_default
-    title: pH stability
     selections:
       - Lib1-230822-pH
       - Lib2-230822-pH

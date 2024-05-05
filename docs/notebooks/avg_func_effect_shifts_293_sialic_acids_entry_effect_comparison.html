@@ -7571,7 +7571,7 @@ The next cell is tagged as <code>parameters</code> to get the passed parameters.
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_injected-parameters" id="cell-id=a9ef4651">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_injected-parameters" id="cell-id=f0273815">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7598,8 +7598,6 @@ The next cell is tagged as <code>parameters</code> to get the passed parameters.
             <span class="s2">"nt changes to codon"</span><span class="p">:</span> <span class="p">{</span><span class="s2">"step"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"min"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"max"</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
         <span class="p">},</span>
     <span class="p">},</span>
-    <span class="s2">"legend"</span><span class="p">:</span> <span class="s2">"Interactive plot of shifts in effects of mutations. Negative values indicate mutations that</span><span class="se">\n</span><span class="s2">have shifted to become more deleterious; positive values indicate mutations shifted to</span><span class="se">\n</span><span class="s2">be more beneficial.</span><span class="se">\n\n</span><span class="s2">Use the site zoom bar at the top to zoom in on specific sites. The line plot shows a summary</span><span class="se">\n</span><span class="s2">statistic indicating the effects of mutations at each site. The heat map shows the effects of</span><span class="se">\n</span><span class="s2">individual mutations, with parental amino-acid identities indicated by x and gray</span><span class="se">\n</span><span class="s2">indicating non-measured mutations.</span><span class="se">\n\n</span><span class="s2">You can mouse over points to get details about individual measurements, including measurements</span><span class="se">\n</span><span class="s2">in individual comparisons.</span><span class="se">\n\n</span><span class="s2">The options at the bottom of the plot let you modify the display, such as by selecting how</span><span class="se">\n</span><span class="s2"> many different variants a mutation must be seen in to be shown (*minimum times_seen*),</span><span class="se">\n</span><span class="s2"> how many different experimental comparisons the mutation was measured in</span><span class="se">\n</span><span class="s2">(*minimum n_comparisons*), what site summary statistic to show, etc.</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span>
-    <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Comparison of effects of mutations in H5 HA on cell entry measured in 293 cells expressing either alpha(2,3) or alpha(2,6) sialic acids"</span><span class="p">,</span>
     <span class="s2">"comparisons"</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">"Lib1-240125-293-sialic_acid_entry_effects"</span><span class="p">,</span>
         <span class="s2">"Lib2-240125-293-sialic_acid_entry_effects"</span><span class="p">,</span>
@@ -7609,7 +7607,7 @@ The next cell is tagged as <code>parameters</code> to get the passed parameters.
 <span class="n">mutation_annotations_csv</span> <span class="o">=</span> <span class="s2">"results/mutation_annotations/mutation_annotations.csv"</span>
 <span class="n">site_numbering_map_csv</span> <span class="o">=</span> <span class="s2">"data/site_numbering_map.csv"</span>
 <span class="n">shifts_csv</span> <span class="o">=</span> <span class="s2">"results/func_effect_shifts/averages/293_sialic_acids_entry_effect_comparison_shifts.csv"</span>
-<span class="n">shifts_html</span> <span class="o">=</span> <span class="s2">"results/func_effect_shifts/averages/293_sialic_acids_entry_effect_comparison_shifts_nolegend.html"</span>
+<span class="n">shifts_html</span> <span class="o">=</span> <span class="s2">"results/func_effect_shifts/averages/293_sialic_acids_entry_effect_comparison_shifts.html"</span>
 </pre></div>
 </div>
 </div>
@@ -7760,6 +7758,56 @@ In general, you might hope to find a lasso shift that has relatively few non-zer
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Only plotting mutations with times_seen &gt;= 2
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/home/jbloom/.local/lib/python3.11/site-packages/seaborn/_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context('mode.use_inf_as_na', True):
+/home/jbloom/.local/lib/python3.11/site-packages/seaborn/_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context('mode.use_inf_as_na', True):
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/home/jbloom/.local/lib/python3.11/site-packages/seaborn/_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context('mode.use_inf_as_na', True):
+/home/jbloom/.local/lib/python3.11/site-packages/seaborn/_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context('mode.use_inf_as_na', True):
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/home/jbloom/.local/lib/python3.11/site-packages/seaborn/_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context('mode.use_inf_as_na', True):
+/home/jbloom/.local/lib/python3.11/site-packages/seaborn/_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context('mode.use_inf_as_na', True):
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/home/jbloom/.local/lib/python3.11/site-packages/seaborn/_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context('mode.use_inf_as_na', True):
+/home/jbloom/.local/lib/python3.11/site-packages/seaborn/_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context('mode.use_inf_as_na', True):
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/home/jbloom/.local/lib/python3.11/site-packages/seaborn/_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context('mode.use_inf_as_na', True):
+/home/jbloom/.local/lib/python3.11/site-packages/seaborn/_oldcore.py:1119: FutureWarning: use_inf_as_na option is deprecated and will be removed in a future version. Convert inf values to NaN before operating instead.
+  with pd.option_context('mode.use_inf_as_na', True):
 </pre>
 </div>
 </div>
@@ -7974,7 +8022,7 @@ First, get the data to plot:</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Saving chart to results/func_effect_shifts/averages/293_sialic_acids_entry_effect_comparison_shifts_nolegend.html
+<pre>Saving chart to results/func_effect_shifts/averages/293_sialic_acids_entry_effect_comparison_shifts.html
 </pre>
 </div>
 </div>
@@ -7982,23 +8030,23 @@ First, get the data to plot:</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <style>
-  #altair-viz-b91acf08896648ccbd951a3a587765cd.vega-embed {
+  #altair-viz-a0149e9b09a447afabc75ee017aa2703.vega-embed {
     width: 100%;
     display: flex;
   }
 
-  #altair-viz-b91acf08896648ccbd951a3a587765cd.vega-embed details,
-  #altair-viz-b91acf08896648ccbd951a3a587765cd.vega-embed details summary {
+  #altair-viz-a0149e9b09a447afabc75ee017aa2703.vega-embed details,
+  #altair-viz-a0149e9b09a447afabc75ee017aa2703.vega-embed details summary {
     position: relative;
   }
 </style>
-<div id="altair-viz-b91acf08896648ccbd951a3a587765cd"></div>
+<div id="altair-viz-a0149e9b09a447afabc75ee017aa2703"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-b91acf08896648ccbd951a3a587765cd") {
-      outputDiv = document.getElementById("altair-viz-b91acf08896648ccbd951a3a587765cd");
+    if (outputDiv.id !== "altair-viz-a0149e9b09a447afabc75ee017aa2703") {
+      outputDiv = document.getElementById("altair-viz-a0149e9b09a447afabc75ee017aa2703");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm/vega@5?noext",
