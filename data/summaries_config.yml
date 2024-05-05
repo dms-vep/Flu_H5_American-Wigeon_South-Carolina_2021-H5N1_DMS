@@ -99,13 +99,3 @@ summary:
         min: 1
         max: 3
         step: 1
-  title: Effects of mutations to hemagglutinin (HA) of H5N1 strain A/American Wigeon/South Carolina/USDA-000345-001/2021 on serum antibody escape, HA-mediated cell entry, and HA stability as measured in lentiviral deep mutational scanning
-  legend: |
-    This is is an interactive chart. Mouseover points for details and measurements, and
-    use the top zoom bar to zoom in on specific sites. The options at the bottom let you
-    only show escape for sites with some minimal functional effect, choose the site
-    summary metric, or floor the escape at zero.
-
-    The line plots at top show the escape at each site across all sera and for individual
-    sera, and the heatmaps show the effects of individual mutations on sera escape or
-    functions of the protein.
