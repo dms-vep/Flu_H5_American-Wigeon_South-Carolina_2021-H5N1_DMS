@@ -805,44 +805,44 @@ avg_antibody_escape_default: &avg_antibody_escape_default
 
 # Define the antibodies/sera to average
 avg_antibody_escape:
-  sera1-01:
+  mouse-1-01:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-230630-sera-1-01
       - Lib2-230630-sera-1-01
       - Lib1-230724-sera-1-01
       - Lib2-230724-sera-1-01
-  sera1-02:
+  mouse-1-02:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-230630-sera-1-02
       - Lib2-230630-sera-1-02
-  sera1-03:
+  mouse-1-03:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-230630-sera-1-03
       - Lib2-230630-sera-1-03
-  sera1-04:
+  mouse-1-04:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-230630-sera-1-04
       - Lib2-230630-sera-1-04
-  sera1-05:
+  mouse-1-05:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-230613-sera-1-05
       - Lib2-230613-sera-1-05
-  sera2-01:
+  mouse-2-01:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-230724-sera-2-01
       - Lib2-230724-sera-2-01
-  sera2-04:
+  mouse-2-04:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-230630-sera-2-04
       - Lib2-230630-sera-2-04
-  sera2-05:
+  mouse-2-05:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-230724-sera-2-05
