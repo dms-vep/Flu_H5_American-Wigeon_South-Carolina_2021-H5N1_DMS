@@ -15,7 +15,7 @@ It must have the following columns:
  - `fastq`: FASTQ file from running CCS
 
 ## Site numbering
-[site_numbering_map.csv](site_numbering_map.csv): Maps several different numbering shcemes for HA. Columns in the spreadsheet include: *sequential_site* (sequential numbering 1,2,3...), *reference_site* (H3 reference numbering), *reference_H1_site* (H1 numbering), *mature_site* (mature numbering starting after signal peptide), *HA1_HA2* (HA1 and HA2 numbering), *region* (assigns each site to a region of the protein).
+[site_numbering_map.csv](site_numbering_map.csv): Maps several different numbering shcemes for HA. Columns in the spreadsheet include: *sequential_site* (sequential numbering of H5 HA 1,2,3...), *reference_site* (H3 reference numbering applied to H5 HA), *reference_H1_site* (H1 numbering applied to H5 HA), *mature_H5_site* (mature numbering of H5 HA which starts after signal peptide), *HA1_HA2_H5_site* (HA1 and HA2 numbering for H5 HA), *region* (assigns each site to a region of the protein).
 
 ## Mutation-type classification
 [data/mutation_design_classification.csv](data/mutation_design_classification.csv) classifies mutations into the different categories of designed mutations.
