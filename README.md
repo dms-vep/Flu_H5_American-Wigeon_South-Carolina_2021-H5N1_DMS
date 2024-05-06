@@ -2,7 +2,7 @@
 Study by Bernadeta Dadonaite and Jesse Bloom.
 
 This repository has the code and data.
-For rendering of key results and an easy-to-interpret summary, see the documentation of the analysis at (https://dms-vep.org/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS)(https://dms-vep.org/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS)
+For rendering of key results and an easy-to-interpret summary, see the documentation of the analysis at [https://dms-vep.org/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS](https://dms-vep.org/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS)
 
 ## Organization of this repo
 
