@@ -100,8 +100,6 @@ escape_plot_kwargs_default: &escape_plot_kwargs_default
   init_floor_at_zero: false
   init_site_statistic: sum
   site_zoom_bar_color_col: region  # supplied in `site_numbering_map`
-  rename_stat_col: site escape
-
 
 # Specify any statistics (usually functional effects) for which you want to enable
 # sliders that hide data. Keyed by statistic name, then next dict gives:
@@ -888,7 +886,22 @@ avg_antibody_escape:
 # define the pH stability selections to average
 avg_stability:
   stability:
-    <<: *avg_antibody_escape_default
+    icXX: 80
+    escape_plot_kwargs:
+      <<: *escape_plot_kwargs_default
+      init_floor_at_zero: true
+      addtl_slider_stats:
+        times_seen: 2
+        nt changes to codon: 3
+      addtl_slider_stats_as_max: [nt changes to codon]
+      addtl_slider_stats_hide_not_filter: [nt changes to codon]
+      slider_binding_range_kwargs:
+        nt changes to codon:
+          min: 1
+          max: 3
+          step: 1
+      avg_type: median
+      per_model_tooltip: true
     selections:
       - Lib1-230822-pH
       - Lib2-230822-pH
