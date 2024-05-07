@@ -31,14 +31,14 @@ assays:
       constant: 0.04
     scale_stat: 1
     stat_name: escape
-  pH_stability:
-    title: pH stability
-    selections: ph_stability_selections
-    averages: avg_ph_stability
+  stability:
+    title: stability
+    selections: stability_selections
+    averages: avg_stability
     prob_escape_scale:
       type: linear
     scale_stat: 1
-    stat_name: pH stability
+    stat_name: stability
 
 # --------------------------------------------------------------------------------------
 # Configuration for the selection experiments for each assay
@@ -709,8 +709,8 @@ antibody_selections:
       concentration: 0.05525
       use_in_fit: true 
 
-# define the pH selections
-ph_stability_selections:
+# define the stability selections
+stability_selections:
   # --------------------------------------------------------------------------------------
   Lib1-230822-pH:
     neut_standard_name: neut_standard
@@ -886,8 +886,8 @@ avg_antibody_escape:
       - Lib2-231129-pig-sera-978
 
 # define the pH stability selections to average
-avg_ph_stability:
-  pH_stability:
+avg_stability:
+  stability:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-230822-pH
