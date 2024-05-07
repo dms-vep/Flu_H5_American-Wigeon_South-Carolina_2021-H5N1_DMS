@@ -45,29 +45,62 @@ rule sialic_acid_entry:
     shell:
         "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
 
-rule phenotypes_summary:
-    """make summary CSV with all phenotypes"""
+
+rule avg_species_sera:
+    """Average escape across each species."""
     input:
-        nb="analysis_notebooks/phenotype_summary.ipynb",
-        summary_file="results/summaries/summary.csv",
-        diffs="results/func_effect_diffs/SA26_vs_SA23_entry_diffs.csv"
+        csvs=lambda wc: [
+            rules.avg_escape.output.effect_csv.format(assay="antibody_escape", antibody=antibody)
+            for antibody in avg_assay_config["antibody_escape"]
+            if antibody.startswith(wc.species)
+        ],
     output:
-        nb="results/notebooks/phenotype_summary.ipynb",
-        phenotypes_summary="results/summaries/phenotypes_summary.csv",
-    params:
-        yaml=lambda _, input, output: yaml.round_trip_dump(
-            {
-                "summary_file": input.summary_file,
-                "diffs":  input.diffs,
-                "phenotypes_summary": output.phenotypes_summary,
-            }
-        ),
+        csv="results/processed_results/avg_of_{species}_sera.csv",
     log:
-        log="results/logs/phenotypes_summary.txt",
+        "results/logs/avg_species_sera_{species}.txt",
     conda:
         os.path.join(config["pipeline_path"], "environment.yml")
-    shell:
-        "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
+    script:
+        "scripts/avg_species_sera.py"
+
+
+rule process_SA26_improvement:
+    """Improvement of entry in 2,6 cells: positive difference and positive 2,6 entry.""" 
+    input:
+        csv="results/func_effect_diffs/SA26_vs_SA23_entry_diffs.csv",
+    output:
+        csv="results/processed_results/increased_SA26_usage.csv",
+    log:
+        "results/logs/process_SA26_improvement.txt",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    script:
+        "scripts/process_SA26_improvement.py"
+
+
+#rule phenotypes_summary:
+#    """make summary CSV with all phenotypes"""
+#    input:
+#        nb="analysis_notebooks/phenotype_summary.ipynb",
+#        summary_file="results/summaries/summary.csv",
+#        diffs="results/func_effect_diffs/SA26_vs_SA23_entry_diffs.csv"
+#    output:
+#        nb="results/notebooks/phenotype_summary.ipynb",
+#        phenotypes_summary="results/summaries/phenotypes_summary.csv",
+#    params:
+#        yaml=lambda _, input, output: yaml.round_trip_dump(
+#            {
+#                "summary_file": input.summary_file,
+#                "diffs":  input.diffs,
+#                "phenotypes_summary": output.phenotypes_summary,
+#            }
+#        ),
+#    log:
+#        log="results/logs/phenotypes_summary.txt",
+#    conda:
+#        os.path.join(config["pipeline_path"], "environment.yml")
+#    shell:
+#        "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
 
 rule functional_effect_distribution:
     """Plot functional effect dristribution for structural elements of HA"""
@@ -102,10 +135,10 @@ docs["Additional files"] = {
         "Notebook comparing entry between 2,3 and 2,6 sialic acid expressing cells":
             rules.sialic_acid_entry.output.nb
     },
-    "Phenotype summary file":{
-        "Summary CSV for all phenotypes":
-            rules.phenotypes_summary.output.phenotypes_summary,
-    },
+#    "Phenotype summary file":{
+#        "Summary CSV for all phenotypes":
+#            rules.phenotypes_summary.output.phenotypes_summary,
+#    },
     "Functional effect distribution ":{
         "Notebook plotting functional effect distribution":
             rules.functional_effect_distribution.output.nb,

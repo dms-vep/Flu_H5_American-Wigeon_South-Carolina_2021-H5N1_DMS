@@ -31,14 +31,14 @@ assays:
       constant: 0.04
     scale_stat: 1
     stat_name: escape
-  pH_stability:
-    title: pH stability
-    selections: ph_stability_selections
-    averages: avg_ph_stability
+  stability:
+    title: stability
+    selections: stability_selections
+    averages: avg_stability
     prob_escape_scale:
       type: linear
     scale_stat: 1
-    stat_name: pH stability
+    stat_name: stability
 
 # --------------------------------------------------------------------------------------
 # Configuration for the selection experiments for each assay
@@ -97,11 +97,9 @@ escape_plot_kwargs_default: &escape_plot_kwargs_default
     times_seen: 2
   heatmap_max_at_least: 2
   heatmap_min_at_least: -2
-  init_floor_at_zero: false
+  init_floor_at_zero: true
   init_site_statistic: sum
   site_zoom_bar_color_col: region  # supplied in `site_numbering_map`
-  rename_stat_col: site escape
-
 
 # Specify any statistics (usually functional effects) for which you want to enable
 # sliders that hide data. Keyed by statistic name, then next dict gives:
@@ -112,7 +110,7 @@ plot_hide_stats_default: &plot_hide_stats_default
   functional effect:
     csv: results/func_effects/averages/293T_entry_func_effects.csv
     csv_col: effect
-    init: -4
+    init: -3
     min_filters:
       times_seen: 2
 
@@ -709,8 +707,8 @@ antibody_selections:
       concentration: 0.05525
       use_in_fit: true 
 
-# define the pH selections
-ph_stability_selections:
+# define the stability selections
+stability_selections:
   # --------------------------------------------------------------------------------------
   Lib1-230822-pH:
     neut_standard_name: neut_standard
@@ -886,9 +884,25 @@ avg_antibody_escape:
       - Lib2-231129-pig-sera-978
 
 # define the pH stability selections to average
-avg_ph_stability:
-  pH_stability:
-    <<: *avg_antibody_escape_default
+avg_stability:
+  stability:
+    icXX: 80
+    escape_plot_kwargs:
+      <<: *escape_plot_kwargs_default
+      init_floor_at_zero: true
+      addtl_slider_stats:
+        times_seen: 2
+        nt changes to codon: 3
+      addtl_slider_stats_as_max: [nt changes to codon]
+      addtl_slider_stats_hide_not_filter: [nt changes to codon]
+      slider_binding_range_kwargs:
+        nt changes to codon:
+          min: 1
+          max: 3
+          step: 1
+      avg_type: median
+      per_model_tooltip: true
+    plot_hide_stats: *plot_hide_stats_default
     selections:
       - Lib1-230822-pH
       - Lib2-230822-pH
