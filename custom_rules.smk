@@ -45,6 +45,21 @@ rule sialic_acid_entry:
     shell:
         "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
 
+
+rule process_SA26_improvement:
+    """Improvement of entry in 2,6 cells: positive difference and positive 2,6 entry.""" 
+    input:
+        csv="results/func_effect_diffs/SA26_vs_SA23_entry_diffs.csv",
+    output:
+        csv="results/processed_results/increased_SA26_usage.csv",
+    log:
+        "results/logs/process_SA26_improvement.txt",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    script:
+        "scripts/process_SA26_improvement.py"
+
+
 rule phenotypes_summary:
     """make summary CSV with all phenotypes"""
     input:

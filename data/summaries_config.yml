@@ -57,7 +57,17 @@ all_sera_escape:
       fixed_min: 0  # heatmaps only show stability **enhancing** mutations
       init_min_value: -10  # initial min value in slider
       le_filters:  # only keep entries with indicated column is <= indicated value
-        stability_std: 3 
+        stability_std: 3
+    SA26 usage increase:
+      csv: results/processed_results/increased_SA26_usage.csv
+      stat: increase_SA26_usage
+      positive_color: "#7600bc"  # purple
+      negative_color: "#F0E442"  # yellow
+      max_at_least: 1
+      fixed_min: 0
+      init_min_value: 0
+      le_filters:
+        increase_SA26_usage_std: 3
   mutation_annotation_sliders:
     nt changes to codon:
       init_value: 3
