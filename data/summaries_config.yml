@@ -5,7 +5,7 @@
 # antibody escape alongside other assays (eg, functional effects of mutations).
 # --------------------------------------------------------------------------------------
 
-summary:
+all_sera_escape:
   min_times_seen: 2  # only include mutations with times_seen >= this
   min_frac_models: 1  # only include mutations in >= this fraction of models
   alphabet: [A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y]  # amino acids to include
@@ -13,84 +13,51 @@ summary:
   init_site_escape_stat: sum  # initially show site escape as this statistic
   antibody_escape:  # show effects on antibody escape, empty dict if no antibodies being shown
     mouse sera:  # name each set of antibodies
-      stat: escape_median  # statistic to use for escape
+      stat: escape_median  # statistic from CSV to plot
       positive_color: "#56B4E9"  # light blue, positive heatmap color
       negative_color: "#E69F00"  # orange, negative heatmap color
-      max_at_least: 1  # make heatmap max at least
-      min_at_least: -1  # make heatmap min at least this
-      antibody_list:  # antibodies to include: keys name used for `avg_escape`, values name for plot
-        mouse-1-01: mouse 1-01
-        mouse-1-02: mouse 1-02
-        mouse-1-03: mouse 1-03
-        mouse-1-04: mouse 1-04
-        mouse-1-05: mouse 1-05
-        mouse-2-01: mouse 2-01
-        mouse-2-04: mouse 2-04
-        mouse-2-05: mouse 2-05
+      max_at_least: 2  # make heatmap max at least
+      min_at_least: -2  # make heatmap min at least this
+      antibody_list:  # antibodies to include and their CSVs
+        mouse-1-01: results/antibody_escape/averages/mouse-1-01_mut_effect.csv
+        mouse-1-02: results/antibody_escape/averages/mouse-1-02_mut_effect.csv
+        mouse-1-03: results/antibody_escape/averages/mouse-1-03_mut_effect.csv
+        mouse-1-04: results/antibody_escape/averages/mouse-1-04_mut_effect.csv
+        mouse-1-05: results/antibody_escape/averages/mouse-1-05_mut_effect.csv
+        mouse-2-01: results/antibody_escape/averages/mouse-2-01_mut_effect.csv
+        mouse-2-04: results/antibody_escape/averages/mouse-2-04_mut_effect.csv
+        mouse-2-05: results/antibody_escape/averages/mouse-2-05_mut_effect.csv
     ferret sera:  # name each set of antibodies
       stat: escape_median  # statistic to use for escape
       positive_color: "#56B4E9"  # light blue, positive heatmap color
       negative_color: "#E69F00"  # orange, negative heatmap color
-      max_at_least: 1  # make heatmap max at least
-      min_at_least: -1  # make heatmap min at least this
+      max_at_least: 2  # make heatmap max at least
+      min_at_least: -2  # make heatmap min at least this
       antibody_list:  # antibodies to include: keys name used for `avg_escape`, values name for plot
-        ferret-7: ferret 7
-        ferret-10: ferret 10
-        ferret-19: ferret 19
-    pig sera:  # name each set of antibodies
-      stat: escape_median  # statistic to use for escape
-      positive_color: "#56B4E9"  # light blue, positive heatmap color
-      negative_color: "#E69F00"  # orange, negative heatmap color
-      max_at_least: 1  # make heatmap max at least
-      min_at_least: -1  # make heatmap min at least this
-      antibody_list:  # antibodies to include: keys name used for `avg_escape`, values name for plot
-        pig-972: pig 972
-        pig-973: pig 973
-        pig-977: pig 977
-        pig-978: pig 978
-  func_effects:  # effects of mutations on function
-    Entry in 293T cells:  # name of functional selection
-      condition: 293T_entry  # condition specified in `avg_func_effects`
-      effect_type: func_effects  # "func_effects" or "latent_effects"
+        ferret-7: results/antibody_escape/averages/ferret-7_mut_effect.csv
+        ferret-10: results/antibody_escape/averages/ferret-10_mut_effect.csv
+        ferret-19: results/antibody_escape/averages/ferret-19_mut_effect.csv
+  other_phenotypes:
+    entry in 293T cells:
+      csv: results/func_effects/averages/293T_entry_func_effects.csv  # CSV w data
+      stat: effect  # column to plot
       positive_color: "#009E73"  # green
       negative_color: "#F0E442"  # yellow
       max_at_least: 2
-      min_at_least: 0
+      min_at_least: -2
       init_min_value: -3  # initial min value in slider
       le_filters:  # only keep entries with indicated column is <= indicated value
         effect_std: 3 
-    Entry in 23 linked sialic acid cells:  # name of functional selection
-      condition: 293_SA23_entry  # condition specified in `avg_func_effects`
-      effect_type: func_effects  # "func_effects" or "latent_effects"
-      positive_color: "#009E73"  # green
-      negative_color: "#F0E442"  # yellow
+    stability:
+      csv: results/stability/averages/stability_mut_effect.csv
+      stat: stability_median
+      positive_color: "#0072B2"  # dark blue
+      negative_color: "#D55E00"  # red
       max_at_least: 2
-      min_at_least: 0
-      init_min_value: -3  # initial min value in slider
+      fixed_min: 0  # heatmaps only show stability **enhancing** mutations
+      init_min_value: -10  # initial min value in slider
       le_filters:  # only keep entries with indicated column is <= indicated value
-        effect_std: 3 
-    Entry in 26 linked sialic acid cells:  # name of functional selection
-      condition: 293_SA26_entry  # condition specified in `avg_func_effects`
-      effect_type: func_effects  # "func_effects" or "latent_effects"
-      positive_color: "#009E73"  # green
-      negative_color: "#F0E442"  # yellow
-      max_at_least: 2
-      min_at_least: 0
-      init_min_value: -3  # initial min value in slider
-      le_filters:  # only keep entries with indicated column is <= indicated value
-        effect_std: 3 
-  other_assays:  # other assays that we show, empty dict if no assays being shown
-    pH_stability:  # assay type
-      pH stability:  # name of particular assay condition
-        condition: pH_stability  # condition specified in `avg_escape`
-        stat: pH stability_median  # statisti used for mutation effects
-        positive_color: "#0072B2"  # dark blue
-        negative_color: "#D55E00"  # red
-        max_at_least: 1
-        min_at_least: 0
-        init_min_value: -10  # initial min value in slider
-        le_filters:  # only keep entries with indicated column is <= indicated value
-          pH stability_std: 3 
+        stability_std: 3 
   mutation_annotation_sliders:
     nt changes to codon:
       init_value: 3
