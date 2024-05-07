@@ -97,7 +97,7 @@ escape_plot_kwargs_default: &escape_plot_kwargs_default
     times_seen: 2
   heatmap_max_at_least: 2
   heatmap_min_at_least: -2
-  init_floor_at_zero: false
+  init_floor_at_zero: true
   init_site_statistic: sum
   site_zoom_bar_color_col: region  # supplied in `site_numbering_map`
 
@@ -110,7 +110,7 @@ plot_hide_stats_default: &plot_hide_stats_default
   functional effect:
     csv: results/func_effects/averages/293T_entry_func_effects.csv
     csv_col: effect
-    init: -4
+    init: -3
     min_filters:
       times_seen: 2
 
@@ -902,6 +902,7 @@ avg_stability:
           step: 1
       avg_type: median
       per_model_tooltip: true
+    plot_hide_stats: *plot_hide_stats_default
     selections:
       - Lib1-230822-pH
       - Lib2-230822-pH
