@@ -52,7 +52,7 @@ phenotypes: &phenotypes
       fixed_min: 0
       init_min_value: 0
       le_filters:
-        increase_SA26_usage_std: 3
+        increase_SA26_usage_std: 2
   mutation_annotation_sliders:
     nt changes to codon:
       init_value: 3
