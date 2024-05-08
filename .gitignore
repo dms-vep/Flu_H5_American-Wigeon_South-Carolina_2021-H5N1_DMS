@@ -79,7 +79,11 @@ results/pH_stability/averages/*
 !results/pH_stability/averages/*_mut_effect.csv
 !results/pH_stability/averages/*_mut_icXX.csv
 
-
 !results/summaries
 results/summaries/*
 !results/summaries/*.csv
+
+node_modules/
+!homepage/.vitepress/
+homepage/.vitepress/cache/
+homepage/.vitepress/dist/
