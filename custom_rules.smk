@@ -22,7 +22,7 @@ rule nt_changes_to_codon:
 
 
 rule sialic_acid_entry:
-    """Compare binding and escape at key sites."""
+    """Compare cell entry into differenct cells."""
     input:
         nb="analysis_notebooks/SA_functional_scores.ipynb",
         SA23_csv="results/func_effects/averages/293_SA23_entry_func_effects.csv",
