@@ -889,6 +889,7 @@ avg_stability:
     icXX: 80
     escape_plot_kwargs:
       <<: *escape_plot_kwargs_default
+      init_site_statistic: mean
       init_floor_at_zero: true
       addtl_slider_stats:
         times_seen: 2
