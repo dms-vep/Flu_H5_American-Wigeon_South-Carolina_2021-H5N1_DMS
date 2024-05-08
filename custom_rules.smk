@@ -77,31 +77,6 @@ rule process_SA26_improvement:
     script:
         "scripts/process_SA26_improvement.py"
 
-
-#rule phenotypes_summary:
-#    """make summary CSV with all phenotypes"""
-#    input:
-#        nb="analysis_notebooks/phenotype_summary.ipynb",
-#        summary_file="results/summaries/summary.csv",
-#        diffs="results/func_effect_diffs/SA26_vs_SA23_entry_diffs.csv"
-#    output:
-#        nb="results/notebooks/phenotype_summary.ipynb",
-#        phenotypes_summary="results/summaries/phenotypes_summary.csv",
-#    params:
-#        yaml=lambda _, input, output: yaml.round_trip_dump(
-#            {
-#                "summary_file": input.summary_file,
-#                "diffs":  input.diffs,
-#                "phenotypes_summary": output.phenotypes_summary,
-#            }
-#        ),
-#    log:
-#        log="results/logs/phenotypes_summary.txt",
-#    conda:
-#        os.path.join(config["pipeline_path"], "environment.yml")
-#    shell:
-#        "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
-
 rule functional_effect_distribution:
     """Plot functional effect dristribution for structural elements of HA"""
     input:
