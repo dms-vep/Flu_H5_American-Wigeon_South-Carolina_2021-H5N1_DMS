@@ -174,7 +174,7 @@ func_effect_diffs:
       addtl_slider_stats_as_max: [difference_std, nt changes to codon]
       heatmap_max_at_least: 1
       heatmap_min_at_least: -1
-      init_floor_at_zero: false
+      init_floor_at_zero: true
       init_site_statistic: sum
       site_zoom_bar_color_col: region  # supplied in `site_numbering_map`
       slider_binding_range_kwargs:
