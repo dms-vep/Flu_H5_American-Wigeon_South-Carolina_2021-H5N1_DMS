@@ -70,15 +70,15 @@ results/receptor_affinity/averages/*
 !results/receptor_affinity/averages/*_mut_effect.csv
 !results/receptor_affinity/averages/*_mut_icXX.csv
 
-!results/pH_stability
-results/pH_stability/*
-!results/pH_stability/by_selection
-results/pH_stability/by_selection/*.pickle
-results/pH_stability/by_selection/*.csv
-!results/pH_stability/averages
-results/pH_stability/averages/*
-!results/pH_stability/averages/*_mut_effect.csv
-!results/pH_stability/averages/*_mut_icXX.csv
+!results/stability
+results/stability/*
+!results/stability/by_selection
+results/stability/by_selection/*.pickle
+results/stability/by_selection/*.csv
+!results/stability/averages
+results/stability/averages/*
+!results/stability/averages/*_mut_effect.csv
+!results/stability/averages/*_mut_icXX.csv
 
 !results/summaries
 results/summaries/*
