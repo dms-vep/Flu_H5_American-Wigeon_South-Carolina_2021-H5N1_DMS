@@ -7,7 +7,7 @@ hero:
   image: images/study_overview.png
 features:
   - title: summary
-    details: Interactive summary of how mutations affect all measured phenotypes
+    details: Summary of how mutations affect all measured phenotypes
     link: /summary
   - title: cell entry
     details: Effects of mutations on pseudovirus entry in 293T cells
@@ -20,12 +20,16 @@ features:
     link: /a26_usage
   - title: serum antibody escape
     details: Effects of mutations on neutralization by polyclonal sera
+    link: /escape
   - title: experiments and biosafety
     details: Explanation of pseudovirus deep mutational scanning
     link: /experiments_and_biosafety
   - title: computational pipeline
     details: Details on the computational pipeline
     link: /pipeline_information
+  - title: HA sequence numbering
+    details: Explanation of sequence numbering schemes.
+    link: /numbering
 ---
 
 ## About
