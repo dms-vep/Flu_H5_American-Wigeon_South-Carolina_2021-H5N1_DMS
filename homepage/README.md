@@ -22,11 +22,11 @@ Also updated the top-level `.gitignore1 to add the following lines:
     homepage/.vitepress/cache/
     homepage/.vitepress/dist/
 
-Then copied the `homepage/.vitepress` subdirectory from `dms-vep-pipeline` to [.vitepress](.vitepress), and manually edited [.vitepress/config.mjs](.vitepress/config.mjs) to have the correct names for this repository.
+Then copied the `homepage/.vitepress` subdirectory from `dms-vep-pipeline` to `.vitepress` in this directory, and manually edited `.vitepress/config.mjs` to have the correct names for this repository.
 
-Then created [index.md](index.md) and the other Markdown files with the page content.
+Then created `index.md` and the other Markdown files with the page content.
 
-Also, placed manually generated images in [public/images/](public/images).
+Also, placed manually generated images in `./public/images/`.
 
 ## Process to add pipeline output for this homepage
 Added to the top-level repo configuration (`config.yaml`)) the following two lines:
