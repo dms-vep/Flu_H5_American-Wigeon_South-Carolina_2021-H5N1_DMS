@@ -53,3 +53,21 @@ To make edits to the Markdown files and have them show up in the visualization, 
 Set up the GitHub action to build the VitePress documentation by copying `.github/workflows/deploy.yaml` from `dms-vep-pipeline-3` to this repo.
 
 Then set up the docs to render from the `gh-pages` branch of the repo.
+
+## Added Google analytics
+Set up a Google Analytics for the site, and then added by adding the following lines to `.vitepress/config.mjs`:
+
+      head: [
+        [
+          "script",
+          { async: "", src: "https://www.googletagmanager.com/gtag/js?id=G-P7HL8Q4F41" }
+        ],
+        [ 
+          "script",
+          {},
+          `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag("js", new Date());
+          gtag("config", "G-P7HL8Q4F41");`
+        ]
+      ],
