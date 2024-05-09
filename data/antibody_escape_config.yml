@@ -797,6 +797,10 @@ avg_antibody_escape_default: &avg_antibody_escape_default
         min: 1
         max: 3
         step: 1
+      times_seen:
+        min: 1
+        max: 10
+        step: 1
     avg_type: median
     per_model_tooltip: true
   plot_hide_stats: *plot_hide_stats_default
@@ -900,6 +904,10 @@ avg_stability:
         nt changes to codon:
           min: 1
           max: 3
+          step: 1
+        times_seen:
+          min: 1
+          max: 10
           step: 1
       avg_type: median
       per_model_tooltip: true
