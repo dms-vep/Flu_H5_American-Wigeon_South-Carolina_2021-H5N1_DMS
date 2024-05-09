@@ -13,6 +13,7 @@ export default defineConfig({
       { text: "Home", link: "/" },
       { text: "Appendix", link: "/appendix", target: "_self" },
     ],
+    srcExclude: ["README.md"],
     socialLinks: [{ icon: "github", link: "https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS" }],
     footer: {
       message: "Study by Bernadeta Dadonaite, Jesse Bloom, et al",
