@@ -47,3 +47,8 @@ then do (on the Hutch server):
     npm run remote:docs:dev
 
 To make edits to the Markdown files and have them show up in the visualization, run above command from same terminal you are using to make edits, such as using `tmux` to make vertically split windows.
+
+## Deploying the pipeline
+Set up the GitHub action to build the VitePress documentation by copying [../.github/workflows/deploy.yaml](../.github/workflows/deploy.yaml) from `dms-vep-pipeline-3` to this repo.
+
+Then set up the docs to render from the `gh-pages` branch of the repo.
