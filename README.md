@@ -38,7 +38,8 @@ Input data for the pipeline are in [./data/](data).
 The results of running the pipeline are placed in [./results/](results).
 Only some of these results are tracked to save space (see [.gitignore](.gitignore)).
 
-The pipeline builds HTML documentation for the pipeline in [./docs/](docs), which is rendered via GitHub Pages.
+The pipeline builds HTML documentation for the pipeline in [./docs/](docs), which can be rendered via GitHub Pages.
+For this repo, nice VitePress documentation was then built to render on GitHub Pages by following the instructions in [homepage](homepage).
 
 ### Library design
 The description of the mutant library design is contained in [./library_design/](library_design).
