@@ -51,4 +51,4 @@ This study measures how mutations affect four HA phenotypes as schematized below
  - *a2,6 sialic acid usage*: positive values indicate improved usage of a2,6 sialic acids.
  - *Escape from serum antibody neutralization*: positive values indicate reduced neutralization by serum, negative values indicate more neutralization.
 
-![schematic of phenotypes measured](images/all_phenotypes.png)
+![schematic of phenotypes measured](public/images/all_phenotypes.png)
