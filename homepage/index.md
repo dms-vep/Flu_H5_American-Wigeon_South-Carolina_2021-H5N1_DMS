@@ -2,23 +2,40 @@
 layout: home
 
 hero:
-  name: "`dms-vep-pipeline-3` test example"
-  tagline: "A collection of data, figures, and information for `dms-vep-pipeline-3` test example"
-  image: your-vep.png
+  name: "Deep mutational scanning of H5 influenza HA"
+  tagline: "Experimental measurements of how mutations to HA of clade 2.3.4.4b strain A/American Wigeon/South Carolina/USDA-000345-001/2021 (H5N1) affect molecular phenotypes relevant to pandemic risk."
+  image: images/study_overview.png
 features:
-  - title: Antibody Escape
-    details: Example link to antibody escape data
-    link: /antibody_escape
-  - title: Cell Entry
-    details: Example link to functional selection data
+  - title: summary
+    details: Interactive summary of how mutations affect all measured phenotypes
+    link: /summary
+  - title: cell entry
+    details: Effects of mutations on pseudovirus entry in 293T cells
     link: /cell_entry
-  - title: Pipeline Information
-    details: Example page detailing computational pipeline
+  - title: stability
+    details: Effects of mutations on HA stability
+    link: /stability
+  - title: a2,6 sialic acid usage
+    details: Effects of mutations on a2,6 sialic acid usage
+    link: /a26_usage
+  - title: serum antibody escape
+    details: Effects of mutations on neutralization by polyclonal sera
+  - title: experiments and biosafety
+    details: Explanation of pseudovirus deep mutational scanning
+    link: /experiments_and_biosafety
+  - title: computational pipeline
+    details: Details on the computational pipeline
     link: /pipeline_information
 ---
 
-## This is the fancy homepage made with VitePress
-Building this homepage requires some manual customization of the Markdown files in the `./homepage` subdirectory of your repo.
-See [the instructions on building a VitePress homepage](https://github.com/dms-vep/dms-vep-pipeline-3/blob/main/homepage/README.md) for more details.
+## About
+This website contains interactive figures and detailed numerical results from [pseudovirus deep mutational scanning](https://doi.org/10.1016/j.cell.2023.02.001) experiments that measure the effects of all mutations to the hemagglutinin (HA) of the 2.3.4.4b clade strain A/American Wigeon/South Carolina/USDA-000345-001/2021 (H5N1) on several key molecular phenotypes.
+This study was led by Bernadeta Dadonaite in the Bloom lab.
 
-To see the less fancy documentation automatically build by the pipeline, see the [Appendix](/appendix){target="_self"}.
+The links in the boxes above take you to detailed interactive plots or descriptions of different aspects of the study.
+For any easy-to-use high-level view of the results, see the [summary](summary){target="_self"} of how mutations affect all phenotypes.
+But to delve into the data in more detail, also click on the boxes above for each individual phenotypes.
+
+You can also look at details on the full [computational pipeline](pipeline_information){target="_self"}, as well as looking at the underlying code [on GitHub](https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS).
+
+Note that the experiments use [single-cycle replicative pseudoviruses that can be safely studied at biosafety-level 2](experiments_and_biosafety){target="_self"}.

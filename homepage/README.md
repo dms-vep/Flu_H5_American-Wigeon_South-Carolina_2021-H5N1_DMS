@@ -26,6 +26,8 @@ Then copied the `homepage/.vitepress` subdirectory from `dms-vep-pipeline` to [.
 
 Then created [index.md](index.md) and the other Markdown files with the page content.
 
+Also, placed manually generated images in [public/images/](public/images).
+
 ## Process to add pipeline output for this homepage
 Added to the top-level repo configuration ([../config.yaml](../config.yaml)) the following two lines:
 
@@ -33,4 +35,15 @@ Added to the top-level repo configuration ([../config.yaml](../config.yaml)) the
     build_vitepress_homepage: true
 
 Essentially, these two lines copy the auto-generated documentation of the pipeline in [../docs/](../docs) to the [./public/](public) subdirectory here so they can be used in the docs.
-Then re-ran the pipeline.
+Then re-ran the pipeline which populated the [./public/](public) subdirectory with a copy of [../docs/](../docs).
+
+## Visualizing the page
+To view the page, after making sure `nodejs` is loaded via:
+
+    ml nodejs/20.9.0-GCCcore-13.2.0
+
+then do (on the Hutch server):
+
+    npm run remote:docs:dev
+
+To make edits to the Markdown files and have them show up in the visualization, run above command from same terminal you are using to make edits, such as using `tmux` to make vertically split windows.
