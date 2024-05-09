@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "Deep mutational scanning of H5 influenza HA"
   tagline: "Experimental measurements of how mutations to HA of clade 2.3.4.4b strain A/American Wigeon/South Carolina/USDA-000345-001/2021 (H5N1) affect molecular phenotypes relevant to pandemic risk."
-  image: images/study_overview.png
+  image: images/schematic.png
 features:
   - title: summary
     details: Summary of how mutations affect all measured phenotypes
