@@ -28,4 +28,4 @@ Here is an explanation of the key plot elements:
 For per-serum escape values, see [this CSV file](https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS/blob/main/results/summaries/all_sera_escape_per_antibody_escape.csv).
 
 ## Detailed plots for each sera
-See the more detailed results of the analysis [here](/appendix){target="_self"} under the antibody escape section for detailed plots for each serum.
+See the more detailed results for escape from each individual serum, look [here](/appendix){target="_self"} under the *Antibody/serum escape* section.
