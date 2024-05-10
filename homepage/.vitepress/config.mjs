@@ -7,6 +7,7 @@ export default defineConfig({
   description:
     "Interactive figures and detailed results for deep mutational scanning of the HA from the clade 2.3.4.4b A/American Wigeon/South Carolina/USDA-000345-001/2021 (H5N1) strain.",
   base: "/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS",
+  appearance: false,
   head: [
     [
       "script",
