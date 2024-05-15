@@ -20,6 +20,9 @@ Here is an explanation of the key plot elements:
 
 HA genes are numbering various different ways; see [here](numbering) for an explanation of the numbering scheme used here.
 
+## Structure-based visualization
+To view the effects of mutations in the context of the H5 HA three-dimensional structure, use [this dms-viz link](https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-vep%2FFlu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS%2Fmain%2Fresults%2Fdms-viz%2Fdms-viz.json).
+
 ## Numerical values of mutation effects on all phenotypes
 The numerical data plotted above are in [this CSV file](https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS/blob/main/results/summaries/phenotypes.csv).
 These data have been to retain only higher-confidence values.

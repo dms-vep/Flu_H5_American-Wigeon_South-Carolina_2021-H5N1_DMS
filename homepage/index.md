@@ -32,18 +32,16 @@ features:
     link: /numbering
 ---
 
-## About this site
-This website contains interactive plots and numerical results from [pseudovirus deep mutational scanning](https://doi.org/10.1016/j.cell.2023.02.001) experiments that measure the effects of mutations to the hemagglutinin (HA) of the 2.3.4.4b clade strain A/American Wigeon/South Carolina/USDA-000345-001/2021 (H5N1) on several key molecular phenotypes.
+## Overview
+This website contains results from [pseudovirus deep mutational scanning](https://doi.org/10.1016/j.cell.2023.02.001) experiments that measure the effects of mutations to the hemagglutinin (HA) of the 2.3.4.4b clade strain A/American Wigeon/South Carolina/USDA-000345-001/2021 (H5N1) on several key molecular phenotypes.
 This study was led by Bernadeta Dadonaite in the Bloom lab.
 
 The links in the boxes above take you to interactive plots or descriptions of different aspects of the study.
-For a high-level overview, see the [summary](summary){target="_self"} of how mutations affect all phenotypes.
+For a high-level overview, see the [summary](summary){target="_self"} of how mutations affect all phenotypes, or examine the data in a structural context using [this dms-viz link](https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-vep%2FFlu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS%2Fmain%2Fresults%2Fdms-viz%2Fdms-viz.json).
 To delve into the data in more detail, click on the boxes above for each individual phenotype.
 
 You can also examine the output of the full [computational pipeline](pipeline_information){target="_self"} and look at the underlying code [on GitHub](https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS).
 [Here is a CSV file](https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS/blob/main/results/summaries/phenotypes.csv) of the numerical values of the measurements with pre-filtering for high-confidence values.
-
-Note the experiments use [single-cycle replicative pseudoviruses that can be safely studied at biosafety-level 2](experiments_and_biosafety){target="_self"}.
 
 ## HA phenotypes measured in this study
 This study measures how mutations affect four HA phenotypes:

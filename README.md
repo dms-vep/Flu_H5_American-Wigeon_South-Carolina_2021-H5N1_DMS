@@ -4,6 +4,8 @@ Study by Bernadeta Dadonaite and Jesse Bloom.
 This repository has the code and data.
 For rendering of key results and an easy-to-interpret summary, see the documentation of the analysis at [https://dms-vep.org/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS](https://dms-vep.org/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS)
 
+A JSON file with the results for visualization with [dms-viz](https://dms-viz.github.io/) is created by the pipeline, and can be viewed at [this link](https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-vep%2FFlu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS%2Fmain%2Fresults%2Fdms-viz%2Fdms-viz.json).
+
 ## Organization of this repo
 
 ### `dms-vep-pipeline-3` submodule
