@@ -84,6 +84,10 @@ results/stability/averages/*
 results/summaries/*
 !results/summaries/*.csv
 
+!results/dms-viz
+results/dms-viz/*
+!results/dms-viz/dms-viz.json
+
 node_modules/
 !homepage/.vitepress/
 homepage/.vitepress/cache/
