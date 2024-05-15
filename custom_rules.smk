@@ -99,6 +99,42 @@ rule functional_effect_distribution:
     shell:
         "papermill {input.nb} {output.nb} -y '{params.yaml}' &> {log}"
 
+
+rule configure_dms_viz:
+    """Configure a JSON file for `dms-viz`."""
+    input:
+        phenotypes_csv="results/summaries/phenotypes.csv",
+        per_antibody_escape_csv="results/summaries/phenotypes_per_antibody_escape.csv",
+        site_numbering_map=config["site_numbering_map"],
+        nb="analysis_notebooks/configure_dms_viz.ipynb",
+    output:
+        dms_viz_json="results/dms-viz/dms-viz.json",
+        dms_viz_sitemap="results/dms-viz/sitemap.csv",
+        dms_viz_phenotypes="results/dms-viz/phenotypes.csv",
+        pdb_file="results/dms-viz/pdb_file.pdb",
+        nb="results/notebooks/configure_dms_viz.ipynb",
+    params:
+        dms_viz_subdir=lambda _, output: os.path.dirname(output.dms_viz_json),
+        pdb_id="4kwm",
+    log:
+        "results/logs/configure_dms_viz.txt",
+    conda:
+        "envs/dms-viz.yml"
+    shell:
+        """
+        papermill {input.nb} {output.nb} \
+            -p phenotypes_csv {input.phenotypes_csv} \
+            -p per_antibody_escape_csv {input.per_antibody_escape_csv} \
+            -p site_numbering_map {input.site_numbering_map} \
+            -p dms_viz_json {output.dms_viz_json} \
+            -p dms_viz_sitemap {output.dms_viz_sitemap} \
+            -p dms_viz_phenotypes {output.dms_viz_phenotypes} \
+            -p pdb_file {output.pdb_file} \
+            -p dms_viz_subdir {params.dms_viz_subdir} \
+            -p pdb_id {params.pdb_id} \
+            &> {log}
+        """
+
 # Files (Jupyter notebooks, HTML plots, or CSVs) that you want included in
 # the HTML docs should be added to the nested dict `docs`:
 docs["Additional files"] = {
@@ -110,13 +146,10 @@ docs["Additional files"] = {
         "Notebook comparing entry between 2,3 and 2,6 sialic acid expressing cells":
             rules.sialic_acid_entry.output.nb
     },
-#    "Phenotype summary file":{
-#        "Summary CSV for all phenotypes":
-#            rules.phenotypes_summary.output.phenotypes_summary,
-#    },
     "Functional effect distribution ":{
         "Notebook plotting functional effect distribution":
             rules.functional_effect_distribution.output.nb,
     },
 }
 
+other_target_files.append(rules.configure_dms_viz.output.dms_viz_json)
