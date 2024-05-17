@@ -10,7 +10,7 @@ Click on the expansion box in the upper right of the plot to enlarge it for easi
 
 The plot shows the difference in entry in cells expressing exclusively a2,6 sialic acid  versus those expressing exclusively a2,3 sialic acid.
 Positive values indicate mutations that improve a2,6 usage (infection of cells expressing exclusively a2,6 sialic acids).
-By default, this plot only shows mutations that increase overall entry into a2,6 cells (you can change this by adjusting the *minimum SA26 entry effect* slider below the plot); the reason for this is that difference measurements are sometimes noisy for mutations that are highly deleterious to entry in both a2,3 and a2,6 cells and this plot is designed to specifically show mutations that **increase** a2,6 usage.
+By default, this plot only shows mutations that increase overall entry into a2,6 cells and shows other mutaitons in dark gray boxes (you can change this by adjusting the *minimum SA26 entry effect* slider below the plot); the reason for this is that difference measurements are sometimes noisy for mutations that are highly deleterious to entry in both a2,3 and a2,6 cells and this plot is designed to specifically show mutations that **increase** a2,6 usage.
 See the overall [summary](summary) or [cell entry](cell_entry) to see how mutations affect cell entry in non-sialic-acid specific ways.
 
 <Figure caption="Interactive plot showing effects of mutations on a2,6 sialic acid usage">

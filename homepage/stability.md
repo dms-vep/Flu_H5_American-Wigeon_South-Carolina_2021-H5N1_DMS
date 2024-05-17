@@ -9,6 +9,7 @@ The plot below shows how mutations affect HA stability, and allows you to zoom a
 Click on the expansion box in the upper right of the plot to enlarge it for easier viewing, or [click here](/htmls/stability_mut_effect.html){target="_self"} to open the plot in a stand-alone window.
 Positive values indicate greater stability (more resistance to acidic pH).
 By default, this plot only shows mutations that **increase** stability; set the *floor at zero* option below the plot to *false* to also show destabilizing mutations (although the experiments may be less accurate at measuring destabilizing mutations than stabilizing ones).
+Note that the two different shades of gray in the heatmaps have differing meanings: light gray means a mutation was *missing (not measured)* in the library, whereas dark gray means a mutation *was measured but was so deleterious for cell entry* it is not possible to reliably estimate its effect on other phenotypes (the threshold for how deleterious a mutation must be for cell entry to be shown in dark gray is controlled by the cell entry slider at the bottom of the plot).
 
 <Figure caption="Interactive plot showing effects of mutations on HA stability">
     <Altair :showShadow="true" :spec-url="'htmls/stability_mut_effect.html'"></Altair>
