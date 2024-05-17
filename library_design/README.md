@@ -3,7 +3,15 @@
 
 This sub-folder contains mutations that were designed to be included in this H5 library. The library was ordered from Twist Biosciences. Twist library was designed to have all possible mutations in the H5 except for some stop codons. 
 
-`3403_pH2rU3_ForInd_H5_H5N1_turkey_Indiana_genscript_T7_CMV_ZsGT2APurR.gb` contains the plasmid map for H5 sequence in inducible lentiviral backbone used in deep mutational scanning.  
+`pH2rU3_ForInd_H5_H5N1_American_Wigeon_genscript_T7_CMV_ZsGT2APurR.gb` contains the plasmid map for H5 sequence in inducible lentiviral backbone used in deep mutational scanning.  
+
+`3405_HDM_N1_native_H5N1_turkey_Indiana.gb` contains A/turkey/Indiana/22-003707-003/2022 strain neuraminidase sequence in expression plasmid.
+
+`29_HDM_VSV_G.gb` contains sequence for VSV-G expression plasmid.
+
+`3137_pH2rU3_ForInd_mCherry_CMV_ZsGT2APurR.gb` contains lentivirus backbone used to construct deep mutational scanning libraries which codes for mCherry gene.
+
+`mutagenesis_primers.csv` contains a spreadsheet with primers used to fill in sites that failed mutagenesis during library construction.
 
 `H5_ssvl_submission_form_230223.xlsx` sslv library design submitted for twist.  
 
