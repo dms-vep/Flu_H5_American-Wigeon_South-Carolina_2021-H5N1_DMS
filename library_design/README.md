@@ -11,6 +11,8 @@ This sub-folder contains mutations that were designed to be included in this H5 
 
 `3137_pH2rU3_ForInd_mCherry_CMV_ZsGT2APurR.gb` contains lentivirus backbone used to construct deep mutational scanning libraries which codes for mCherry gene.
 
+`3068_ForInd_mC_BCs_pool1.gb` and `3069_ForInd_mC_BCs_pool2.gb` contain plasmid maps for barcoded non-neutralizable standards. These were pooled equimolarly for experiments.
+
 `mutagenesis_primers.csv` contains a spreadsheet with primers used to fill in sites that failed mutagenesis during library construction.
 
 `H5_ssvl_submission_form_230223.xlsx` sslv library design submitted for twist.  
