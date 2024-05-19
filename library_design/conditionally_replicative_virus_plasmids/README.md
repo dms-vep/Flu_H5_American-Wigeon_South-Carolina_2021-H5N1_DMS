@@ -8,4 +8,4 @@ This sub-folder contains all plasmid maps required to make conditionally replica
 
 `3972_pHW_N1_TurkeyH5.gb` N1 NA segment from A/turkey/Indiana/22-003707-003/2022 .  
 
-`pHW_American-Wigeon_South-Carolina_USDA-000345-001_delPBCS.gb` H5 HA segment from A/American Wigeon/South Carolina/USDA-000345-001/2021 strain in which polybasic cleavage site has been deleted. 
+`pHW_HA_American-Wigeon_USDA-000345-001_H5N1_delPBCS.gb` H5 HA segment from A/American Wigeon/South Carolina/USDA-000345-001/2021 strain in which polybasic cleavage site has been deleted. 
