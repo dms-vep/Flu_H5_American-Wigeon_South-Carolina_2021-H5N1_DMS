@@ -6,7 +6,7 @@
     "remote:docs:dev": "vitepress dev homepage --host 0.0.0.0 --port $(fhfreeport)"
   },
   "devDependencies": {
-    "vitepress": "^1.1.0"
+    "vitepress": "^1.2.2"
   },
   "dependencies": {
     "bootstrap-icons": "^1.11.3",
