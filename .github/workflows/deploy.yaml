@@ -6,6 +6,8 @@ name: Deploy VitePress site to Pages
 on:
   push:
     branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
   build:
@@ -25,6 +27,7 @@ jobs:
       - run: npm ci
       - run: npm run docs:build
       - name: Deploy
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           # Change to your GitHub Pages repository
