@@ -30,7 +30,7 @@ export default defineConfig({
     ],
     socialLinks: [{ icon: "github", link: "https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS" }],
     footer: {
-      message: "Study by Bernadeta Dadonaite, Jesse Bloom, et al",
+      message: "Study by Bernadeta Dadonaite, Jesse Bloom, et al (https://www.biorxiv.org/content/10.1101/2024.05.23.595634v1)",
     },
   },
 });
