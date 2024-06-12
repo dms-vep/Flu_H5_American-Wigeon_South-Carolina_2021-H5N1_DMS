@@ -23,7 +23,7 @@ Note that if you want a specific commit or tag of [dms-vep-pipeline-3](https://g
 and then `cd ../` back to the top-level directory, and add and commit the updated `dms-vep-pipeline-3` submodule.
 You can also make changes to the [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3) that you commit back to that repo.
 
-### Configuration and runing the pipeline
+### Configuration and running the pipeline
 The configuration for the pipeline is in [config.yaml](config.yaml) and the files in [./data/](data) referenced therein.
 To run the pipeline, do:
 
@@ -32,6 +32,20 @@ To run the pipeline, do:
 To run on the Hutch cluster via [slurm](https://slurm.schedmd.com/), you can run the file [run_Hutch_cluster.bash](run_Hutch_cluster.bash):
 
     sbatch -c 8 run_Hutch_cluster.bash
+
+### Running the pipeline without the FASTQ files
+Running the full pipeline in this repo requires access to large FASTQ files with the deep sequencing data.
+Those FASTQ files are far too large to store in this GitHub repo, so need to be stored elsewhere on your computing cluster.
+The locations where they are stored on the Fred Hutch computing cluster are specified in [./data/PacBio_runs.csv](data/PacBio_runs.csv) and [./data/barcode_runs.csv](data/barcode_runs.csv); if you want to run the full pipeline on another cluster then you will need to obtain all these FASTQ files, download them to your cluster, and then update the paths in the two aforementioned files to point to the locations where you downloaded the files.
+
+But alternatively, for most purposes it should be sufficient for you to re-run the pipeline not going all the way back to the FASTQ files, but rather just using the variants and barcode counts already extracted from these FASTQs by the original analysis on the Hutch cluster.
+Those variants and barcode counts files are much smaller and so can be stored in this repo.
+To re-run the pipeline using those so that the FASTQs are not required, follow the [instructions here](https://github.com/dms-vep/dms-vep-pipeline-3?tab=readme-ov-file#re-running-the-pipeline-without-the-fastq-files) which only require you to change teh values for `prebuilt_variants`, `prebuilt_geneseq`, and `use_precomputed_barcode_counts` in [config.yaml](config.yaml) to be as follows:
+
+    prebuilt_variants: results/variants/codon_variants.csv  # use codon-variant table already in repo
+    prebuilt_geneseq: results/gene_sequence/codon.fasta  # use gene sequence already in repo
+    ...
+    use_precomputed_barcode_counts: false  # use barcode counts already in repo
 
 ### Input data
 Input data for the pipeline are in [./data/](data).
