@@ -36,5 +36,5 @@ Explore the effects of mutations on the phenotypes measured in this experiment u
 
 The default numbering scheme is for H3; however, you can select your preferred numbering scheme using the `Select numbering scheme:` menu.
 
-<iframe width="100%" height="822" frameborder="0"
-  src="https://observablehq.com/embed/@willhannon-mcb/h5n1-dms-phenotype-lookup?cells=viewof+numberingScheme%2Cviewof+sites%2Cviewof+phenotype%2Cplot%2Cfilter_df"></iframe>
+<iframe width="100%" height="915" frameborder="0"
+  src="https://observablehq.com/embed/@willhannon-mcb/h5n1-dms-phenotype-lookup@251?cells=viewof+numberingScheme%2Cviewof+sites%2CtransposedSitesString%2Cviewof+phenotype%2Cplot%2Cfilter_df"></iframe>
