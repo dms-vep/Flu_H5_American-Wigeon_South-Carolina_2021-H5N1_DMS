@@ -48,7 +48,7 @@ To re-run the pipeline using those so that the FASTQs are not required, follow t
     use_precomputed_barcode_counts: false  # use barcode counts already in repo
 
 ### Input data
-Input data for the pipeline are in [./data/](data).
+Input data for the pipeline are in [./data/](data). Raw sequencing files for both PacBio and Illumina sequencing can be found under [PRJNA1123200 BioProject](https://www.ncbi.nlm.nih.gov/sra/PRJNA1123200) on SRA.
 
 ### Results and documentation
 The results of running the pipeline are placed in [./results/](results).
