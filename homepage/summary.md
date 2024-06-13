@@ -30,11 +30,11 @@ These data have been to retain only higher-confidence values.
 For more detailed data without the pre-filtering, see the phenotype-specific pages.
 
 
-## Interactive Phenotype Tool
+## Explore Mutation Effects
 
-Explore the effect of mutations on the phenotypes measured in this experiment using the interactive table below. Use the small search bar beneath the table to find individual mutations (i.e. 'V5L').
+Explore the effects of mutations on the phenotypes measured in this experiment using the interactive tool below. Search for mutations (or sites) by entering them as a comma-separated list in the `Mutations:` search bar (e.g., H110Y, H110S). Lines indicating the effects of each mutation are displayed on a histogram of all mutation effects for the phenotype selected from the `Phenotypes:` menu. Below the histogram, an interactive table displays data associated with each mutation.
 
-Generate a detailed histogram of any phenotype by typing its name into the `column` bar. See how the effects of individual mutations compare to this histogram by typing a comma-separated list into the `sites` bar. Another interactive table shows the rows matching these mutations.
+The default numbering scheme is for H3; however, you can select your preferred numbering scheme using the `Select numbering scheme:` menu.
 
-<iframe width="100%" height="1183.59375" frameborder="0"
-  src="https://observablehq.com/embed/@willhannon-mcb/h5n1-dms-phenotype-lookup@60?cells=viewof+sites%2Csummary%2Cfilter_df%2Cviewof+column%2Cplot"></iframe>
+<iframe width="100%" height="822" frameborder="0"
+  src="https://observablehq.com/embed/@willhannon-mcb/h5n1-dms-phenotype-lookup?cells=viewof+numberingScheme%2Cviewof+sites%2Cviewof+phenotype%2Cplot%2Cfilter_df"></iframe>
