@@ -28,3 +28,13 @@ To view the effects of mutations in the context of the H5 HA three-dimensional s
 The numerical data plotted above are in [this CSV file](https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS/blob/main/results/summaries/phenotypes.csv).
 These data have been to retain only higher-confidence values.
 For more detailed data without the pre-filtering, see the phenotype-specific pages.
+
+
+## Explore Mutation Effects
+
+Explore the effects of mutations on the phenotypes measured in this experiment using the interactive tool below. Search for mutations (or sites) by entering them as a comma-separated list in the `Mutations:` search bar (e.g., H110Y, H110S). Lines indicating the effects of each mutation are displayed on a histogram of all mutation effects for the phenotype selected from the `Phenotypes:` menu. Below the histogram, an interactive table displays data associated with each mutation.
+
+The default numbering scheme is for H3; however, you can select your preferred numbering scheme using the `Select numbering scheme:` menu.
+
+<iframe width="100%" height="915" frameborder="0"
+  src="https://observablehq.com/embed/@willhannon-mcb/h5n1-dms-phenotype-lookup@251?cells=viewof+numberingScheme%2Cviewof+sites%2CtransposedSitesString%2Cviewof+phenotype%2Cplot%2Cfilter_df"></iframe>
