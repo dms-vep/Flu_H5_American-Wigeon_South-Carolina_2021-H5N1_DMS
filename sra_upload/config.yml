@@ -1,0 +1,62 @@
+# ======================================================== #
+#                                                          #
+#     Edit the information in this configuration file      #
+#                                                          #
+# ======================================================== #
+
+# ====== Info applying to the whole variant library ====== #
+organism: Influenza A virus
+isolate: A/American_Wigeon/South_Carolina/USDA-000345-001/2021
+isolation_source: HEK-293T
+collection_date: 2023
+geographic_location: 'USA: Washington'
+sample_type: plasmid
+
+# ======== Info for Illumina barcodes BioSamples ======== #
+barcode_runs: 
+  
+  # Path to the barcoded runs csv file that will go into the BioSample
+  file_path: ../data/barcode_runs.csv
+  
+  # Edit this data that goes into the SRA metadata table for the BioSample
+  accession: SAMN41801926
+  sample_id_columns: [sample]
+  title_prefix: H5 HA DMS Illumina barcode sequencing for sample  
+  description: Illumina barcode sequencing for H5 HA
+  strategy: AMPLICON
+  source: SYNTHETIC
+  selection: PCR
+  layout: single
+  platform: ILLUMINA
+  model: NextSeq 2000
+
+  # Meaningful BioSample specific folder name for FTP upload
+  ftp_subfolder: H5_HA_DMS_barcodes
+
+
+# ========== Info for PacBio library BioSample ========== #
+pacbio_runs:
+  
+  # Path to the pacbio runs that will be included in the BioSample
+  file_path: ../data/PacBio_runs.csv
+ 
+  # This data goes into the SRA metadata table
+  accession: SAMN41803410
+  title_prefix: PacBio CCSs linking variants to barcodes for H5 HA deep mutational scanning
+  description: genomes from infection with VSV-G pseuodotyped libraries
+  strategy: Synthetic-Long-Read
+  source: SYNTHETIC
+  selection: PCR
+  layout: single
+  platform: PACBIO_SMRT
+  model: Sequel II
+
+  # Meaningful BioSample specific folder name for FTP upload
+  ftp_subfolder: H5_HA_DMS_mAbs_pacbio_ccs
+
+# =========== Info for uploading to SRA via FTP =========== #
+# These come from the SRA FTP upload instructions.
+ftp_username: subftp
+ftp_account_folder: uploads/bdadonaite_gmail.com_6wugm1ZW
+
+  
