@@ -71,6 +71,27 @@ func_scores:
     post_selection_sample: Lib2-240125-293-SA26-H5-control
     func_score_params: *func_scores_params_default
     global_epistasis_params: *global_epistasis_params
+  Lib1-240704-293:
+    pre_selection_sample: Lib1-240704-293-VSVG-control
+    post_selection_sample: Lib1-240704-293-H5-control
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
+  Lib2-240704-293:
+    pre_selection_sample: Lib2-240704-293-VSVG-control
+    post_selection_sample: Lib2-240704-293-H5-control
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
+  Lib1-240704-CMAH-293:
+    pre_selection_sample: Lib1-240704-CMAH-293-VSVG-control
+    post_selection_sample: Lib1-240704-CMAH-293-H5-control
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
+  Lib2-240704-CMAH-293:
+    pre_selection_sample: Lib2-240704-CMAH-293-VSVG-control
+    post_selection_sample: Lib2-240704-CMAH-293-H5-control
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
+
 
 # --------------------------------------------------------------------------------------
 # Configuration for averaging mutation functional effects across selections and plotting
@@ -131,6 +152,16 @@ avg_func_effects:
     selections:
       - Lib1-240125-293-SA26
       - Lib2-240125-293-SA26
+  293_entry:
+    <<: *avg_func_effects_default
+    selections:
+      - Lib1-240704-293
+      - Lib2-240704-293
+  293_CMAH_entry:
+    <<: *avg_func_effects_default
+    selections:
+      - Lib1-240704-CMAH-293
+      - Lib2-240704-CMAH-293
 
 # --------------------------------------------------------------------------------------
 # Configuration for simple difference in functional effects across conditions
@@ -186,3 +217,43 @@ func_effect_diffs:
           step: 1
           min: 1
           max: 3
+  CMAH_vs_293_entry:
+    condition_1:
+      name: CMAH entry
+      selections:
+        - Lib1-240704-CMAH-293
+        - Lib2-240704-CMAH-293
+    condition_2:
+      name: 293 entry
+      selections:
+        - Lib1-240704-293
+        - Lib2-240704-293
+    avg_method: median
+    per_selection_tooltips: true
+    plot_kwargs:
+      alphabet: [R,K,H,D,E,Q,N,S,T,Y,W,F,A,I,L,M,V,G,P,C]
+      addtl_slider_stats:
+        times_seen: 2
+        difference_std: 2  # standard deviation difference across pairwise comparisons for mutation
+        fraction_pairs_w_mutation: 1  # fraction of all pairs between conditions w mutation
+        best_effect: -2  # effect must be >= for at least one condition
+        293 entry effect: -8  # slider on effect in this condition, but no initial value
+        CMAH entry effect: -8  # slider on effect in this condition, but no initial value
+        nt changes to codon: 3
+      addtl_slider_stats_hide_not_filter: [best_effect, 293 entry effect, CMAH entry effect, nt changes to codon]
+      addtl_slider_stats_as_max: [difference_std, nt changes to codon]
+      heatmap_max_at_least: 1
+      heatmap_min_at_least: -1
+      init_floor_at_zero: true
+      init_site_statistic: sum
+      site_zoom_bar_color_col: region  # supplied in `site_numbering_map`
+      slider_binding_range_kwargs:
+        times_seen:
+          step: 1
+          min: 1
+          max: 10
+        nt changes to codon:
+          step: 1
+          min: 1
+          max: 3
+

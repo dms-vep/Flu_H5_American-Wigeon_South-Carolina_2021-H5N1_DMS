@@ -130,3 +130,11 @@ Lib1-240125-293-SA23-H5-control,Lib1,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina
 Lib2-240125-293-SA23-H5-control,Lib2,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240124_VH00699_428_AAFGTFNM5/Unaligned/Project_bdadonai/Lib2_H5_SA23_S6_R1_001.fastq.gz
 Lib1-240125-293-SA26-H5-control,Lib1,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240124_VH00699_428_AAFGTFNM5/Unaligned/Project_bdadonai/Lib1_H5_SA26_S7_R1_001.fastq.gz
 Lib2-240125-293-SA26-H5-control,Lib2,2024-01-25,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240124_VH00699_428_AAFGTFNM5/Unaligned/Project_bdadonai/Lib2_H5_SA26_S8_R1_001.fastq.gz
+Lib1-240704-293-VSVG-control,Lib1,2024-07-04,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240703_VH01189_304_AAFYYGCM5/Unaligned/Project_bdadonai/VSVG_Lib1_H5_293_S7_R1_001.fastq.gz
+Lib2-240704-293-VSVG-control,Lib2,2024-07-04,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240703_VH01189_304_AAFYYGCM5/Unaligned/Project_bdadonai/VSVG_Lib2_H5_293_S8_R1_001.fastq.gz
+Lib1-240704-CMAH-293-VSVG-control,Lib1,2024-07-04,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240703_VH01189_304_AAFYYGCM5/Unaligned/Project_bdadonai/VSVG_Lib1_H5_27F_S3_R1_001.fastq.gz
+Lib2-240704-CMAH-293-VSVG-control,Lib2,2024-07-04,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240703_VH01189_304_AAFYYGCM5/Unaligned/Project_bdadonai/VSVG_Lib2_H5_27F_S4_R1_001.fastq.gz
+Lib1-240704-293-H5-control,Lib1,2024-07-04,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240703_VH01189_304_AAFYYGCM5/Unaligned/Project_bdadonai/Lib1_H5_293_S5_R1_001.fastq.gz
+Lib2-240704-293-H5-control,Lib2,2024-07-04,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240703_VH01189_304_AAFYYGCM5/Unaligned/Project_bdadonai/Lib2_H5_293_S6_R1_001.fastq.gz
+Lib1-240704-CMAH-293-H5-control,Lib1,2024-07-04,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240703_VH01189_304_AAFYYGCM5/Unaligned/Project_bdadonai/Lib1_H5_27F_S1_R1_001.fastq.gz
+Lib2-240704-CMAH-293-H5-control,Lib2,2024-07-04,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/240703_VH01189_304_AAFYYGCM5/Unaligned/Project_bdadonai/Lib2_H5_27F_S2_R1_001.fastq.gz
