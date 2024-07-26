@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"grid": false}, "legend": {"labelFontSize": 12, "labelLimit": 400, "orient": "right", "symbolSize": 100, "title": null, "titleFontSize": 14}}, "layer": [{"mark": {"type": "point", "filled": true, "size": 100}, "encoding": {"color": {"field": "Strain", "scale": {"domain": ["A/American Wigeon/South Carolina/USDA-000345-001/2021(WT)", "A/chicken/Khabarovsk/244V/2022(N446K)", "A/Larusargentatus/Belgium/085710001/2023(R81G_R90Q)"], "range": ["grey", "orange", "#2ca25f"]}, "type": "nominal"}, "tooltip": [{"field": "Strain", "type": "nominal"}, {"field": "pH", "type": "quantitative"}, {"field": "mean_infectivity", "type": "quantitative"}, {"field": "std_infectivity", "type": "quantitative"}], "x": {"field": "pH", "scale": {"domain": [7, 5.2]}, "type": "quantitative"}, "y": {"field": "mean_infectivity", "scale": {"domain": [0.005, 1], "type": "log"}, "title": "retained Infectivity", "type": "quantitative"}}}, {"mark": {"type": "errorbar", "extent": "stdev"}, "encoding": {"color": {"field": "Strain", "scale": {"domain": ["A/American Wigeon/South Carolina/USDA-000345-001/2021(WT)", "A/chicken/Khabarovsk/244V/2022(N446K)", "A/Larusargentatus/Belgium/085710001/2023(R81G_R90Q)"], "range": ["grey", "orange", "#2ca25f"]}, "type": "nominal"}, "x": {"field": "pH", "scale": {"domain": [7, 5.2]}, "type": "quantitative"}, "y": {"field": "mean_infectivity", "scale": {"domain": [0.005, 1], "type": "log"}, "title": "retained Infectivity", "type": "quantitative"}, "yError": {"field": "std_infectivity"}}}, {"mark": {"type": "line", "strokeWidth": 3}, "encoding": {"color": {"field": "Strain", "scale": {"domain": ["A/American Wigeon/South Carolina/USDA-000345-001/2021(WT)", "A/chicken/Khabarovsk/244V/2022(N446K)", "A/Larusargentatus/Belgium/085710001/2023(R81G_R90Q)"], "range": ["grey", "orange", "#2ca25f"]}, "type": "nominal"}, "x": {"field": "pH", "scale": {"domain": [7, 5.2]}, "type": "quantitative"}, "y": {"field": "mean_infectivity", "scale": {"domain": [0.005, 1], "type": "log"}, "title": "retained Infectivity", "type": "quantitative"}}}], "data": {"name": "data-5455b9062caaae8aa5c2f85583cef7a9"}, "height": 300, "title": "retained Infectivity vs pH", "width": 300, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-5455b9062caaae8aa5c2f85583cef7a9": [{"Strain": "A/American Wigeon/South Carolina/USDA-000345-001/2021(WT)", "pH": 5.3, "mean_infectivity": 0.007732330666666666, "std_infectivity": 0.0013845476953764843}, {"Strain": "A/American Wigeon/South Carolina/USDA-000345-001/2021(WT)", "pH": 5.5, "mean_infectivity": 0.038843911, "std_infectivity": 0.005281001087310718}, {"Strain": "A/American Wigeon/South Carolina/USDA-000345-001/2021(WT)", "pH": 5.7, "mean_infectivity": 0.16741452233333334, "std_infectivity": 0.03667136242660516}, {"Strain": "A/American Wigeon/South Carolina/USDA-000345-001/2021(WT)", "pH": 6.9, "mean_infectivity": 1.0, "std_infectivity": 0.0}, {"Strain": "A/Larusargentatus/Belgium/085710001/2023(R81G_R90Q)", "pH": 5.3, "mean_infectivity": 0.03997890166666667, "std_infectivity": 0.007970118468734157}, {"Strain": "A/Larusargentatus/Belgium/085710001/2023(R81G_R90Q)", "pH": 5.5, "mean_infectivity": 0.45811795366666663, "std_infectivity": 0.03109678766357221}, {"Strain": "A/Larusargentatus/Belgium/085710001/2023(R81G_R90Q)", "pH": 5.7, "mean_infectivity": 0.6608780326666667, "std_infectivity": 0.13826034589448497}, {"Strain": "A/Larusargentatus/Belgium/085710001/2023(R81G_R90Q)", "pH": 6.9, "mean_infectivity": 1.0, "std_infectivity": 0.0}, {"Strain": "A/chicken/Khabarovsk/244V/2022(N446K)", "pH": 5.3, "mean_infectivity": 0.018338440666666667, "std_infectivity": 0.007542080305263615}, {"Strain": "A/chicken/Khabarovsk/244V/2022(N446K)", "pH": 5.5, "mean_infectivity": 0.2155283166666667, "std_infectivity": 0.04599402876731256}, {"Strain": "A/chicken/Khabarovsk/244V/2022(N446K)", "pH": 5.7, "mean_infectivity": 0.43977982033333335, "std_infectivity": 0.15104563701893067}, {"Strain": "A/chicken/Khabarovsk/244V/2022(N446K)", "pH": 6.9, "mean_infectivity": 1.0, "std_infectivity": 0.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
