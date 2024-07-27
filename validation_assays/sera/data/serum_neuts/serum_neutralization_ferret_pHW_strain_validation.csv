@@ -1,0 +1,145 @@
+﻿,serum,virus,replicate,concentration,fraction infectivity
+1,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.04,0.0095922
+2,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.013333333,0.006817633
+3,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.004444444,0
+4,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.001481481,0
+5,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.000493827,0.014469926
+6,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.000164609,0.322409947
+7,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,5.49E-05,0.881651524
+8,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,1.83E-05,0.746526008
+9,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.04,0
+10,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.013333333,0
+11,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.004444444,0.009899183
+12,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.001481481,0.004224243
+13,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.000493827,0.009072581
+14,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.000164609,0.379122965
+15,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,5.49E-05,0.890219739
+16,ferret-7,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,1.83E-05,0.946795299
+17,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.04,0.013909216
+18,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.013333333,0
+19,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.004444444,0
+20,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.001481481,0
+21,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.000493827,0.003213206
+22,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.000164609,0.315765744
+23,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,5.49E-05,1.083718606
+24,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,1.83E-05,0.89973463
+25,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.04,0
+26,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.013333333,0
+27,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.004444444,0.00050713
+28,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.001481481,0
+29,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.000493827,0.003402218
+30,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.000164609,0.208509326
+31,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,5.49E-05,1.156191428
+32,ferret-10,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,1.83E-05,1.100003922
+33,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.04,0.016688954
+34,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.013333333,0
+35,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.004444444,0
+36,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.001481481,0.009542902
+37,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.000493827,0.054498488
+38,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,0.000164609,0.506311993
+39,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,5.49E-05,1.438942539
+40,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,1,1.83E-05,1.033596089
+41,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.04,0.017784002
+42,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.013333333,0.012730271
+43,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.004444444,0.007911232
+44,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.001481481,0
+45,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.000493827,0.072265625
+46,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,0.000164609,0.587703479
+47,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,5.49E-05,1.312204352
+48,ferret-19,A/American Wigeon/South Carolina/USDA-000345-001/2021,2,1.83E-05,1.185236022
+49,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,1,0.04,0.002631515
+50,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,1,0.013333333,0
+51,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,1,0.004444444,0.018599012
+52,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,1,0.001481481,0.250172938
+53,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,1,0.000493827,0.682528716
+54,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,1,0.000164609,0.766725746
+55,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,1,5.49E-05,0.781616549
+56,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,1,1.83E-05,0.715071571
+57,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,2,0.04,0.009632795
+58,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,2,0.013333333,0
+59,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,2,0.004444444,0.025991307
+60,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,2,0.001481481,0.326748283
+61,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,2,0.000493827,0.733655756
+62,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,2,0.000164609,0.945754337
+63,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,2,5.49E-05,0.935167413
+64,ferret-7,A/domesticcat/Oklahoma/24009118002/2024,2,1.83E-05,0.859956999
+65,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,1,0.04,0.004731899
+66,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,1,0.013333333,0.00149556
+67,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,1,0.004444444,0.033265324
+68,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,1,0.001481481,0.075497498
+69,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,1,0.000493827,0.486656879
+70,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,1,0.000164609,0.733068371
+71,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,1,5.49E-05,1.012369375
+72,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,1,1.83E-05,0.907606485
+73,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,2,0.04,0.009487941
+74,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,2,0.013333333,0.00486057
+75,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,2,0.004444444,0.010970165
+76,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,2,0.001481481,0.082608066
+77,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,2,0.000493827,0.499093186
+78,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,2,0.000164609,0.766725746
+79,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,2,5.49E-05,1.010663254
+80,ferret-10,A/domesticcat/Oklahoma/24009118002/2024,2,1.83E-05,0.927750983
+81,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,1,0.04,0
+82,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,1,0.013333333,0.013553513
+83,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,1,0.004444444,0.155090334
+84,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,1,0.001481481,0.511429996
+85,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,1,0.000493827,0.933327576
+86,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,1,0.000164609,0.920332277
+87,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,1,5.49E-05,1.087012156
+88,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,1,1.83E-05,1.104790129
+89,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,2,0.04,0.017092779
+90,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,2,0.013333333,0.008911045
+91,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,2,0.004444444,0.183506313
+92,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,2,0.001481481,0.519473625
+93,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,2,0.000493827,0.876327835
+94,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,2,0.000164609,0.889181302
+95,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,2,5.49E-05,1.11942845
+96,ferret-19,A/domesticcat/Oklahoma/24009118002/2024,2,1.83E-05,1.201251283
+97,ferret-7,A/dairycattle/Texas/24009028003/2024,1,0.04,0.013142935
+98,ferret-7,A/dairycattle/Texas/24009028003/2024,1,0.013333333,0.152173913
+99,ferret-7,A/dairycattle/Texas/24009028003/2024,1,0.004444444,0.781700946
+100,ferret-7,A/dairycattle/Texas/24009028003/2024,1,0.001481481,1.138272448
+101,ferret-7,A/dairycattle/Texas/24009028003/2024,1,0.000493827,0.785337867
+102,ferret-7,A/dairycattle/Texas/24009028003/2024,1,0.000164609,0.754474394
+103,ferret-7,A/dairycattle/Texas/24009028003/2024,1,5.49E-05,0.874119055
+104,ferret-7,A/dairycattle/Texas/24009028003/2024,1,1.83E-05,0.902190475
+105,ferret-7,A/dairycattle/Texas/24009028003/2024,2,0.04,0.003501751
+106,ferret-7,A/dairycattle/Texas/24009028003/2024,2,0.013333333,0.225477999
+107,ferret-7,A/dairycattle/Texas/24009028003/2024,2,0.004444444,0.870651984
+108,ferret-7,A/dairycattle/Texas/24009028003/2024,2,0.001481481,1.176254694
+109,ferret-7,A/dairycattle/Texas/24009028003/2024,2,0.000493827,0.871073794
+110,ferret-7,A/dairycattle/Texas/24009028003/2024,2,0.000164609,1.13526551
+111,ferret-7,A/dairycattle/Texas/24009028003/2024,2,5.49E-05,1.006648641
+112,ferret-7,A/dairycattle/Texas/24009028003/2024,2,1.83E-05,0.942821567
+113,ferret-10,A/dairycattle/Texas/24009028003/2024,1,0.04,0
+114,ferret-10,A/dairycattle/Texas/24009028003/2024,1,0.013333333,0.023146936
+115,ferret-10,A/dairycattle/Texas/24009028003/2024,1,0.004444444,0.003437627
+116,ferret-10,A/dairycattle/Texas/24009028003/2024,1,0.001481481,0.597985661
+117,ferret-10,A/dairycattle/Texas/24009028003/2024,1,0.000493827,0.857858858
+118,ferret-10,A/dairycattle/Texas/24009028003/2024,1,0.000164609,1.047845006
+119,ferret-10,A/dairycattle/Texas/24009028003/2024,1,5.49E-05,0.988475688
+120,ferret-10,A/dairycattle/Texas/24009028003/2024,1,1.83E-05,1.044726969
+121,ferret-10,A/dairycattle/Texas/24009028003/2024,2,0.04,0
+122,ferret-10,A/dairycattle/Texas/24009028003/2024,2,0.013333333,0.00847957
+123,ferret-10,A/dairycattle/Texas/24009028003/2024,2,0.004444444,0.023519587
+124,ferret-10,A/dairycattle/Texas/24009028003/2024,2,0.001481481,0.558296347
+125,ferret-10,A/dairycattle/Texas/24009028003/2024,2,0.000493827,0.939082368
+126,ferret-10,A/dairycattle/Texas/24009028003/2024,2,0.000164609,1.054145583
+127,ferret-10,A/dairycattle/Texas/24009028003/2024,2,5.49E-05,0.926421701
+128,ferret-10,A/dairycattle/Texas/24009028003/2024,2,1.83E-05,1.14597703
+129,ferret-19,A/dairycattle/Texas/24009028003/2024,1,0.04,0
+130,ferret-19,A/dairycattle/Texas/24009028003/2024,1,0.013333333,0.08050681
+131,ferret-19,A/dairycattle/Texas/24009028003/2024,1,0.004444444,0.589426868
+132,ferret-19,A/dairycattle/Texas/24009028003/2024,1,0.001481481,1.156623421
+133,ferret-19,A/dairycattle/Texas/24009028003/2024,1,0.000493827,0.913619442
+134,ferret-19,A/dairycattle/Texas/24009028003/2024,1,0.000164609,1.123845715
+135,ferret-19,A/dairycattle/Texas/24009028003/2024,1,5.49E-05,1.211870041
+136,ferret-19,A/dairycattle/Texas/24009028003/2024,1,1.83E-05,1.392712617
+137,ferret-19,A/dairycattle/Texas/24009028003/2024,2,0.04,0.002713478
+138,ferret-19,A/dairycattle/Texas/24009028003/2024,2,0.013333333,0.081030644
+139,ferret-19,A/dairycattle/Texas/24009028003/2024,2,0.004444444,0.617394006
+140,ferret-19,A/dairycattle/Texas/24009028003/2024,2,0.001481481,1.186497098
+141,ferret-19,A/dairycattle/Texas/24009028003/2024,2,0.000493827,1.065430049
+142,ferret-19,A/dairycattle/Texas/24009028003/2024,2,0.000164609,1.123451929
+143,ferret-19,A/dairycattle/Texas/24009028003/2024,2,5.49E-05,1.190594389
+144,ferret-19,A/dairycattle/Texas/24009028003/2024,2,1.83E-05,1.324557236

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"grid": false}, "legend": {"labelFontSize": 10, "labelLimit": 2, "orient": "right", "titleFontSize": 12, "titleLimit": 2}}, "data": {"name": "data-e3785d25c505b16796690f7791b31fc9"}, "facet": {"field": "serum", "sort": ["mouse_1-02", "mouse_1-03", "mouse_1-05"], "type": "nominal"}, "spec": {"layer": [{"mark": {"type": "point", "filled": true, "size": 100}, "encoding": {"color": {"field": "strain", "legend": {"labelLimit": 200, "orient": "right", "title": "Strain", "titleLimit": 200}, "type": "nominal"}, "x": {"field": "escape_mean", "scale": {"padding": 10}, "type": "quantitative"}, "y": {"field": "ic90", "scale": {"padding": 10, "type": "log"}, "type": "quantitative"}}}, {"mark": {"type": "text", "align": "left", "baseline": "top", "color": "black", "dx": 5, "dy": 5, "fontSize": 10}, "encoding": {"text": {"field": "correlation", "format": ".2f", "type": "nominal"}, "x": {"value": 1}, "y": {"value": 1}}}], "height": 200, "width": 200}, "columns": 3, "padding": {"left": 2, "right": 200, "top": 20, "bottom": 20}, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-e3785d25c505b16796690f7791b31fc9": [{"serum": "mouse-serum-1-02", "strain": "A/American Wigeon/South Carolina/USDA-000345-001/2021", "escape_mean": 0.0, "ic90": 0.0002835035963420319, "log_ic90": -8.168285749367115, "correlation": 0.7326184722739337}, {"serum": "mouse-serum-1-02", "strain": "A/dairycattle/Texas/24009028003/2024", "escape_mean": 1.2191999999999998, "ic90": 0.01300719319693848, "log_ic90": -4.342252751705816, "correlation": 0.7326184722739337}, {"serum": "mouse-serum-1-02", "strain": "A/domesticcat/Oklahoma/24009118002/2024", "escape_mean": 1.1488, "ic90": 0.006836774576611797, "log_ic90": -4.985439211690748, "correlation": 0.7326184722739337}, {"serum": "mouse-serum-1-02", "strain": "A/peregrinefalcon/Saga/4112A002/2023 ", "escape_mean": 0.6787000000000001, "ic90": 0.000820081181436136, "log_ic90": -7.106107220854939, "correlation": 0.7326184722739337}, {"serum": "mouse-serum-1-02", "strain": "A/skunk/NewMexico/24006483001original/2024", "escape_mean": 1.9789999999999999, "ic90": 0.0033890413981360838, "log_ic90": -5.687208170988902, "correlation": 0.7326184722739337}, {"serum": "mouse-serum-1-03", "strain": "A/American Wigeon/South Carolina/USDA-000345-001/2021", "escape_mean": 0.0, "ic90": 0.0006317810673547522, "log_ic90": -7.366967636245423, "correlation": 0.9875940445654873}, {"serum": "mouse-serum-1-03", "strain": "A/dairycattle/Texas/24009028003/2024", "escape_mean": 2.3735500000000003, "ic90": 0.008373348437442458, "log_ic90": -4.782701422217187, "correlation": 0.9875940445654873}, {"serum": "mouse-serum-1-03", "strain": "A/domesticcat/Oklahoma/24009118002/2024", "escape_mean": 2.2928170000000003, "ic90": 0.009166785071102634, "log_ic90": -4.692168646213583, "correlation": 0.9875940445654873}, {"serum": "mouse-serum-1-03", "strain": "A/peregrinefalcon/Saga/4112A002/2023 ", "escape_mean": 0.14229999999999998, "ic90": 0.0005630802254908509, "log_ic90": -7.4820884435448844, "correlation": 0.9875940445654873}, {"serum": "mouse-serum-1-03", "strain": "A/skunk/NewMexico/24006483001original/2024", "escape_mean": 2.7829, "ic90": 0.00879814665226344, "log_ic90": -4.733214187376228, "correlation": 0.9875940445654873}, {"serum": "mouse-serum-1-05", "strain": "A/American Wigeon/South Carolina/USDA-000345-001/2021", "escape_mean": 0.0, "ic90": 0.0007740553642943144, "log_ic90": -7.163867156836688, "correlation": 0.7440187081376434}, {"serum": "mouse-serum-1-05", "strain": "A/dairycattle/Texas/24009028003/2024", "escape_mean": 2.0889, "ic90": 0.04, "log_ic90": -3.2188758248682006, "correlation": 0.7440187081376434}, {"serum": "mouse-serum-1-05", "strain": "A/domesticcat/Oklahoma/24009118002/2024", "escape_mean": 2.0039000000000002, "ic90": 0.0018163973542954604, "log_ic90": -6.310900215306469, "correlation": 0.7440187081376434}, {"serum": "mouse-serum-1-05", "strain": "A/peregrinefalcon/Saga/4112A002/2023 ", "escape_mean": 3.0517, "ic90": 0.023299600529826874, "log_ic90": -3.759319063200077, "correlation": 0.7440187081376434}, {"serum": "mouse-serum-1-05", "strain": "A/skunk/NewMexico/24006483001original/2024", "escape_mean": 1.7288999999999999, "ic90": 0.0019630835931137704, "log_ic90": -6.233238780226814, "correlation": 0.7440187081376434}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
