@@ -1,0 +1,21 @@
+# Specify configuration
+
+# mAb neutralization data
+serum_neuts_mouse_pHW_strain_validation: data/serum_neuts/serum_neutralization_mouse_pHW_strain_validation.csv
+serum_neuts_ferret_pHW_strain_validation: data/serum_neuts/serum_neutralization_ferret_pHW_strain_validation.csv
+
+# DMS data
+mouse_1-02_sera_escape: ../../results/antibody_escape/averages/mouse-1-02_mut_effect.csv
+mouse_1-03_sera_escape: ../../results/antibody_escape/averages/mouse-1-03_mut_effect.csv
+mouse_1-05_sera_escape: ../../results/antibody_escape/averages/mouse-1-05_mut_effect.csv
+ferret_7_sera_escape: ../../results/antibody_escape/averages/ferret-7_mut_effect.csv
+ferret_10_sera_escape: ../../results/antibody_escape/averages/ferret-10_mut_effect.csv
+ferret_19_sera_escape: ../../results/antibody_escape/averages/ferret-19_mut_effect.csv
+
+# strains
+strains: strain_mutations.csv
+
+# Results
+resultsdir: results/
+
+
