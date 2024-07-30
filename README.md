@@ -10,7 +10,7 @@ A JSON file with the results for visualization with [dms-viz](https://dms-viz.gi
 
 ### `dms-vep-pipeline-3` submodule
 
-Most of the analysis is done by the [dms-vep-pipeline-3](https://github.com/dms-vep-3/dms-vep-pipeline-3), which was added as a [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to this pipeline via:
+Most of the analysis is done by the [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3), which was added as a [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to this pipeline via:
 
     git submodule add https://github.com/dms-vep/dms-vep-pipeline-3
 
