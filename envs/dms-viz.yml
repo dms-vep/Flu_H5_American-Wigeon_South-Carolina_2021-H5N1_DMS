@@ -3,7 +3,6 @@ name: dms-viz
 channels:
   - conda-forge
   - bioconda
-  - defaults
 
 dependencies:
   - biopython=1.83
