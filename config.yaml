@@ -30,7 +30,7 @@ github_blob_url: https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolin
 # Some descriptions and metadata about the analysis.
 description: Deep mutational scanning of H5N1 influenza haemagglutinin using a barcoded lentiviral platform (strain A/American Wigeon/South Carolina/USDA-000345-001/2021)
 year: 2024
-authors: "[Dadonaite et al](https://www.biorxiv.org/content/10.1101/2024.05.23.595634v1)"
+authors: "[Dadonaite et al](https://doi.org/10.1371/journal.pbio.3002916)"
 
 # ----------------------------------------------------------------------------
 # Site numbering, mutation classification, and neut standards

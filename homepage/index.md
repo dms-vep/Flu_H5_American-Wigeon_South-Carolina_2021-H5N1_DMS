@@ -35,7 +35,7 @@ features:
 ## Overview
 This website contains results from [pseudovirus deep mutational scanning](https://doi.org/10.1016/j.cell.2023.02.001) experiments that measure the effects of mutations to the hemagglutinin (HA) of the 2.3.4.4b clade strain A/American Wigeon/South Carolina/USDA-000345-001/2021 (H5N1) on several key molecular phenotypes.
 
-The paper describing this study is [Dadonaite et al (2024)](https://www.biorxiv.org/content/10.1101/2024.05.23.595634v1).
+The paper describing this study is [Dadonaite et al (2024)](https://doi.org/10.1371/journal.pbio.3002916).
 
 The links in the boxes above take you to interactive plots or descriptions of different aspects of the study.
 For a high-level overview, see the [summary](summary){target="_self"} of how mutations affect all phenotypes, or examine the data in a structural context using [this dms-viz link](https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-vep%2FFlu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS%2Fmain%2Fresults%2Fdms-viz%2Fdms-viz.json).
