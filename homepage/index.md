@@ -30,6 +30,9 @@ features:
   - title: HA sequence numbering
     details: Explanation of sequence numbering schemes
     link: /numbering
+  - title: Identifying HA mutations
+    details: Using Nextclade to identify new HA mutations
+    link: /identifying_ha_mutations
 ---
 
 ## Overview

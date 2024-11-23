@@ -22,36 +22,14 @@ Here is an explanation of the key plot elements:
 HA genes are numbering various different ways; see [here](numbering) for an explanation of the numbering scheme used here.
 
 ## Structure-based visualization
+
 To view the effects of mutations in the context of the H5 HA three-dimensional structure, use [this dms-viz link](https://dms-viz.github.io/v0/?data=https%3A%2F%2Fraw.githubusercontent.com%2Fdms-vep%2FFlu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS%2Fmain%2Fresults%2Fdms-viz%2Fdms-viz.json).
 
 ## Numerical values of mutation effects on all phenotypes
+
 The numerical data plotted above are in [this CSV file](https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS/blob/main/results/summaries/phenotypes.csv).
 These data have been to retain only higher-confidence values.
 For more detailed data without the pre-filtering, see the phenotype-specific pages.
-
-## H5 Surveillance with [Nextclade](https://clades.nextstrain.org/)
-
-Thanks to help from [Louise Moncla](https://lmoncla.github.io/monclalab/) and [Jordan Ort](https://lmoncla.github.io/monclalab/team/JordanOrt/), you can easily connect H5 HA mutations identified with [Nextclade](https://clades.nextstrain.org/) to their effect on H5 stability, cell entry, receptor usage, and antigenic escape. Here's how:
-
-[Nextclade](https://clades.nextstrain.org/) is a software tool that performs clade assignment, mutation calling, and sequence quality checks on viral sequences. After providing your viral sequences as a `.fasta` file, Nextclade recommends a relevant 'dataset' consisting of a curated phylogeny, reference sequence, gene annotation file, and metadata. The output of Nextclade, including viral mutations, can be downloaded for downstream applications.
-
-1. Upload a `.fasta` file of your viral sequences.
-
-2. Select the appropriate reference dataset. We're only supporting the `H5Nx clade 2.3.4.4` dataset, which contains the parental H5 HA sequence used to design our DMS library (`A/American Wigeon/South Carolina/USDA-000345-001`).
-
-3. Identify mutations relative to the parental H5 HA sequence. By default, mutations are identified relative to the reference sequence of the `H5Nx clade 2.3.4.4` dataset (`A/Astrakhan/3212/2020`). Change this by selecting the DMS strain in the `Relative to` drop down menu:
-
-    ![Dropdown menu](public/images/nextclade.png)
-
-4. Download mutations identified by Nextclade. Select the `nextclade.csv` file under the `Export` tab. Amino acid mutations relative to the parental strain will be in a column called `relativeMutations['A/American_wigeon/North_Carolina/AH0182517/2022'].aaSubstitutions` in the following format:
-
-    ```text
-    HA:V11I,HA:T52A,HA:M120L,HA:A156T,HA:A226V,HA:K341R,HA:N491D,HA:V526I
-    ```
-
-5. Convert between HA numbering schemes. The HA mutations from Nextclade are numbered sequentially. This is equivalent to the `sequential_site` column in our [`site_numbering_map.csv`](https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS/blob/main/data/site_numbering_map.csv).
-
-6. Look up mutations in our DMS datasets. [Here is a CSV file](https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS/blob/main/results/summaries/phenotypes.csv) of the numerical values of the measurements with pre-filtering for high-confidence values. In this file, the `site` column refers to the `reference_site` column in our [`site_numbering_map.csv`](https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS/blob/main/data/site_numbering_map.csv).
 
 ## Explore Mutation Effects
 
