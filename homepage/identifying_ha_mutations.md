@@ -18,6 +18,8 @@ H5Nx influenza is a persistent threat to public health, so it's important to con
     HA:V11I,HA:T52A,HA:M120L,HA:A156T,HA:A226V,HA:K341R,HA:N491D,HA:V526I
     ```
 
+    **Note**, the `aaSubstitutions` column still only has the mutations relative to the default Nextclade reference strain (`A/Astrakhan/3212/2020`).
+
 5. Convert between HA numbering schemes. The HA mutations from Nextclade are numbered **sequentially**. This is equivalent to the `sequential_site` column in our [`site_numbering_map.csv`](https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS/blob/main/data/site_numbering_map.csv). The file [`site_numbering_map.csv`](https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS/blob/main/data/site_numbering_map.csv) provides a way to convert between Nextclade's sequential site numbering and other HA formats. For a detailed explanation of HA numbering, refer to [this page](./numbering.md).
 
 6. Search for the effect of mutations in our data. Mutations in our data are numbered using the widely adopted H3 numbering scheme, as shown in the `reference_site` column in [`site_numbering_map.csv`](https://github.com/dms-vep/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS/blob/main/data/site_numbering_map.csv). First, convert mutations to the H3 numbering scheme (`sequential_site` → `reference_site`), then explore their phenotypes using our [interactive summary plots](./summary.md).
