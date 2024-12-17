@@ -1,5 +1,5 @@
 # Deep mutational scanning of H5N1 influenza haemagglutinin using a barcoded lentiviral platform (strain A/American Wigeon/South Carolina/USDA-000345-001/2021)
-Study by [Dadonaite et al, bioRxiv (2024)](https://doi.org/10.1371/journal.pbio.3002916).
+The main publication for this paper is [Dadonaite et al, PLoS Biology (2024)](https://doi.org/10.1371/journal.pbio.3002916), but note that this repository may be further updated beyond that paper (see the [CHANGELOG](CHANGELOG.md), which also provides links to releases exactly corresponding to each paper).
 
 This repository has the code and data.
 For rendering of key results and an easy-to-interpret summary, see the documentation of the analysis at [https://dms-vep.org/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS](https://dms-vep.org/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS)
