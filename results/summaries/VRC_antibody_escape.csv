@@ -1,4 +1,4 @@
-site,wildtype,mutant,mouse sera escape,entry in 293T cells,stability,SA26 usage increase,sequential_site,reference_H1_site,mature_H5_site,HA1_HA2_H5_site,region,nt changes to codon
+site,wildtype,mutant,VRC antibodies escape,entry in 293T cells,stability,SA26 usage increase,sequential_site,reference_H1_site,mature_H5_site,HA1_HA2_H5_site,region,nt changes to codon
 -1,L,A,,-1.245,,0,6,-11,-11,6 (HA1),HA1,2
 -1,L,C,0.1422,0.03853,-0.012,0,6,-11,-11,6 (HA1),HA1,3
 -1,L,D,,-5.869,,0,6,-11,-11,6 (HA1),HA1,3
