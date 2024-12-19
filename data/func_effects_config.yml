@@ -205,22 +205,22 @@ avg_func_effects:
       - Lib1-240704-CMAH-293
       - Lib2-240704-CMAH-293
 
-  293_IGM_entry:
+  293_low-sera_entry:
     <<: *avg_func_effects_default
     selections:
       - Lib1-241216-293-IGM
       - Lib2-241216-293-IGM
-  293_IGM_CMAH_entry:
+  293_low-sera_CMAH_entry:
     <<: *avg_func_effects_default
     selections:
       - Lib1-241216-CMAH-IGM
       - Lib2-241216-CMAH-IGM
-  293_SA23_IGM_entry:
+  293_SA23_low-sera_entry:
     <<: *avg_func_effects_default
     selections:
       - Lib1-241216-SA23-IGM
       - Lib2-241216-SA23-IGM
-  293_SA26_IGM_entry:
+  293_SA26_low-sera_entry:
     <<: *avg_func_effects_default
     selections:
       - Lib1-241216-SA26-IGM
@@ -279,7 +279,7 @@ func_effect_diffs:
           step: 1
           min: 1
           max: 3
-  SA26_vs_SA23_IGM_entry:
+  SA26_vs_SA23_low-sera_entry:
     condition_1:
       name: SA26-IGM entry
       selections:
@@ -357,7 +357,7 @@ func_effect_diffs:
           step: 1
           min: 1
           max: 3
-  CMAH_vs_293_IGM_entry:
+  CMAH_vs_293_low-sera_entry:
     condition_1:
       name: CMAH-IGM entry
       selections:

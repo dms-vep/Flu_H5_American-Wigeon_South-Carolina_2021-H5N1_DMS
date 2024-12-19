@@ -95,7 +95,7 @@ all_sera_escape:
 VRC_antibody_escape:
   <<: *phenotypes
   antibody_escape:
-    mouse sera:  # name each set of antibodies
+    VRC antibodies:  # name each set of antibodies
       stat: escape_median  # statistic from CSV to plot
       positive_color: "#56B4E9"  # light blue, positive heatmap color
       negative_color: "#E69F00"  # orange, negative heatmap color
