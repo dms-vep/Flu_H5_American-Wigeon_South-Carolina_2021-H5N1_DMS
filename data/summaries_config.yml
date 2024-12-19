@@ -107,3 +107,4 @@ VRC_antibody_escape:
         mAb-310-018-13-7D11: results/antibody_escape/averages/mAb-310-018-13-7D11_mut_effect.csv
         mAb-310-054-13-12D03: results/antibody_escape/averages/mAb-310-054-13-12D03_mut_effect.csv
         mAb-310-33-06C-1H02: results/antibody_escape/averages/mAb-310-33-06C-1H02_mut_effect.csv
+      no_heatmap: True
