@@ -92,7 +92,7 @@ all_sera_escape:
         ferret-10: results/antibody_escape/averages/ferret-10_mut_effect.csv
         ferret-19: results/antibody_escape/averages/ferret-19_mut_effect.csv
 
-Vir_antibody_escape:
+VRC_antibody_escape:
   <<: *phenotypes
   antibody_escape:
     mouse sera:  # name each set of antibodies
