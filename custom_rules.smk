@@ -31,7 +31,7 @@ rule sialic_acid_entry:
     output:
         nb="results/notebooks/SA_functional_scores.ipynb",
     params:
-        yaml=lambda _, input, output: yaml.round_trip_dump(
+        yaml=lambda _, input, output: yaml_str(
             {
                 "SA23_csv": input.SA23_csv,
                 "SA26_csv": input.SA26_csv,
@@ -86,7 +86,7 @@ rule functional_effect_distribution:
     output:
         nb="results/notebooks/functional_effect_distribution.ipynb",
     params:
-        yaml=lambda _, input, output: yaml.round_trip_dump(
+        yaml=lambda _, input, output: yaml_str(
             {
                 "effects_csv": input.effects_csv,
                 "structure_csv": input.structure_csv

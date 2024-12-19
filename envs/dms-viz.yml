@@ -13,4 +13,4 @@ dependencies:
   - pyarrow
   - python=3.11
   - pip:
-      - configure-dms-viz==1.5.0
+      - configure-dms-viz==1.6.0

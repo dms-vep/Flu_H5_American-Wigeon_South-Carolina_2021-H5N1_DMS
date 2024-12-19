@@ -92,7 +92,7 @@ polyclonal_params_default: &polyclonal_params_default
 
 # keyword arguments to `Polyclonal.mut_escape_plot`
 escape_plot_kwargs_default: &escape_plot_kwargs_default
-  alphabet: [A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y] 
+  alphabet: [A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y]
   addtl_slider_stats:
     times_seen: 2
   heatmap_max_at_least: 2
@@ -206,7 +206,7 @@ antibody_selections:
       use_in_fit: true
      Lib1-230724-sera-1-01-0.064:
       concentration: 0.064
-      use_in_fit: true 
+      use_in_fit: true
 
   Lib2-230724-sera-1-01:
     neut_standard_name: neut_standard
@@ -224,7 +224,7 @@ antibody_selections:
       use_in_fit: false
      Lib2-230724-sera-1-01-0.064:
       concentration: 0.064
-      use_in_fit: true 
+      use_in_fit: true
 
   # --------------------------------------------------------------------------------------
   Lib1-230630-sera-1-02:
@@ -243,7 +243,7 @@ antibody_selections:
       use_in_fit: true
      Lib1-230630-sera-1-02-0.02176:
       concentration: 0.02176
-      use_in_fit: true 
+      use_in_fit: true
 
   Lib2-230630-sera-1-02:
     neut_standard_name: neut_standard
@@ -261,7 +261,7 @@ antibody_selections:
       use_in_fit: true
      Lib2-230630-sera-1-02-0.02176:
       concentration: 0.02176
-      use_in_fit: true    
+      use_in_fit: true
 
   # --------------------------------------------------------------------------------------
   Lib1-230630-sera-1-03:
@@ -280,7 +280,7 @@ antibody_selections:
       use_in_fit: true
      Lib1-230630-sera-1-03-0.08242:
       concentration: 0.08242
-      use_in_fit: true 
+      use_in_fit: true
 
   Lib2-230630-sera-1-03:
     neut_standard_name: neut_standard
@@ -298,7 +298,7 @@ antibody_selections:
       use_in_fit: true
      Lib2-230630-sera-1-03-0.08242:
       concentration: 0.08242
-      use_in_fit: true 
+      use_in_fit: true
 
   # --------------------------------------------------------------------------------------
   Lib1-230630-sera-1-04:
@@ -317,7 +317,7 @@ antibody_selections:
       use_in_fit: true
      Lib1-230630-sera-1-04-0.13402:
       concentration: 0.13402
-      use_in_fit: true 
+      use_in_fit: true
 
   Lib2-230630-sera-1-04:
     neut_standard_name: neut_standard
@@ -335,7 +335,7 @@ antibody_selections:
       use_in_fit: true
      Lib2-230630-sera-1-04-0.13402:
       concentration: 0.13402
-      use_in_fit: true 
+      use_in_fit: true
 
   # --------------------------------------------------------------------------------------
   Lib1-230630-sera-2-04:
@@ -354,7 +354,7 @@ antibody_selections:
       use_in_fit: true
      Lib1-230630-sera-2-04-0.10898:
       concentration: 0.13402
-      use_in_fit: true 
+      use_in_fit: true
 
   Lib2-230630-sera-2-04:
     neut_standard_name: neut_standard
@@ -372,7 +372,7 @@ antibody_selections:
       use_in_fit: true
      Lib2-230630-sera-2-04-0.10898:
       concentration: 0.13402
-      use_in_fit: true 
+      use_in_fit: true
 
   # --------------------------------------------------------------------------------------
   Lib1-230724-sera-2-01:
@@ -391,7 +391,7 @@ antibody_selections:
       use_in_fit: true
      Lib1-230724-sera-2-01-0.17555:
       concentration: 0.17555
-      use_in_fit: true 
+      use_in_fit: true
 
   Lib2-230724-sera-2-01:
     neut_standard_name: neut_standard
@@ -409,7 +409,7 @@ antibody_selections:
       use_in_fit: true
      Lib2-230724-sera-2-01-0.17555:
       concentration: 0.17555
-      use_in_fit: true 
+      use_in_fit: true
 
   # --------------------------------------------------------------------------------------
   Lib1-230724-sera-2-05:
@@ -428,7 +428,7 @@ antibody_selections:
       use_in_fit: true
      Lib1-230724-sera-2-05-0.21781:
       concentration: 0.21781
-      use_in_fit: true 
+      use_in_fit: true
 
   Lib2-230724-sera-2-05:
     neut_standard_name: neut_standard
@@ -446,7 +446,7 @@ antibody_selections:
       use_in_fit: true
      Lib2-230724-sera-2-05-0.21781:
       concentration: 0.21781
-      use_in_fit: true 
+      use_in_fit: true
 
   # --------------------------------------------------------------------------------------
   Lib1-230822-ferret-sera-7:
@@ -465,7 +465,7 @@ antibody_selections:
       use_in_fit: true
      Lib1-230822-ferret-sera-7-0.02944:
       concentration: 0.02944
-      use_in_fit: true 
+      use_in_fit: true
 
   Lib2-230822-ferret-sera-7:
     neut_standard_name: neut_standard
@@ -483,7 +483,7 @@ antibody_selections:
       use_in_fit: true
      Lib2-230822-ferret-sera-7-0.02944:
       concentration: 0.02944
-      use_in_fit: true 
+      use_in_fit: true
 
   # --------------------------------------------------------------------------------------
   Lib1-230822-ferret-sera-10:
@@ -502,7 +502,7 @@ antibody_selections:
       use_in_fit: true
      Lib1-230822-ferret-sera-10-0.01965:
       concentration: 0.01965
-      use_in_fit: true 
+      use_in_fit: true
 
   Lib2-230822-ferret-sera-10:
     neut_standard_name: neut_standard
@@ -520,7 +520,7 @@ antibody_selections:
       use_in_fit: true
      Lib2-230822-ferret-sera-10-0.01965:
       concentration: 0.01965
-      use_in_fit: true 
+      use_in_fit: true
 
   # --------------------------------------------------------------------------------------
   Lib1-230822-ferret-sera-19:
@@ -539,7 +539,7 @@ antibody_selections:
       use_in_fit: true
      Lib1-230822-ferret-sera-19-0.0151:
       concentration: 0.0151
-      use_in_fit: true 
+      use_in_fit: true
 
   Lib2-230822-ferret-sera-19:
     neut_standard_name: neut_standard
@@ -557,7 +557,7 @@ antibody_selections:
       use_in_fit: true
      Lib2-230822-ferret-sera-19-0.0151:
       concentration: 0.0151
-      use_in_fit: true 
+      use_in_fit: true
 
   # --------------------------------------------------------------------------------------
   Lib1-231129-pig-sera-972:
@@ -576,7 +576,7 @@ antibody_selections:
       use_in_fit: true
      Lib1-231129-pig-sera-972-0.11321:
       concentration: 0.11321
-      use_in_fit: true 
+      use_in_fit: true
 
   Lib2-231129-pig-sera-972:
     neut_standard_name: neut_standard
@@ -594,7 +594,7 @@ antibody_selections:
       use_in_fit: true
      Lib2-231129-pig-sera-972-0.0663:
       concentration: 0.0663
-      use_in_fit: true 
+      use_in_fit: true
 
   # --------------------------------------------------------------------------------------
   Lib1-231129-pig-sera-973:
@@ -613,7 +613,7 @@ antibody_selections:
       use_in_fit: true
      Lib1-231129-pig-sera-973-0.08962:
       concentration: 0.08962
-      use_in_fit: true 
+      use_in_fit: true
 
   Lib2-231129-pig-sera-973:
     neut_standard_name: neut_standard
@@ -631,7 +631,7 @@ antibody_selections:
       use_in_fit: true
      Lib2-231129-pig-sera-973-0.05525:
       concentration: 0.05525
-      use_in_fit: true 
+      use_in_fit: true
 
   # --------------------------------------------------------------------------------------
   Lib1-231129-pig-sera-977:
@@ -650,7 +650,7 @@ antibody_selections:
       use_in_fit: true
      Lib1-231129-pig-sera-977-0.08113:
       concentration: 0.08113
-      use_in_fit: true 
+      use_in_fit: true
 
   Lib2-231129-pig-sera-977:
     neut_standard_name: neut_standard
@@ -668,7 +668,7 @@ antibody_selections:
       use_in_fit: true
      Lib2-231129-pig-sera-977-0.05525:
       concentration: 0.05525
-      use_in_fit: true 
+      use_in_fit: true
 
   # --------------------------------------------------------------------------------------
   Lib1-231129-pig-sera-978:
@@ -687,7 +687,7 @@ antibody_selections:
       use_in_fit: true
      Lib1-231129-pig-sera-978-0.09434:
       concentration: 0.09434
-      use_in_fit: true 
+      use_in_fit: true
 
   Lib2-231129-pig-sera-978:
     neut_standard_name: neut_standard
@@ -705,7 +705,168 @@ antibody_selections:
       use_in_fit: true
      Lib2-231129-pig-sera-978-0.05525:
       concentration: 0.05525
-      use_in_fit: true 
+      use_in_fit: true
+
+  # --------------------------------------------------------------------------------------
+  Lib1-241216-mAb26:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-241216-no-antibody-control
+    antibody_samples:
+     Lib1-241216-mAb26_2.1:
+      concentration: 2.1
+      use_in_fit: true
+     Lib1-241216-mAb26_8.4:
+      concentration: 8.4
+      use_in_fit: true
+
+  Lib2-241216-mAb26:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-241216-no-antibody-control
+    antibody_samples:
+     Lib2-241216-mAb26_2.1:
+      concentration: 2.1
+      use_in_fit: true
+     Lib2-241216-mAb26_8.4:
+      concentration: 8.4
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+
+  Lib1-241216-mAb74:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-241216-no-antibody-control
+    antibody_samples:
+     Lib1-241216-mAb74_2.84:
+      concentration: 2.84
+      use_in_fit: true
+     Lib1-241216-mAb74_11.38:
+      concentration: 11.28
+      use_in_fit: true
+
+  Lib2-241216-mAb74:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-241216-no-antibody-control
+    antibody_samples:
+     Lib2-241216-mAb74_2.84:
+      concentration: 2.84
+      use_in_fit: true
+     Lib2-241216-mAb74_11.38:
+      concentration: 11.28
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+
+  Lib1-241216-mAb7011:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-241216-no-antibody-control
+    antibody_samples:
+     Lib1-241216-mAb7011_16.8:
+      concentration: 16.8
+      use_in_fit: true
+     Lib1-241216-mAb7011_67.2:
+      concentration: 67.2
+      use_in_fit: true
+
+  Lib2-241216-mAb7011:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-241216-no-antibody-control
+    antibody_samples:
+     Lib2-241216-mAb7011_16.8:
+      concentration: 16.8
+      use_in_fit: true
+     Lib2-241216-mAb7011_67.2:
+      concentration: 67.2
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+
+  Lib1-241216-mAb12D03:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-241216-no-antibody-control
+    antibody_samples:
+     Lib1-241216-mAb12D03_1.29:
+      concentration: 1.29
+      use_in_fit: true
+     Lib1-241216-mAb12D03_5.16:
+      concentration: 5.16
+      use_in_fit: true
+
+  Lib2-241216-mAb12D03:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-241216-no-antibody-control
+    antibody_samples:
+     Lib2-241216-mAb12D03_1.29:
+      concentration: 1.29
+      use_in_fit: true
+     Lib2-241216-mAb12D03_5.16:
+      concentration: 5.16
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+
+  Lib1-241216-mAb1H02:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-241216-no-antibody-control
+    antibody_samples:
+     Lib1-241216-mAb1H02_2.76:
+      concentration: 2.76
+      use_in_fit: true
+     Lib1-241216-mAb1H02_11.04:
+      concentration: 11.04
+      use_in_fit: true
+
+
+  Lib2-241216-mAb1H02:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-241216-no-antibody-control
+    antibody_samples:
+     Lib2-241216-mAb1H02_2.76:
+      concentration: 2.76
+      use_in_fit: true
+     Lib2-241216-mAb1H02_11.04:
+      concentration: 11.04
+      use_in_fit: true
+
 
 # define the stability selections
 stability_selections:
@@ -733,7 +894,7 @@ stability_selections:
      Lib2-230822-pH-5.5:
       concentration: 1.9
       use_in_fit: true
-      
+
   # --------------------------------------------------------------------------------------
   Lib1-231002-pH:
      neut_standard_name: neut_standard
@@ -886,6 +1047,31 @@ avg_antibody_escape:
     selections:
       - Lib1-231129-pig-sera-978
       - Lib2-231129-pig-sera-978
+  mAb-S2002-c366-26:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-241216-mAb26
+      - Lib2-241216-mAb26
+  mAb-S2002-c289-74:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-241216-mAb74
+      - Lib2-241216-mAb74
+  mAb-310-018-13-7D11:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-241216-mAb7011
+      - Lib2-241216-mAb7011
+  mAb-310-054-13-12D03:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-241216-mAb12D03
+      - Lib2-241216-mAb12D03
+  mAb-310-33-06C-1H02:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-241216-mAb1H02
+      - Lib2-241216-mAb1H02
 
 # define the pH stability selections to average
 avg_stability:
