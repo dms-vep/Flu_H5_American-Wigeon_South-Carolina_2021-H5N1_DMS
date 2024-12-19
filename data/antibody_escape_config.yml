@@ -707,6 +707,167 @@ antibody_selections:
       concentration: 0.05525
       use_in_fit: true 
 
+  # --------------------------------------------------------------------------------------
+  Lib1-241216-mAb26:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-241216-no-antibody-control
+    antibody_samples:
+     Lib1-241216-mAb26_2.1:
+      concentration: 2.1
+      use_in_fit: true
+     Lib1-241216-mAb26_8.4:
+      concentration: 8.4
+      use_in_fit: true
+
+  Lib2-241216-mAb26:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-241216-no-antibody-control
+    antibody_samples:
+     Lib2-241216-mAb26_2.1:
+      concentration: 2.1
+      use_in_fit: true
+     Lib2-241216-mAb26_8.4:
+      concentration: 8.4
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+
+  Lib1-241216-mAb74:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-241216-no-antibody-control
+    antibody_samples:
+     Lib1-241216-mAb74_2.84:
+      concentration: 2.84
+      use_in_fit: true
+     Lib1-241216-mAb74_11.38:
+      concentration: 11.28
+      use_in_fit: true
+
+  Lib2-241216-mAb74:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-241216-no-antibody-control
+    antibody_samples:
+     Lib2-241216-mAb74_2.84:
+      concentration: 2.84
+      use_in_fit: true
+     Lib2-241216-mAb74_11.38:
+      concentration: 11.28
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+
+  Lib1-241216-mAb7011:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-241216-no-antibody-control
+    antibody_samples:
+     Lib1-241216-mAb7011_16.8:
+      concentration: 16.8
+      use_in_fit: true
+     Lib1-241216-mAb7011_67.2:
+      concentration: 67.2
+      use_in_fit: true
+
+  Lib2-241216-mAb7011:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-241216-no-antibody-control
+    antibody_samples:
+     Lib2-241216-mAb7011_16.8:
+      concentration: 16.8
+      use_in_fit: true
+     Lib2-241216-mAb7011_67.2:
+      concentration: 67.2
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+
+  Lib1-241216-mAb12D03:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-241216-no-antibody-control
+    antibody_samples:
+     Lib1-241216-mAb12D03_1.29:
+      concentration: 1.29
+      use_in_fit: true
+     Lib1-241216-mAb12D03_5.16:
+      concentration: 5.16
+      use_in_fit: true
+
+  Lib2-241216-mAb12D03:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-241216-no-antibody-control
+    antibody_samples:
+     Lib2-241216-mAb12D03_1.29:
+      concentration: 1.29
+      use_in_fit: true
+     Lib2-241216-mAb12D03_5.16:
+      concentration: 5.16
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+
+  Lib1-241216-mAb1H02:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-241216-no-antibody-control
+    antibody_samples:
+     Lib1-241216-mAb1H02_2.76:
+      concentration: 2.76
+      use_in_fit: true
+     Lib1-241216-mAb1H02_11.04:
+      concentration: 11.04
+      use_in_fit: true
+
+
+  Lib2-241216-mAb1H02:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-241216-no-antibody-control
+    antibody_samples:
+     Lib2-241216-mAb1H02_2.76:
+      concentration: 2.76
+      use_in_fit: true
+     Lib2-241216-mAb1H02_11.04:
+      concentration: 11.04
+      use_in_fit: true
+
+
 # define the stability selections
 stability_selections:
   # --------------------------------------------------------------------------------------
@@ -886,6 +1047,35 @@ avg_antibody_escape:
     selections:
       - Lib1-231129-pig-sera-978
       - Lib2-231129-pig-sera-978
+  mAb26:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-241216-mAb26
+      - Lib2-241216-mAb26
+
+  mAb74:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-241216-mAb74
+      - Lib2-241216-mAb74
+  
+  mAb7011:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-241216-mAb7011
+      - Lib2-241216-mAb7011
+
+  mAb12D03:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-241216-mAb12D03
+      - Lib2-241216-mAb12D03
+
+  mAb1H02:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-241216-mAb1H02
+      - Lib2-241216-mAb1H02
 
 # define the pH stability selections to average
 avg_stability:

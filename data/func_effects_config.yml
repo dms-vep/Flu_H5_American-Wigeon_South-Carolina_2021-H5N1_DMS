@@ -104,33 +104,33 @@ func_scores:
     func_score_params: *func_scores_params_default
     global_epistasis_params: *global_epistasis_params
   Lib1-241216-CMAH-IGM:
-    pre_selection_sample: Lib1-241216-CMAH-293-IGM-H5-control
-    post_selection_sample: Lib1-241216-CMAH-293-IGM-VSVG-control
+    pre_selection_sample: Lib1-241216-CMAH-293-IGM-VSVG-control
+    post_selection_sample: Lib1-241216-CMAH-293-IGM-H5-control
     func_score_params: *func_scores_params_default
     global_epistasis_params: *global_epistasis_params
   Lib2-241216-CMAH-IGM:
-    pre_selection_sample: Lib2-241216-CMAH-293-IGM-H5-control
-    post_selection_sample: Lib2-241216-CMAH-293-IGM-VSVG-control
+    pre_selection_sample: Lib2-241216-CMAH-293-IGM-VSVG-control
+    post_selection_sample: Lib2-241216-CMAH-293-IGM-H5-control
     func_score_params: *func_scores_params_default
     global_epistasis_params: *global_epistasis_params
   Lib1-241216-SA23-IGM:
-    pre_selection_sample: Lib1-241216-293-SA23-IGM-H5-control
-    post_selection_sample: Lib1-241216-293-SA23-IGM-VSVG-control
+    pre_selection_sample: Lib1-241216-293-SA23-IGM-VSVG-control
+    post_selection_sample: Lib1-241216-293-SA23-IGM-H5-control
     func_score_params: *func_scores_params_default
     global_epistasis_params: *global_epistasis_params
   Lib2-241216-SA23-IGM:
-    pre_selection_sample: Lib2-241216-293-SA23-IGM-H5-control
-    post_selection_sample: Lib2-241216-293-SA23-IGM-VSVG-control
+    pre_selection_sample: Lib2-241216-293-SA23-IGM-VSVG-control
+    post_selection_sample: Lib2-241216-293-SA23-IGM-H5-control
     func_score_params: *func_scores_params_default
     global_epistasis_params: *global_epistasis_params
   Lib1-241216-SA26-IGM:
-    pre_selection_sample: Lib1-241216-293-SA26-IGM-H5-control
-    post_selection_sample: Lib1-241216-293-SA26-IGM-VSVG-control
+    pre_selection_sample: Lib1-241216-293-SA26-IGM-VSVG-control
+    post_selection_sample: Lib1-241216-293-SA26-IGM-H5-control
     func_score_params: *func_scores_params_default
     global_epistasis_params: *global_epistasis_params
   Lib2-241216-SA26-IGM:
-    pre_selection_sample: Lib2-241216-293-SA26-IGM-H5-control
-    post_selection_sample: Lib2-241216-293-SA26-IGM-VSVG-control
+    pre_selection_sample: Lib2-241216-293-SA26-IGM-VSVG-control
+    post_selection_sample: Lib2-241216-293-SA26-IGM-H5-control
     func_score_params: *func_scores_params_default
     global_epistasis_params: *global_epistasis_params
 
@@ -299,10 +299,10 @@ func_effect_diffs:
         difference_std: 2  # standard deviation difference across pairwise comparisons for mutation
         fraction_pairs_w_mutation: 1  # fraction of all pairs between conditions w mutation
         best_effect: -2  # effect must be >= for at least one condition
-        SA23 entry effect: -8  # slider on effect in this condition, but no initial value
-        SA26 entry effect: 0  # slider on effect in this condition, but no initial value
+        SA23-IGM entry effect: -8  # slider on effect in this condition, but no initial value
+        SA26-IGM entry effect: 0  # slider on effect in this condition, but no initial value
         nt changes to codon: 3
-      addtl_slider_stats_hide_not_filter: [best_effect, SA23 entry effect, SA26 entry effect, nt changes to codon]
+      addtl_slider_stats_hide_not_filter: [best_effect, SA23-IGM entry effect, SA26-IGM entry effect, nt changes to codon]
       addtl_slider_stats_as_max: [difference_std, nt changes to codon]
       heatmap_max_at_least: 1
       heatmap_min_at_least: -1
@@ -377,10 +377,10 @@ func_effect_diffs:
         difference_std: 2  # standard deviation difference across pairwise comparisons for mutation
         fraction_pairs_w_mutation: 1  # fraction of all pairs between conditions w mutation
         best_effect: -2  # effect must be >= for at least one condition
-        293 entry effect: -8  # slider on effect in this condition, but no initial value
-        CMAH entry effect: -8  # slider on effect in this condition, but no initial value
+        293-IGM entry effect: -8  # slider on effect in this condition, but no initial value
+        CMAH-IGM entry effect: -8  # slider on effect in this condition, but no initial value
         nt changes to codon: 3
-      addtl_slider_stats_hide_not_filter: [best_effect, 293 entry effect, CMAH entry effect, nt changes to codon]
+      addtl_slider_stats_hide_not_filter: [best_effect, 293-IGM entry effect, CMAH-IGM entry effect, nt changes to codon]
       addtl_slider_stats_as_max: [difference_std, nt changes to codon]
       heatmap_max_at_least: 1
       heatmap_min_at_least: -1
