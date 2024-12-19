@@ -102,8 +102,8 @@ VRC_antibody_escape:
       max_at_least: 2  # make heatmap max at least
       min_at_least: -2  # make heatmap min at least this
       antibody_list:  # antibodies to include and their CSVs
-        mAb26: results/antibody_escape/averages/mAb26_mut_effect.csv
-        mAb74: results/antibody_escape/averages/mAb74_mut_effect.csv
-        mAb7011: results/antibody_escape/averages/mAb7011_mut_effect.csv
-        mAb12D03: results/antibody_escape/averages/mAb12D03_mut_effect.csv
-        mAb1H02: results/antibody_escape/averages/mAb1H02_mut_effect.csv
+        mAb-S2002-c366-26: results/antibody_escape/averages/mAb-S2002-c366-26_mut_effect.csv
+        mAb-S2002-c289-74: results/antibody_escape/averages/mAb-S2002-c289-74_mut_effect.csv
+        mAb-310-018-13-7D11: results/antibody_escape/averages/mAb-310-018-13-7D11_mut_effect.csv
+        mAb-310-054-13-12D03: results/antibody_escape/averages/mAb-310-054-13-12D03_mut_effect.csv
+        mAb-310-33-06C-1H02: results/antibody_escape/averages/mAb-310-33-06C-1H02_mut_effect.csv
