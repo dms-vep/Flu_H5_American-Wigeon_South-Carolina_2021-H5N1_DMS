@@ -4,8 +4,7 @@ This CHANGELOG should provide succinct and clear explanations of changes made to
 ## Current version of repository
 **Any changes made to the repository subsequent to the last tagged release should be listed below.**
 
-### 2024-12-18 (pull request #134)
-- Update `dms-vep-pipeline-3` to v3.19.1
+- Update `dms-vep-pipeline-3` to v3.20.0
 - Added cell entry (functional selections) performed in media without FBS
 - Added VRC antibody selections
 
