@@ -86,7 +86,7 @@ results/summaries/*
 
 !results/dms-viz
 results/dms-viz/*
-!results/dms-viz/dms-viz.json
+!results/dms-viz/*.json
 
 node_modules/
 !homepage/.vitepress/
