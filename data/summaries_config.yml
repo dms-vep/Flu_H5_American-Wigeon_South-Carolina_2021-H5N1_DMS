@@ -110,11 +110,11 @@ VRC_antibody_escape:
       max_at_least: 2  # make heatmap max at least
       min_at_least: -2  # make heatmap min at least this
       antibody_list:  # antibodies to include and their CSVs
-        S2002-c366-26: results/antibody_escape/averages/mAb-S2002-c366-26_mut_effect.csv
-        S2002-c289-74: results/antibody_escape/averages/mAb-S2002-c289-74_mut_effect.csv
-        310-018-13-7D11: results/antibody_escape/averages/mAb-310-018-13-7D11_mut_effect.csv
-        310-054-13-12D03: results/antibody_escape/averages/mAb-310-054-13-12D03_mut_effect.csv
-        310-33-06C-1H02: results/antibody_escape/averages/mAb-310-33-06C-1H02_mut_effect.csv
+        326-366-26: results/antibody_escape/averages/326-366-26_mut_effect.csv
+        326-289-74: results/antibody_escape/averages/326-289-74_mut_effect.csv
+        310-7D11: results/antibody_escape/averages/310-7D11_mut_effect.csv
+        310-12D03: results/antibody_escape/averages/310-12D03_mut_effect.csv
+        310-1H02: results/antibody_escape/averages/310-1H02_mut_effect.csv
   other_phenotypes:
     entry in 293T cells:
       csv: results/func_effects/averages/293T_entry_func_effects.csv  # CSV w data

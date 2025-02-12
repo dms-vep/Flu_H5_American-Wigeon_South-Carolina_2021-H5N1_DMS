@@ -1047,27 +1047,27 @@ avg_antibody_escape:
     selections:
       - Lib1-231129-pig-sera-978
       - Lib2-231129-pig-sera-978
-  mAb-S2002-c366-26:
+  326-366-26:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-241216-mAb26
       - Lib2-241216-mAb26
-  mAb-S2002-c289-74:
+  326-289-74:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-241216-mAb74
       - Lib2-241216-mAb74
-  mAb-310-018-13-7D11:
+  310-7D11:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-241216-mAb7011
       - Lib2-241216-mAb7011
-  mAb-310-054-13-12D03:
+  310-12D03:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-241216-mAb12D03
       - Lib2-241216-mAb12D03
-  mAb-310-33-06C-1H02:
+  310-1H02:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-241216-mAb1H02
