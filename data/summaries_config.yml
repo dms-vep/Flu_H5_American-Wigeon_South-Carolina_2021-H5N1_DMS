@@ -148,7 +148,11 @@ mRNA_vaccine_mouse_sera_escape:
       antibody_list:  # antibodies to include and their CSVs
         mouse_11_H5: results/antibody_escape/averages/mouse_11_H5_mut_effect.csv
         mouse_13_H5: results/antibody_escape/averages/mouse_13_H5_mut_effect.csv
+        mouse_15_H5: results/antibody_escape/averages/mouse_15_H5_mut_effect.csv
+        mouse_16_H5: results/antibody_escape/averages/mouse_16_H5_mut_effect.csv
+        mouse_1_20HAH5: results/antibody_escape/averages/mouse_1_20HAH5_mut_effect.csv
         mouse_6_20HAH5: results/antibody_escape/averages/mouse_6_20HAH5_mut_effect.csv
+        mouse_7_20HAH5: results/antibody_escape/averages/mouse_7_20HAH5_mut_effect.csv
         mouse_8_20HAH5: results/antibody_escape/averages/mouse_8_20HAH5_mut_effect.csv
   other_phenotypes:
     entry in 293T cells:
