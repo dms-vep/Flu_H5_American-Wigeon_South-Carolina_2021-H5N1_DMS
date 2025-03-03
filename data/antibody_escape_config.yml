@@ -1009,6 +1009,146 @@ antibody_selections:
       concentration: 0.62
       use_in_fit: true
 
+
+# --------------------------------------------------------------------------------------
+  Lib1-250301-mouse_15_H5:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250301-no-antibody-control
+    antibody_samples:
+     Lib1-250301-mouse_15_H5_0.1:
+      concentration: 0.1
+      use_in_fit: true
+     Lib1-250301-mouse_15_H5_0.36:
+      concentration: 0.36
+      use_in_fit: true
+     Lib1-250301-mouse_15_H5_1.16:
+      concentration: 1.16
+      use_in_fit: true
+
+  Lib2-250301-mouse_15_H5:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-250301-no-antibody-control
+    antibody_samples:
+     Lib2-250301-mouse_15_H5_0.1:
+      concentration: 0.1
+      use_in_fit: true
+     Lib2-250301-mouse_15_H5_0.36:
+      concentration: 0.36
+      use_in_fit: true
+     Lib2-250301-mouse_15_H5_1.16:
+      concentration: 1.16
+      use_in_fit: true
+
+
+# --------------------------------------------------------------------------------------
+  Lib1-250301-mouse_16_H5:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250301-no-antibody-control
+    antibody_samples:
+     Lib1-250301-mouse_16_H5_0.32:
+      concentration: 0.32
+      use_in_fit: true
+     Lib1-250301-mouse_16_H5_0.96:
+      concentration: 0.96
+      use_in_fit: true
+
+
+  Lib2-250301-mouse_16_H5:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-250301-no-antibody-control
+    antibody_samples:
+     Lib2-250301-mouse_16_H5_0.32:
+      concentration: 0.32
+      use_in_fit: true
+     Lib2-250301-mouse_16_H5_0.96:
+      concentration: 0.96
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-250301-mouse_1_20HAH5:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250301-no-antibody-control
+    antibody_samples:
+     Lib1-250301-mouse_1_20HAH5_0.1:
+      concentration: 0.1
+      use_in_fit: true
+     Lib1-250301-mouse_1_20HAH5_0.37:
+      concentration: 0.37
+      use_in_fit: true
+     Lib1-250301-mouse_1_20HAH5_0.89:
+      concentration: 0.89
+      use_in_fit: true
+
+  Lib2-250301-mouse_1_20HAH5:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-250301-no-antibody-control
+    antibody_samples:
+     Lib2-250301-mouse_1_20HAH5_0.1:
+      concentration: 0.1
+      use_in_fit: true
+     Lib2-250301-mouse_1_20HAH5_0.37:
+      concentration: 0.37
+      use_in_fit: true
+     Lib2-250301-mouse_1_20HAH5_0.89:
+      concentration: 0.89
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-250301-mouse_7_20HAH5:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250301-no-antibody-control
+    antibody_samples:
+     Lib1-250301-mouse_7_20HAH5_0.4:
+      concentration: 0.4
+      use_in_fit: true
+     Lib1-250301-mouse_7_20HAH5_1.01:
+      concentration: 1.01
+      use_in_fit: true
+
+  Lib2-250301-mouse_7_20HAH5:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-250301-no-antibody-control
+    antibody_samples:
+     Lib2-250301-mouse_7_20HAH5_0.4:
+      concentration: 0.4
+      use_in_fit: true
+     Lib2-250301-mouse_7_20HAH5_1.01:
+      concentration: 1.01
+      use_in_fit: true
+
+
 # define the stability selections
 stability_selections:
   # --------------------------------------------------------------------------------------
@@ -1223,6 +1363,16 @@ avg_antibody_escape:
     selections:
       - Lib1-250213-mouse_13_H5
       - Lib2-250213-mouse_13_H5
+  mouse_15_H5:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250301-mouse_15_H5
+      - Lib2-250301-mouse_15_H5
+  mouse_16_H5:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250301-mouse_16_H5
+      - Lib2-250301-mouse_16_H5
   mouse_6_20HAH5:
     <<: *avg_antibody_escape_default
     selections:
@@ -1233,6 +1383,17 @@ avg_antibody_escape:
     selections:
       - Lib1-250213-mouse_8_20HAH5
       - Lib2-250213-mouse_8_20HAH5
+  mouse_1_20HAH5:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250301-mouse_1_20HAH5
+      - Lib2-250301-mouse_1_20HAH5
+  mouse_7_20HAH5:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250301-mouse_7_20HAH5
+      - Lib2-250301-mouse_7_20HAH5
+      
 
 # define the pH stability selections to average
 avg_stability:
