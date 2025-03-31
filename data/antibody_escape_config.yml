@@ -1148,6 +1148,104 @@ antibody_selections:
       concentration: 1.01
       use_in_fit: true
 
+# --------------------------------------------------------------------------------------
+  Lib1-250331-cattle_20_7:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250331-no-antibody-control
+    antibody_samples:
+     Lib1-250331-cattle_20_7_0.96:
+      concentration: 0.96
+      use_in_fit: true
+     Lib1-250331-cattle_20_7_1.91:
+      concentration: 1.91
+      use_in_fit: true
+  
+  Lib2-250331-cattle_20_7:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-250331-no-antibody-control
+    antibody_samples:
+     Lib2-250331-cattle_20_7_0.96:
+      concentration: 0.96
+      use_in_fit: true
+     Lib2-250331-cattle_20_7_1.91:
+      concentration: 1.91
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-250331-cattle_90_10:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250331-no-antibody-control
+    antibody_samples:
+     Lib1-250331-cattle_90_10_0.02:
+      concentration: 0.02
+      use_in_fit: true
+     Lib1-250331-cattle_90_10_0.06:
+      concentration: 0.06
+      use_in_fit: true
+     Lib1-250331-cattle_90_10_0.17:
+      concentration: 0.17
+      use_in_fit: true
+ 
+  Lib2-250331-cattle_90_10:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-250331-no-antibody-control
+    antibody_samples:
+     Lib2-250331-cattle_90_10_0.02:
+      concentration: 0.02
+      use_in_fit: true
+     Lib2-250331-cattle_90_10_0.06:
+      concentration: 0.06
+      use_in_fit: true
+     Lib2-250331-cattle_90_10_0.17:
+      concentration: 0.17
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-250331-cattle_90_7:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250331-no-antibody-control
+    antibody_samples:
+     Lib1-250331-cattle_90_7_0.75:
+      concentration: 0.75
+      use_in_fit: true
+     Lib1-250331-cattle_20_7_0.96:
+      concentration: 0.96
+      use_in_fit: true
+  
+  Lib2-250331-cattle_90_7:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-250331-no-antibody-control
+    antibody_samples:
+     Lib2-250331-cattle_90_7_0.75:
+      concentration: 0.75
+      use_in_fit: true
+     Lib2-250331-cattle_20_7_0.96:
+      concentration: 0.96
+      use_in_fit: true
 
 # define the stability selections
 stability_selections:
@@ -1393,7 +1491,23 @@ avg_antibody_escape:
     selections:
       - Lib1-250301-mouse_7_20HAH5
       - Lib2-250301-mouse_7_20HAH5
-      
+  cattle_20_7:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250331-cattle_20_7
+      - Lib2-250331-cattle_20_7
+  cattle_90_7:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250331-cattle_90_7
+      - Lib2-250331-cattle_90_7      
+  cattle_90_10:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250331-cattle_90_10
+      - Lib2-250331-cattle_90_10     
+
+
 
 # define the pH stability selections to average
 avg_stability:
