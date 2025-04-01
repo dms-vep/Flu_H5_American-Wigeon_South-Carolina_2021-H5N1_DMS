@@ -198,3 +198,38 @@ cattle_sera_escape:
       init_min_value: -3  # initial min value in slider
       le_filters:  # only keep entries with indicated column is <= indicated value
         effect_std: 3 
+
+Crowe_antibody_escape:
+  min_times_seen: 2  # only include mutations with times_seen >= this
+  min_frac_models: 1  # only include mutations in >= this fraction of models
+  alphabet: [A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y]  # amino acids to include
+  init_floor_escape_at_zero: true  # initially floor site escape to be >= 0?
+  init_site_escape_stat: sum  # initially show site escape as this statistic
+  no_mean_lineplot: True
+  scale_lineplot_height: 1.1
+  selectable_per_antibody_heatmap: True
+  lineplot_antibody_label_loc: top
+  antibody_escape:
+    Crowe antibodies:  # name each set of antibodies
+      stat: escape_median  # statistic from CSV to plot
+      positive_color: "#56B4E9"  # light blue, positive heatmap color
+      negative_color: "#E69F00"  # orange, negative heatmap color
+      max_at_least: 2  # make heatmap max at least
+      min_at_least: -2  # make heatmap min at least this
+      antibody_list:  # antibodies to include and their CSVs
+        mAb-188: results/antibody_escape/averages/mAb-188_mut_effect.csv
+        # mAb-214: results/antibody_escape/averages/mAb-214_mut_effect.csv
+        mAb-232: results/antibody_escape/averages/mAb-232_mut_effect.csv
+        mAb-235: results/antibody_escape/averages/mAb-235_mut_effect.csv
+        mAb-324: results/antibody_escape/averages/mAb-324_mut_effect.csv
+  other_phenotypes:
+    entry in 293T cells:
+      csv: results/func_effects/averages/293T_entry_func_effects.csv  # CSV w data
+      stat: effect  # column to plot
+      positive_color: "#009E73"  # green
+      negative_color: "#F0E442"  # yellow
+      max_at_least: 2
+      min_at_least: -2
+      init_min_value: -3  # initial min value in slider
+      le_filters:  # only keep entries with indicated column is <= indicated value
+        effect_std: 3
