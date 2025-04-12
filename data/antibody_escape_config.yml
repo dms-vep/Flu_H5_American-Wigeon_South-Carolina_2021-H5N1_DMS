@@ -1224,7 +1224,7 @@ antibody_selections:
       use_in_fit: false
      Lib1-250331-cattle_90_10_0.06:
       concentration: 0.06
-      use_in_fit: false
+      use_in_fit: true
      Lib1-250331-cattle_90_10_0.17:
       concentration: 0.17
       use_in_fit: true
@@ -1242,7 +1242,7 @@ antibody_selections:
       use_in_fit: false
      Lib2-250331-cattle_90_10_0.06:
       concentration: 0.06
-      use_in_fit: false
+      use_in_fit: true
      Lib2-250331-cattle_90_10_0.17:
       concentration: 0.17
       use_in_fit: true
@@ -1593,6 +1593,200 @@ antibody_selections:
       concentration: 2.28
       use_in_fit: true
 
+# --------------------------------------------------------------------------------------
+  Lib1-250411-H5-FMLMI-AF-A8-mouse-1:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250411-no_mAb
+    antibody_samples:
+     Lib1-250411-H5-FMLMI-AF-A8-mouse-1_0.01:
+      concentration: 0.01
+      use_in_fit: true
+     Lib1-250411-H5-FMLMI-AF-A8-mouse-1_0.03:
+      concentration: 0.03
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-250411-H5-FMLMI-membrane-anchored-mouse-1:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250411-no_mAb
+    antibody_samples:
+     Lib1-250411-H5-FMLMI-membrane-anchored-mouse-1_0.01:
+      concentration: 0.01
+      use_in_fit: true
+     Lib1-250411-H5-FMLMI-membrane-anchored-mouse-1_0.03:
+      concentration: 0.03
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-250411-H5-membrane-anchored-mouse-1:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250411-no_mAb
+    antibody_samples:
+     Lib1-250411-H5-membrane-anchored-mouse-1_0.015:
+      concentration: 0.015
+      use_in_fit: true
+     Lib1-250411-H5-membrane-anchored-mouse-1_0.05:
+      concentration: 0.05
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-250411-H5-FMLMI-AF-A8-mouse-2:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250411-no_mAb
+    antibody_samples:
+     Lib1-250411-H5-FMLMI-AF-A8-mouse-2_0.01:
+      concentration: 0.01
+      use_in_fit: true
+     Lib1-250411-H5-FMLMI-AF-A8-mouse-2_0.02:
+      concentration: 0.02
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-250411-H5-AF-A8-mouse-2:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250411-no_mAb
+    antibody_samples:
+     Lib1-250411-H5-AF-A8-mouse-2_0.08:
+      concentration: 0.08
+      use_in_fit: true
+     Lib1-250411-H5-AF-A8-mouse-2_0.33:
+      concentration: 0.33
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-250411-H5-FMLMI-membrane-anchored-mouse-2:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250411-no_mAb
+    antibody_samples:
+     Lib1-250411-H5-FMLMI-membrane-anchored-mouse-2_0.01:
+      concentration: 0.01
+      use_in_fit: true
+     Lib1-250411-H5-FMLMI-membrane-anchored-mouse-2_0.03:
+      concentration: 0.03
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-250411-H5-membrane-anchored-mouse-2:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250411-no_mAb
+    antibody_samples:
+     Lib1-250411-H5-membrane-anchored-mouse-2_0.01:
+      concentration: 0.01
+      use_in_fit: true
+     Lib1-250411-H5-membrane-anchored-mouse-2_0.35:
+      concentration: 0.35
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-250411-H5-FMLMI-AF-A8-mouse-3:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250411-no_mAb
+    antibody_samples:
+     Lib1-250411-H5-FMLMI-AF-A8-mouse-3_0.02:
+      concentration: 0.02
+      use_in_fit: true
+     Lib1-250411-H5-FMLMI-AF-A8-mouse-3_0.05:
+      concentration: 0.05
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-250411-H5-AF-A8-mouse-3:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250411-no_mAb
+    antibody_samples:
+     Lib1-250411-H5-AF-A8-mouse-3_0.09:
+      concentration: 0.09
+      use_in_fit: true
+     Lib1-250411-H5-AF-A8-mouse-3_0.35:
+      concentration: 0.35
+      use_in_fit: true
+
+
+# --------------------------------------------------------------------------------------
+  Lib1-250411-H5-FMLMI-membrane-anchored-mouse-3:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250411-no_mAb
+    antibody_samples:
+     Lib1-250411-H5-FMLMI-membrane-anchored-mouse-3_0.01:
+      concentration: 0.01
+      use_in_fit: true
+     Lib1-250411-H5-FMLMI-membrane-anchored-mouse-3_0.02:
+      concentration: 0.02
+      use_in_fit: true
+
+
+# --------------------------------------------------------------------------------------
+  Lib1-250411-H5-membrane-anchored-mouse-3:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250411-no_mAb
+    antibody_samples:
+     Lib1-250411-H5-membrane-anchored-mouse-3_0.01:
+      concentration: 0.01
+      use_in_fit: true
+     Lib1-250411-H5-membrane-anchored-mouse-3_0.04:
+      concentration: 0.04
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-250411-H5-AF-A8-mouse-4:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250411-no_mAb
+    antibody_samples:
+     Lib1-250411-H5-AF-A8-mouse-4_0.12:
+      concentration: 0.12
+      use_in_fit: true
+     Lib1-250411-H5-AF-A8-mouse-4_0.5:
+      concentration: 0.5
+      use_in_fit: true
+
 # define the stability selections
 stability_selections:
   # --------------------------------------------------------------------------------------
@@ -1879,6 +2073,58 @@ avg_antibody_escape:
     selections:
       - Lib1-250331-mAb324
       - Lib2-250331-mAb324
+
+  H5-AF-A8-mouse-2:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250411-H5-AF-A8-mouse-2
+  H5-AF-A8-mouse-3:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250411-H5-AF-A8-mouse-3
+  H5-AF-A8-mouse-4:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250411-H5-AF-A8-mouse-4
+  H5-FMLMI-AF-A8-mouse-1:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250411-H5-FMLMI-AF-A8-mouse-1
+  H5-FMLMI-AF-A8-mouse-2:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250411-H5-FMLMI-AF-A8-mouse-2
+  H5-FMLMI-AF-A8-mouse-3:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250411-H5-FMLMI-AF-A8-mouse-3
+  H5-membrane-anchored-mouse-1:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250411-H5-membrane-anchored-mouse-1
+  H5-membrane-anchored-mouse-2:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250411-H5-membrane-anchored-mouse-2
+  H5-membrane-anchored-mouse-3:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250411-H5-membrane-anchored-mouse-3 
+  H5-FMLMI-membrane-anchored-mouse-1:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250411-H5-FMLMI-membrane-anchored-mouse-1
+  H5-FMLMI-membrane-anchored-mouse-2:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250411-H5-FMLMI-membrane-anchored-mouse-2
+  H5-FMLMI-membrane-anchored-mouse-3:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250411-H5-FMLMI-membrane-anchored-mouse-3
+ 
+
+
 
 # define the pH stability selections to average
 avg_stability:
