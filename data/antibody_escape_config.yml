@@ -1247,6 +1247,42 @@ antibody_selections:
       concentration: 0.17
       use_in_fit: true
 
+  Lib1-250416-cattle_90_10:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250416-no_mAb
+    antibody_samples:
+     Lib1-250416-cattle_90_10_0.08:
+      concentration: 0.08
+      use_in_fit: true
+     Lib1-250416-cattle_90_10_0.13:
+      concentration: 0.13
+      use_in_fit: true
+     Lib1-250416-cattle_90_10_0.18:
+      concentration: 0.18
+      use_in_fit: true
+ 
+  Lib2-250416-cattle_90_10:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-250416-no_mAb
+    antibody_samples:
+     Lib2-250416-cattle_90_10_0.08:
+      concentration: 0.08
+      use_in_fit: true
+     Lib2-250416-cattle_90_10_0.13:
+      concentration: 0.13
+      use_in_fit: true
+     Lib2-250416-cattle_90_10_0.18:
+      concentration: 0.18
+      use_in_fit: true
+
 # --------------------------------------------------------------------------------------
   Lib1-250331-cattle_90_7:
     neut_standard_name: neut_standard
@@ -1339,6 +1375,37 @@ antibody_selections:
      Lib2-250331-mAb214_0.14:
       concentration: 0.14
       use_in_fit: true
+
+  Lib1-250416-mAb214:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250416-no_mAb
+    antibody_samples:
+     Lib1-250416-mAb214_0.07:
+      concentration: 0.07
+      use_in_fit: true
+     Lib1-250416-mAb214_0.20:
+      concentration: 0.20
+      use_in_fit: true
+
+  Lib2-250416-mAb214:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-250416-no_mAb
+    antibody_samples:
+     Lib2-250416-mAb214_0.07:
+      concentration: 0.07
+      use_in_fit: true
+     Lib2-250416-mAb214_0.20:
+      concentration: 0.20
+      use_in_fit: true
+
 
 # --------------------------------------------------------------------------------------
   Lib1-250331-mAb232:
@@ -1787,6 +1854,9 @@ antibody_selections:
       concentration: 0.5
       use_in_fit: true
 
+
+
+
 # define the stability selections
 stability_selections:
   # --------------------------------------------------------------------------------------
@@ -1968,6 +2038,7 @@ avg_antibody_escape:
     selections:
       - Lib1-231129-pig-sera-978
       - Lib2-231129-pig-sera-978
+  
   326-366-26:
     <<: *avg_antibody_escape_default
     selections:
@@ -1993,6 +2064,7 @@ avg_antibody_escape:
     selections:
       - Lib1-241216-mAb1H02
       - Lib2-241216-mAb1H02
+  
   mouse_11_H5:
     <<: *avg_antibody_escape_default
     selections:
@@ -2033,6 +2105,7 @@ avg_antibody_escape:
     selections:
       - Lib1-250301-mouse_7_20HAH5
       - Lib2-250301-mouse_7_20HAH5
+  
   cattle_20_7:
     <<: *avg_antibody_escape_default
     selections:
@@ -2047,7 +2120,12 @@ avg_antibody_escape:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-250331-cattle_90_10
-      - Lib2-250331-cattle_90_10     
+      - Lib2-250331-cattle_90_10   
+  cattle_90_10_repeat:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250416-cattle_90_10
+      - Lib2-250416-cattle_90_10        
   mAb-188:
     <<: *avg_antibody_escape_default
     selections:
@@ -2058,6 +2136,11 @@ avg_antibody_escape:
     selections:
       - Lib1-250331-mAb214
       - Lib2-250331-mAb214
+  mAb-214_repeat:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250416-mAb214
+      - Lib2-250416-mAb214
   mAb-232:
     <<: *avg_antibody_escape_default
     selections:
