@@ -308,3 +308,15 @@ Lib1-250411-H5-membrane-anchored-mouse-3_0.04,Lib1,2025-04-11,/fh/fast/bloom_j/S
 Lib1-250411-H5-AF-A8-mouse-4_0.12,Lib1,2025-04-11,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250408_LH00740_0065_B232T5GLT3/Unaligned/H5_anne_pH_sera_lib1_selections_020425/Lib1_mouse_4_gr4_1_S37_L003_R1_001.fastq.gz
 Lib1-250411-H5-AF-A8-mouse-4_0.5,Lib1,2025-04-11,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250408_LH00740_0065_B232T5GLT3/Unaligned/H5_anne_pH_sera_lib1_selections_020425/Lib1_mouse_4_gr4_2_S38_L003_R1_001.fastq.gz
 Lib1-250411-no_mAb,Lib1,2025-04-11,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250408_LH00740_0065_B232T5GLT3/Unaligned/H5_anne_pH_sera_lib1_selections_020425/Lib1_no_mAb_S51_L003_R1_001.fastq.gz
+Lib1-250416-mAb214_0.07,Lib1,2025-04-16,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250415_LH00740_0068_A232T7FLT3/Unaligned/XBB15_mabs_lib2_214_cattle_illumina/Lib1_214_1_S12_L001_R1_001.fastq.gz
+Lib1-250416-mAb214_0.20,Lib1,2025-04-16,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250415_LH00740_0068_A232T7FLT3/Unaligned/XBB15_mabs_lib2_214_cattle_illumina/Lib1_214_2_S13_L001_R1_001.fastq.gz
+Lib2-250416-mAb214_0.07,Lib2,2025-04-16,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250415_LH00740_0068_A232T7FLT3/Unaligned/XBB15_mabs_lib2_214_cattle_illumina/Lib2_214_1_S18_L001_R1_001.fastq.gz
+Lib2-250416-mAb214_0.20,Lib2,2025-04-16,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250415_LH00740_0068_A232T7FLT3/Unaligned/XBB15_mabs_lib2_214_cattle_illumina/Lib2_214_2_S19_L001_R1_001.fastq.gz
+Lib1-250416-no_mAb,Lib1,2025-04-16,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250415_LH00740_0068_A232T7FLT3/Unaligned/XBB15_mabs_lib2_214_cattle_illumina/Lib1_H5_no_mAb_S17_L001_R1_001.fastq.gz
+Lib2-250416-no_mAb,Lib2,2025-04-16,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250415_LH00740_0068_A232T7FLT3/Unaligned/XBB15_mabs_lib2_214_cattle_illumina/Lib2_H5_no_mAb_S23_L001_R1_001.fastq.gz
+Lib1-250416-cattle_90_10_0.08,Lib1,2025-04-16,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250415_LH00740_0068_A232T7FLT3/Unaligned/XBB15_mabs_lib2_214_cattle_illumina/Lib1_cattle_9010_1_S14_L001_R1_001.fastq.gz
+Lib1-250416-cattle_90_10_0.13,Lib1,2025-04-16,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250415_LH00740_0068_A232T7FLT3/Unaligned/XBB15_mabs_lib2_214_cattle_illumina/Lib1_cattle_9010_2_S15_L001_R1_001.fastq.gz
+Lib1-250416-cattle_90_10_0.18,Lib1,2025-04-16,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250415_LH00740_0068_A232T7FLT3/Unaligned/XBB15_mabs_lib2_214_cattle_illumina/Lib1_cattle_9010_3_S16_L001_R1_001.fastq.gz
+Lib2-250416-cattle_90_10_0.08,Lib2,2025-04-16,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250415_LH00740_0068_A232T7FLT3/Unaligned/XBB15_mabs_lib2_214_cattle_illumina/Lib2_cattle_9010_1_S20_L001_R1_001.fastq.gz
+Lib2-250416-cattle_90_10_0.13,Lib2,2025-04-16,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250415_LH00740_0068_A232T7FLT3/Unaligned/XBB15_mabs_lib2_214_cattle_illumina/Lib2_cattle_9010_2_S21_L001_R1_001.fastq.gz
+Lib2-250416-cattle_90_10_0.18,Lib2,2025-04-16,/fh/fast/bloom_j/SR/ngs/illumina/bdadonai/20250415_LH00740_0068_A232T7FLT3/Unaligned/XBB15_mabs_lib2_214_cattle_illumina/Lib2_cattle_9010_3_S22_L001_R1_001.fastq.gz
