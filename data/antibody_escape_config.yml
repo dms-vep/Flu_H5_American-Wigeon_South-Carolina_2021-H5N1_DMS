@@ -101,6 +101,16 @@ escape_plot_kwargs_default: &escape_plot_kwargs_default
   init_site_statistic: sum
   site_zoom_bar_color_col: region  # supplied in `site_numbering_map`
 
+escape_plot_kwargs_mucus: &escape_plot_kwargs_mucus
+  alphabet: [A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y]
+  addtl_slider_stats:
+    times_seen: 2
+  heatmap_max_at_least: 2
+  heatmap_min_at_least: -2
+  init_floor_at_zero: false
+  init_site_statistic: sum
+  site_zoom_bar_color_col: region  # supplied in `site_numbering_map`
+
 # Specify any statistics (usually functional effects) for which you want to enable
 # sliders that hide data. Keyed by statistic name, then next dict gives:
 #   - `csv`: CSV file with the data, should have columns "site" and "mutant"
@@ -113,6 +123,15 @@ plot_hide_stats_default: &plot_hide_stats_default
     init: -3
     min_filters:
       times_seen: 2
+
+plot_hide_stats_SA23_SA26: &plot_hide_stats_SA23_SA26
+  functional effect:
+    csv: results/func_effects/averages/SA23_SA26_low-sera_entry_func_effects.csv
+    csv_col: effect
+    init: -3
+    min_filters:
+      times_seen: 1
+
 
 # define the antibody selections
 antibody_selections:
@@ -1854,6 +1873,169 @@ antibody_selections:
       concentration: 0.5
       use_in_fit: true
 
+# --------------------------------------------------------------------------------------
+  Lib1-250504-H5-FMLMI-foldon-mouse-1:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250504-H5-no_mAb
+    antibody_samples:
+     Lib1-250504-H5-FMLMI-foldon-mouse-1_0.02:
+      concentration: 0.02
+      use_in_fit: true
+     Lib1-250504-H5-FMLMI-foldon-mouse-1_0.05:
+      concentration: 0.05
+      use_in_fit: true
+
+  Lib2-250504-H5-FMLMI-foldon-mouse-1:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-250504-H5-no_mAb
+    antibody_samples:
+     Lib2-250504-H5-FMLMI-foldon-mouse-1_0.02:
+      concentration: 0.02
+      use_in_fit: true
+     Lib2-250504-H5-FMLMI-foldon-mouse-1_0.05:
+      concentration: 0.05
+      use_in_fit: true
+# --------------------------------------------------------------------------------------
+  Lib1-250504-H5-FMLMI-foldon-mouse-2:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250504-H5-no_mAb
+    antibody_samples:
+     Lib1-250504-H5-FMLMI-foldon-mouse-2_0.01:
+      concentration: 0.01
+      use_in_fit: true
+     Lib1-250504-H5-FMLMI-foldon-mouse-2_0.03:
+      concentration: 0.03
+      use_in_fit: true
+
+  Lib2-250504-H5-FMLMI-foldon-mouse-2:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-250504-H5-no_mAb
+    antibody_samples:
+     Lib2-250504-H5-FMLMI-foldon-mouse-2_0.01:
+      concentration: 0.01
+      use_in_fit: true
+     Lib2-250504-H5-FMLMI-foldon-mouse-2_0.03:
+      concentration: 0.03
+      use_in_fit: true
+# --------------------------------------------------------------------------------------
+  Lib1-250504-H5-foldon-mouse-1:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250504-H5-no_mAb
+    antibody_samples:
+     Lib1-250504-H5-foldon-mouse-1_0.01:
+      concentration: 0.01
+      use_in_fit: true
+     Lib1-250504-H5-foldon-mouse-1_0.03:
+      concentration: 0.03
+      use_in_fit: true
+  
+  Lib2-250504-H5-foldon-mouse-1:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-250504-H5-no_mAb
+    antibody_samples:
+     Lib2-250504-H5-foldon-mouse-1_0.01:
+      concentration: 0.01
+      use_in_fit: true
+     Lib2-250504-H5-foldon-mouse-1_0.03:
+      concentration: 0.03
+      use_in_fit: true
+# --------------------------------------------------------------------------------------
+  Lib1-250504-H5-foldon-mouse-2:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib1-250504-H5-no_mAb
+    antibody_samples:
+     Lib1-250504-H5-foldon-mouse-2_0.01:
+      concentration: 0.01
+      use_in_fit: false
+     Lib1-250504-H5-foldon-mouse-2_0.03:
+      concentration: 0.03
+      use_in_fit: true
+
+  Lib2-250504-H5-foldon-mouse-2:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: Lib2-250504-H5-no_mAb
+    antibody_samples:
+     Lib2-250504-H5-foldon-mouse-2_0.01:
+      concentration: 0.01
+      use_in_fit: true
+     Lib2-250504-H5-foldon-mouse-2_0.03:
+      concentration: 0.03
+      use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+  Lib1-250504-mucus-ALI_29:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_mucus
+    plot_hide_stats: *plot_hide_stats_SA23_SA26
+    no_antibody_sample: Lib1-250504-H5-no_mAb
+    antibody_samples:
+     Lib1-250504-mucus-ALI_29_0.1:
+      concentration: 0.11
+      use_in_fit: true
+     Lib1-250504-mucus-ALI_29_0.21:
+      concentration: 0.21
+      use_in_fit: true
+     Lib1-250504-mucus-ALI_29_0.41:
+      concentration: 0.41
+      use_in_fit: true
+     Lib1-250504-mucus-ALI_29_0.66:
+      concentration: 0.66
+      use_in_fit: true
+
+  Lib2-250504-mucus-ALI_29:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_mucus
+    plot_hide_stats: *plot_hide_stats_SA23_SA26
+    no_antibody_sample: Lib2-250504-H5-no_mAb
+    antibody_samples:
+     Lib2-250504-mucus-ALI_29_0.1:
+      concentration: 0.11
+      use_in_fit: true
+     Lib2-250504-mucus-ALI_29_0.21:
+      concentration: 0.21
+      use_in_fit: true
+     Lib2-250504-mucus-ALI_29_0.41:
+      concentration: 0.41
+      use_in_fit: true
+     Lib2-250504-mucus-ALI_29_0.66:
+      concentration: 0.66
+      use_in_fit: true
 
 
 
@@ -1939,6 +2121,28 @@ avg_antibody_escape_default: &avg_antibody_escape_default
     <<: *escape_plot_kwargs_default
     addtl_slider_stats:
       times_seen: 2
+      nt changes to codon: 3
+    addtl_slider_stats_as_max: [nt changes to codon]
+    addtl_slider_stats_hide_not_filter: [nt changes to codon]
+    slider_binding_range_kwargs:
+      nt changes to codon:
+        min: 1
+        max: 3
+        step: 1
+      times_seen:
+        min: 1
+        max: 10
+        step: 1
+    avg_type: median
+    per_model_tooltip: true
+  plot_hide_stats: *plot_hide_stats_default
+
+avg_antibody_escape_mucus: &avg_antibody_escape_mucus
+  icXX: 80
+  escape_plot_kwargs:
+    <<: *escape_plot_kwargs_mucus
+    addtl_slider_stats:
+      times_seen: 1
       nt changes to codon: 3
     addtl_slider_stats_as_max: [nt changes to codon]
     addtl_slider_stats_hide_not_filter: [nt changes to codon]
@@ -2205,9 +2409,31 @@ avg_antibody_escape:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-250411-H5-FMLMI-membrane-anchored-mouse-3
- 
+  H5-foldon-mouse-1:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250504-H5-foldon-mouse-1
+      - Lib2-250504-H5-foldon-mouse-1
+  H5-foldon-mouse-2:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250504-H5-foldon-mouse-2
+      - Lib2-250504-H5-foldon-mouse-2
+  H5-FMLMI-foldon-mouse-1:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250504-H5-FMLMI-foldon-mouse-1
+      - Lib2-250504-H5-FMLMI-foldon-mouse-1
+  H5-FMLMI-foldon-mouse-2:
+    <<: *avg_antibody_escape_default
+    selections:
+      - Lib1-250504-H5-FMLMI-foldon-mouse-2
 
-
+  H5-ALI-mucus-29:
+    <<: *avg_antibody_escape_mucus
+    plot_hide_stats: *plot_hide_stats_SA23_SA26
+    selections:
+      - Lib2-250504-mucus-ALI_29
 
 # define the pH stability selections to average
 avg_stability:

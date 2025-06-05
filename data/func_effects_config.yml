@@ -33,7 +33,7 @@ global_epistasis_params: &global_epistasis_params
   # Regularization (ridge or L2) on the inferred latent effects, see
   # https://github.com/matsengrp/multidms/issues/168#issuecomment-2643522165
   # We recommend using a small value, like 1e-7.
-  latent_effects_regularization: 0
+  latent_effects_regularization: 1e-7
   
 # Define how to compute functional scores. Each key is a selection experiment.
 # A global epistasis model is used to get mutational effects for each selection.
@@ -139,6 +139,18 @@ func_scores:
     global_epistasis_params: *global_epistasis_params
 
 
+  Lib1-250504-SA26-SA23-IGM:
+    pre_selection_sample: Lib1-250504-H5_VSVG
+    post_selection_sample: Lib1-250504-H5-no_mAb
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
+  Lib2-250504-SA26-SA23-IGM:
+    pre_selection_sample: Lib2-250504-H5_VSVG
+    post_selection_sample: Lib2-250504-H5-no_mAb
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
+
+
 # --------------------------------------------------------------------------------------
 # Configuration for averaging mutation functional effects across selections and plotting
 # them.
@@ -229,6 +241,14 @@ avg_func_effects:
     selections:
       - Lib1-241216-SA26-IGM
       - Lib2-241216-SA26-IGM
+ 
+  SA23_SA26_low-sera_entry:
+    <<: *avg_func_effects_default
+    selections:
+      - Lib1-250504-SA26-SA23-IGM
+      - Lib2-250504-SA26-SA23-IGM
+
+      
 # --------------------------------------------------------------------------------------
 # Configuration for simple difference in functional effects across conditions
 # --------------------------------------------------------------------------------------

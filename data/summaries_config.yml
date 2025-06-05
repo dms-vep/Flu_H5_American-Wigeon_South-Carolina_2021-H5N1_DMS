@@ -264,6 +264,10 @@ Stabilized_HA_sera_escape:
         H5-FMLMI-membrane-anchored-mouse-1: results/antibody_escape/averages/H5-FMLMI-membrane-anchored-mouse-1_mut_effect.csv
         H5-FMLMI-membrane-anchored-mouse-2: results/antibody_escape/averages/H5-FMLMI-membrane-anchored-mouse-2_mut_effect.csv
         H5-FMLMI-membrane-anchored-mouse-3: results/antibody_escape/averages/H5-FMLMI-membrane-anchored-mouse-3_mut_effect.csv
+        H5-FMLMI-foldon-mouse-1: results/antibody_escape/averages/H5-FMLMI-foldon-mouse-1_mut_effect.csv
+        H5-FMLMI-foldon-mouse-2: results/antibody_escape/averages/H5-FMLMI-foldon-mouse-2_mut_effect.csv
+        H5-foldon-mouse-1: results/antibody_escape/averages/H5-foldon-mouse-1_mut_effect.csv
+        H5-foldon-mouse-2: results/antibody_escape/averages/H5-foldon-mouse-2_mut_effect.csv
   other_phenotypes:
     entry in 293T cells:
       csv: results/func_effects/averages/293T_entry_func_effects.csv  # CSV w data
