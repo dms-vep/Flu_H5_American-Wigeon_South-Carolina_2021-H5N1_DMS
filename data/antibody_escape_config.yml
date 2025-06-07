@@ -2361,27 +2361,27 @@ avg_antibody_escape:
       - Lib1-250331-mAb324
       - Lib2-250331-mAb324
 
-  H5-AF-A8-mouse-2:
+  H5-RC_I_1-mouse-2:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-250411-H5-AF-A8-mouse-2
-  H5-AF-A8-mouse-3:
+  H5-RC_I_1-mouse-3:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-250411-H5-AF-A8-mouse-3
-  H5-AF-A8-mouse-4:
+  H5-RC_I_1-mouse-4:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-250411-H5-AF-A8-mouse-4
-  H5-FMLMI-AF-A8-mouse-1:
+  H5-FMLMI-RC_I_1-mouse-1:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-250411-H5-FMLMI-AF-A8-mouse-1
-  H5-FMLMI-AF-A8-mouse-2:
+  H5-FMLMI-RC_I_1-mouse-2:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-250411-H5-FMLMI-AF-A8-mouse-2
-  H5-FMLMI-AF-A8-mouse-3:
+  H5-FMLMI-RC_I_1-mouse-3:
     <<: *avg_antibody_escape_default
     selections:
       - Lib1-250411-H5-FMLMI-AF-A8-mouse-3
