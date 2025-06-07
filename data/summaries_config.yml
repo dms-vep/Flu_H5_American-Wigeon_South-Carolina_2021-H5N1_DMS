@@ -234,40 +234,88 @@ Crowe_antibody_escape:
       le_filters:  # only keep entries with indicated column is <= indicated value
         effect_std: 3
 
+
 Stabilized_HA_sera_escape:
   min_times_seen: 2  # only include mutations with times_seen >= this
   min_frac_models: 1  # only include mutations in >= this fraction of models
   alphabet: [A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y]  # amino acids to include
   init_floor_escape_at_zero: true  # initially floor site escape to be >= 0?
   init_site_escape_stat: sum  # initially show site escape as this statistic
-  no_mean_lineplot: True
+  no_mean_lineplot: False
   scale_lineplot_height: 1.1
   selectable_per_antibody_heatmap: True
-  lineplot_antibody_label_loc: top
-  antibody_escape:
-    stabilized HA sera groups:  # name each set of sera
-      stat: escape_median  # statistic from CSV to plot
+  lineplot_antibody_label_loc: right
+  antibody_escape:  # show effects on antibody escape, empty dict if no antibodies being shown
+    H5-RC_I_1:  # name each set of antibodies
+      stat: escape_median  # statistic to use for escape
       positive_color: "#56B4E9"  # light blue, positive heatmap color
       negative_color: "#E69F00"  # orange, negative heatmap color
       max_at_least: 2  # make heatmap max at least
       min_at_least: -2  # make heatmap min at least this
+      le_filters:
+        escape_std: 1.5
       antibody_list:  # antibodies to include and their CSVs
-        H5-AF-A8-mouse-2: results/antibody_escape/averages/H5-AF-A8-mouse-2_mut_effect.csv
-        H5-AF-A8-mouse-3: results/antibody_escape/averages/H5-AF-A8-mouse-3_mut_effect.csv
-        H5-AF-A8-mouse-4: results/antibody_escape/averages/H5-AF-A8-mouse-4_mut_effect.csv
-        H5-FMLMI-AF-A8-mouse-1: results/antibody_escape/averages/H5-FMLMI-AF-A8-mouse-1_mut_effect.csv
-        H5-FMLMI-AF-A8-mouse-2: results/antibody_escape/averages/H5-FMLMI-AF-A8-mouse-2_mut_effect.csv
-        H5-FMLMI-AF-A8-mouse-3: results/antibody_escape/averages/H5-FMLMI-AF-A8-mouse-3_mut_effect.csv
+        H5-RC_I_1-mouse-2: results/antibody_escape/averages/H5-RC_I_1-mouse-2_mut_effect.csv
+        H5-RC_I_1-mouse-3: results/antibody_escape/averages/H5-RC_I_1-mouse-3_mut_effect.csv
+        H5-RC_I_1-mouse-4: results/antibody_escape/averages/H5-RC_I_1-mouse-4_mut_effect.csv
+    H5-FMLMI-RC_I_1:  # name each set of antibodies
+      stat: escape_median  # statistic to use for escape
+      positive_color: "#56B4E9"  # light blue, positive heatmap color
+      negative_color: "#E69F00"  # orange, negative heatmap color
+      max_at_least: 2  # make heatmap max at least
+      min_at_least: -2  # make heatmap min at least this
+      le_filters:
+        escape_std: 1.5
+      antibody_list:  # antibodies to include and their CSVs
+        H5-FMLMI-RC_I_1-mouse-1: results/antibody_escape/averages/H5-FMLMI-RC_I_1-mouse-1_mut_effect.csv
+        H5-FMLMI-RC_I_1-mouse-2: results/antibody_escape/averages/H5-FMLMI-RC_I_1-mouse-2_mut_effect.csv
+        H5-FMLMI-RC_I_1-mouse-3: results/antibody_escape/averages/H5-FMLMI-RC_I_1-mouse-3_mut_effect.csv
+    H5-membrane-anchored:  # name each set of antibodies
+      stat: escape_median  # statistic to use for escape
+      positive_color: "#56B4E9"  # light blue, positive heatmap color
+      negative_color: "#E69F00"  # orange, negative heatmap color
+      max_at_least: 2  # make heatmap max at least
+      min_at_least: -2  # make heatmap min at least this
+      le_filters:
+        escape_std: 1.5
+      antibody_list:  # antibodies to include and their CSVs
         H5-membrane-anchored-mouse-1: results/antibody_escape/averages/H5-membrane-anchored-mouse-1_mut_effect.csv
         H5-membrane-anchored-mouse-2: results/antibody_escape/averages/H5-membrane-anchored-mouse-2_mut_effect.csv
         H5-membrane-anchored-mouse-3: results/antibody_escape/averages/H5-membrane-anchored-mouse-3_mut_effect.csv
+    H5-FMLMI-membrane-anchored:  # name each set of antibodies
+      stat: escape_median  # statistic to use for escape
+      positive_color: "#56B4E9"  # light blue, positive heatmap color
+      negative_color: "#E69F00"  # orange, negative heatmap color
+      max_at_least: 2  # make heatmap max at least
+      min_at_least: -2  # make heatmap min at least this
+      le_filters:
+        escape_std: 1.5
+      antibody_list:  # antibodies to include and their CSVs
         H5-FMLMI-membrane-anchored-mouse-1: results/antibody_escape/averages/H5-FMLMI-membrane-anchored-mouse-1_mut_effect.csv
         H5-FMLMI-membrane-anchored-mouse-2: results/antibody_escape/averages/H5-FMLMI-membrane-anchored-mouse-2_mut_effect.csv
         H5-FMLMI-membrane-anchored-mouse-3: results/antibody_escape/averages/H5-FMLMI-membrane-anchored-mouse-3_mut_effect.csv
-        H5-FMLMI-foldon-mouse-1: results/antibody_escape/averages/H5-FMLMI-foldon-mouse-1_mut_effect.csv
-        H5-FMLMI-foldon-mouse-2: results/antibody_escape/averages/H5-FMLMI-foldon-mouse-2_mut_effect.csv
+    H5-foldon:  # name each set of antibodies
+      stat: escape_median  # statistic to use for escape
+      positive_color: "#56B4E9"  # light blue, positive heatmap color
+      negative_color: "#E69F00"  # orange, negative heatmap color
+      max_at_least: 2  # make heatmap max at least
+      min_at_least: -2  # make heatmap min at least this
+      le_filters:
+        escape_std: 1.5
+      antibody_list:  # antibodies to include and their CSVs
         H5-foldon-mouse-1: results/antibody_escape/averages/H5-foldon-mouse-1_mut_effect.csv
         H5-foldon-mouse-2: results/antibody_escape/averages/H5-foldon-mouse-2_mut_effect.csv
+    H5-FMLMI-foldon:  # name each set of antibodies
+      stat: escape_median  # statistic to use for escape
+      positive_color: "#56B4E9"  # light blue, positive heatmap color
+      negative_color: "#E69F00"  # orange, negative heatmap color
+      max_at_least: 2  # make heatmap max at least
+      min_at_least: -2  # make heatmap min at least this
+      le_filters:
+        escape_std: 1.5
+      antibody_list:  # antibodies to include and their CSVs
+        H5-FMLMI-foldon-mouse-1: results/antibody_escape/averages/H5-FMLMI-foldon-mouse-1_mut_effect.csv
+        H5-FMLMI-foldon-mouse-2: results/antibody_escape/averages/H5-FMLMI-foldon-mouse-2_mut_effect.csv
   other_phenotypes:
     entry in 293T cells:
       csv: results/func_effects/averages/293T_entry_func_effects.csv  # CSV w data
