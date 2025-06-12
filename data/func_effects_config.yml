@@ -33,8 +33,9 @@ global_epistasis_params: &global_epistasis_params
   # Regularization (ridge or L2) on the inferred latent effects, see
   # https://github.com/matsengrp/multidms/issues/168#issuecomment-2643522165
   # We recommend using a small value, like 1e-7.
-  latent_effects_regularization: 1e-7
-  
+  latent_effects_regularization: 0  # for backward-compatibility w earlier pipeline version
+  fit_kwargs: {maxiter: 1000, tol: 0.000001}  # for backward-compatabillity w earlier pipeline version 
+
 # Define how to compute functional scores. Each key is a selection experiment.
 # A global epistasis model is used to get mutational effects for each selection.
 # Recommended naming of selection experiments is:
