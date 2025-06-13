@@ -2026,7 +2026,7 @@ antibody_selections:
     antibody_samples:
      Lib2-250504-mucus-ALI_29_0.1:
       concentration: 0.11
-      use_in_fit: true
+      use_in_fit: false
      Lib2-250504-mucus-ALI_29_0.21:
       concentration: 0.21
       use_in_fit: true
