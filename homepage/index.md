@@ -18,6 +18,9 @@ features:
   - title: a2,6 sialic acid usage
     details: Effects of mutations on a2,6 sialic acid usage
     link: /a26_usage
+  - title: NeuGc-containing glycan usage
+    details: Effects of mutations on NeuGc glycan usage
+    link: /NeuGc_usage
   - title: serum antibody escape
     details: Effects of mutations on neutralization by polyclonal sera
     link: /escape
