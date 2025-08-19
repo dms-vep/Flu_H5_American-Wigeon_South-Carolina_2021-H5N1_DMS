@@ -13,6 +13,8 @@ You can zoom in on specific HA regions using the zoom bar above the heatmaps. Cl
 The plot shows the difference in entry in cells expressing exclusively NeuGc-terminating glycans versus those expressing NeuAc-terminating glycans.
 Positive values indicate mutations that improve NeuGc usage. By default, this plot only shows mutations that increase overall entry into NeuGc terminating sialic acid expressing cells; the reason for this is that difference measurements are sometimes noisy for mutations that are highly deleterious to entry in both NeuGc and NeuAc expressing cells and this plot is designed to specifically show mutations that **increase** NeuGc usage.
 
+Note the HA numbering scheme used in this page is for sequential numbering (starting at first Methionine).
+
 <Figure caption="Interactive plot showing effects of mutations on NeuGc sialic acid usage">
     <Altair :showShadow="true" :spec-url="'https://dms-vep.org/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS_NeuGc/htmls/CMAH_vs_293_entry_diffs.html'"></Altair>
 </Figure>
