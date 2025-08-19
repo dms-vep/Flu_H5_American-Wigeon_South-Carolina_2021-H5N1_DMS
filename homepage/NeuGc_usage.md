@@ -15,7 +15,7 @@ Positive values indicate mutations that improve NeuGc usage. By default, this pl
 
 Note the HA numbering scheme used in this page is for sequential numbering (starting at first Methionine).
 
-<Figure caption="Interactive plot showing effects of mutations on NeuGc sialic acid usage">
+<Figure caption="Interactive plot showing effects of mutations that increase NeuGc usage>
     <Altair :showShadow="true" :spec-url="'https://dms-vep.org/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS_NeuGc/htmls/CMAH_vs_293_entry_diffs.html'"></Altair>
 </Figure>
 
@@ -28,13 +28,13 @@ Here is an explanation of the key plot elements:
 ## Effects of mutations in NeuGc versus NeuAc cells
 The scatterplot below shows effects of mutations on entry in 293-CMAH (NeuGc) versus 293 (NeuAc) cells. If you hover over each point you will find specific mutation labels. You can decrease change *best_effect* filter to see measurements for mutations that are quite deleterious for entry in both cells lines, but note those measurements tend to be more noisy. 
 
-<Figure caption="Scatteplot  showing effect of each mutation in 293-CMAH (NeuGc) versus 293 (NeuAc) cells">
+<Figure caption="Scatteplot showing effect of each mutation in 293-CMAH (NeuGc) versus 293 (NeuAc) cells">
     <Altair :showShadow="true" :spec-url="'https://dms-vep.org/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS_NeuGc/htmls/CMAH_vs_293_entry_diffs_corr.html'"></Altair>
 </Figure>
 
 The heatmap below shows how mutations affect entry in  293 (NeuAc) versus 293-CMAH (NeuGc) cells. Positive entry values indicate mutation is beneficial for cell entry and negative entry values indicate mutation is deleterious for entry. Note that mutation effects in these plots are determined by many other factors than just NeuAc vs NeuGc binding (such as protein folding, sialic acid binding, etc.), therefore entry difference (the plot at the top of this page and heatmap at the bottom here) is a better way to isolate NeuGc binding specific effects. Dark grey squares indicate mutations filtered out due to deletarious entry effects and you can adjust those filters using sliders below.
 
-<Figure caption="Interactive entry effects on 293-CMAH (NeuGc) and 293 (NeuAc) cells">
+<Figure caption="Mutation entry effects on 293-CMAH (NeuGc) and 293 (NeuAc) cells">
     <Altair :showShadow="true" :spec-url="'https://dms-vep.org/Flu_H5_American-Wigeon_South-Carolina_2021-H5N1_DMS_NeuGc/htmls/entry_in_NeuAc_vs_NeuGc_cells_overlaid.html'"></Altair>
 </Figure>
 
